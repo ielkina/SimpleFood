@@ -1,0 +1,370 @@
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),url("../fonts/Rubik-Light.woff2") format("woff2"),url("../fonts/Rubik-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),url("../fonts/Rubik-Regular.woff2") format("woff2"),url("../fonts/Rubik-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),url("../fonts/Rubik-Italic.woff2") format("woff2"),url("../fonts/Rubik-Italic.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),url("../fonts/Rubik-Medium.woff2") format("woff2"),url("../fonts/Rubik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),url("../fonts/Rubik-Bold.woff2") format("woff2"),url("../fonts/Rubik-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),url("../fonts/OpenSans-Light.woff2") format("woff2"),url("../fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),url("../fonts/OpenSans-Regular.woff2") format("woff2"),url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),url("../fonts/OpenSans-Medium.woff2") format("woff2"),url("../fonts/OpenSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),url("../fonts/OpenSans-Bold.woff2") format("woff2"),url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Rubik",sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #31352b;
+  opacity: .9;
+  background-color: #fff;
+}
+
+a,
+button {
+  outline: rgba(0,0,0,0);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.logo {
+  border-radius: 5px;
+  -webkit-transition: opacity .3s,background-color .3s,-webkit-box-shadow .3s ease-in-out;
+  transition: opacity .3s,background-color .3s,-webkit-box-shadow .3s ease-in-out;
+  -o-transition: opacity .3s,background-color .3s,box-shadow .3s ease-in-out;
+  transition: opacity .3s,background-color .3s,box-shadow .3s ease-in-out;
+  transition: opacity .3s,background-color .3s,box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out;
+}
+
+.logo:hover {
+  opacity: .8;
+}
+
+.logo:focus {
+  background-color: rgba(255,255,255,.0117647059);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255,104,56,.7019607843);
+  box-shadow: 0px 0px 0px 2px rgba(255,104,56,.7019607843);
+}
+
+.logo:active {
+  background-color: rgba(0,0,0,0);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
+  opacity: .5;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 159px;
+}
+
+.navbar__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.menu {
+  width: 301px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.menu__link {
+  font-size: 18px;
+  line-height: .21;
+  color: #31352b;
+  border-radius: 5px;
+  -webkit-transition: color .3s,background-color .3s,text-shadow .3s ease-in-out,-webkit-box-shadow .3s;
+  transition: color .3s,background-color .3s,text-shadow .3s ease-in-out,-webkit-box-shadow .3s;
+  -o-transition: color .3s,background-color .3s,box-shadow .3s,text-shadow .3s ease-in-out;
+  transition: color .3s,background-color .3s,box-shadow .3s,text-shadow .3s ease-in-out;
+  transition: color .3s,background-color .3s,box-shadow .3s,text-shadow .3s ease-in-out,-webkit-box-shadow .3s;
+}
+
+.menu__link:hover {
+  color: #ff6838;
+}
+
+.menu__link:focus {
+  color: #31352b;
+  background-color: rgba(255,255,255,.0117647059);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255,104,56,.7019607843);
+  box-shadow: 0px 0px 0px 2px rgba(255,104,56,.7019607843);
+}
+
+.menu__link:active {
+  color: #31352b;
+  text-shadow: 2px 2px 5px rgba(49,53,43,.5019607843);
+  background-color: rgba(0,0,0,0);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
+}
+
+.menu__link-active {
+  color: #ff6838;
+}
+
+.buttons__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 12.5px;
+  position: relative;
+  border: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
+  border-radius: 5px;
+  -webkit-transition: background-color .3s,-webkit-box-shadow .3s ease-in-out;
+  transition: background-color .3s,-webkit-box-shadow .3s ease-in-out;
+  -o-transition: background-color .3s,box-shadow .3s ease-in-out;
+  transition: background-color .3s,box-shadow .3s ease-in-out;
+  transition: background-color .3s,box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out;
+}
+
+.buttons__btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.buttons__btn:hover {
+  background-color: #ff6838;
+}
+
+.buttons__btn:hover .buttons__icon {
+  stroke: #fff;
+}
+
+.buttons__btn:hover .buttons__span {
+  color: #ff7a50;
+  background-color: #fff;
+}
+
+.buttons__btn:focus {
+  background-color: rgba(255,122,80,.1019607843);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255,104,56,.7019607843);
+  box-shadow: 0px 0px 0px 2px rgba(255,104,56,.7019607843);
+}
+
+.buttons__btn:focus .buttons__icon {
+  stroke: #363853;
+}
+
+.buttons__btn:focus .buttons__span {
+  color: #fff;
+  background-color: #ff7a50;
+}
+
+.buttons__btn:active {
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
+  background-color: #fff2ed;
+}
+
+.buttons__btn:active .buttons__icon {
+  stroke: #363853;
+}
+
+.buttons__btn:active .buttons__span {
+  color: #fff;
+  background-color: #ff7a50;
+}
+
+.buttons__icon {
+  stroke: #363853;
+  -webkit-transition: stroke .3s ease-in-out;
+  -o-transition: stroke .3s ease-in-out;
+  transition: stroke .3s ease-in-out;
+}
+
+.buttons__span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ff6838;
+  color: #fff;
+  font-size: 10px;
+  line-height: .12;
+  top: 8px;
+  right: 3px;
+  -webkit-transition: color .3s,background-color .3s ease-in-out;
+  -o-transition: color .3s,background-color .3s ease-in-out;
+  transition: color .3s,background-color .3s ease-in-out;
+}
