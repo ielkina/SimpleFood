@@ -22,28 +22,6 @@
     line-height: 0.21;
     color: $text;
     border-radius: 5px;
-    transition:
-      color 0.3s,
-      background-color 0.3s,
-      box-shadow 0.3s,
-      text-shadow 0.3s ease-in-out;
-
-    &:hover {
-      color: $link;
-    }
-
-    &:focus {
-      color: $text;
-      background-color: $bg-focus;
-      box-shadow: 0px 0px 0px 2px $bs-focus;
-    }
-
-    &:active {
-      color: $text;
-      text-shadow: 2px 2px 5px $text-shadow-active;
-      background-color: transparent;
-      box-shadow: 0px 0px 0px 2px transparent;
-    }
   }
 
   &__link-active {
@@ -51,66 +29,65 @@
   }
 }
 
-.buttons {
+.btn {
 
-  &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12.5px;
-    position: relative;
-    border: transparent;
-    background-color: transparent;
-    border-radius: 5px;
-    transition:
-      background-color 0.3s,
-      box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12.5px;
+  position: relative;
+  border: transparent;
+  background-color: transparent;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s ease-in-out;
 
-    &:not(:last-child) {
-      margin-right: 10px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $link;
+
+    & .btn__icon {
+      stroke: $wite;
     }
 
-    &:hover {
-      background-color: $link;
-
-      & .buttons__icon {
-        stroke: $wite;
-      }
-
-      & .buttons__span {
-        color: $coral;
-        background-color: $wite;
-      }
-    }
-
-    &:focus {
-      background-color: $bg-btn-focus;
-      box-shadow: 0px 0px 0px 2px $bs-focus;
-
-      & .buttons__icon {
-        stroke: $stroke;
-      }
-
-      & .buttons__span {
-        color: $wite;
-        background-color: $coral;
-      }
-    }
-
-    &:active {
-      box-shadow: 0px 0px 0px 2px transparent;
-      background-color: $lite;
-
-      & .buttons__icon {
-        stroke: $stroke;
-      }
-
-      & .buttons__span {
-        color: $wite;
-        background-color: $coral;
-      }
+    & .btn__span {
+      color: $coral;
+      background-color: $wite;
     }
   }
+
+  &:focus {
+    background-color: $bg-btn-focus;
+    box-shadow: 0px 0px 0px 2px $bs-focus;
+
+    & .btn__icon {
+      stroke: $stroke;
+    }
+
+    & .btn__span {
+      color: $wite;
+      background-color: $coral;
+    }
+  }
+
+  &:active {
+    box-shadow: 0px 0px 0px 2px transparent;
+    background-color: $lite;
+
+    & .btn__icon {
+      stroke: $stroke;
+    }
+
+    & .btn__span {
+      color: $wite;
+      background-color: $coral;
+    }
+  }
+
 
   &__icon {
     stroke: $stroke;
