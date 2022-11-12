@@ -1,0 +1,45 @@
+.hero {
+
+  &__inner {
+    height: 660px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {}
+
+  &__title {
+    font-weight: 600;
+    font-size: 66px;
+    line-height: 1.3;
+    color: $stroke;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__title-span {
+    display: block;
+    color: $link;
+  }
+
+  &__text {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    padding: 12px 32px;
+    margin-right: 34px;
+    @extend %btn-1;
+  }
+
+  &__link {
+    @extend %link-2;
+  }
+}

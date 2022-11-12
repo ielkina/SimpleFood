@@ -3,8 +3,42 @@
 @include('path/head.html',{"title":"Simple Food | Блюда"})
 
 <body>
-  @include('path/header-dishes.html')
-  @include('path/main.html')
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
+        </a>
+        <div class="navbar__inner">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link-active" href="dishes.html">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <button class="btn" type="search">
+            <svg class="btn__icon" style=" width: 18.76px; height: 19px;">
+              <use xlink:href="img/icons/sprite.svg#icon-search"></use>
+            </svg>
+            <span class="sr-only">Поиск по сайту</span>
+          </button>
+          <button class="btn" type="button">
+            <svg class="btn__icon" style=" width: 18.5px; height: 17.83px;">
+              <use xlink:href="img/icons/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="btn__span">4</span>
+            <span class="sr-only">Перейти в корзину</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="main"></main>
   @include('path/footer.html')
   @include('path/script.html')
 </body>

@@ -16,53 +16,46 @@
 
 <body>
   <header class="header">
-  <div class="container">
-    <nav class="navbar">
-      <a class="logo" href="index.html">
-        <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
-      </a>
-      <div class="navbar__inner">
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link" href="index.html">Главная</a>
-          </li>    
-          <li class="menu__item">
-            <a class="menu__link menu__link-active" href="dishes.html">Блюда</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-        <button class="buttons__btn" type="search">
-          <svg class="buttons__icon" style=" width: 18.76px; height: 19px;">
-            <use xlink:href="img/icons/sprite.svg#icon-search"></use>
-          </svg>
-          <span class="sr-only">Поиск по сайту</span>
-        </button>
-        <button class="buttons__btn" type="button">
-          <svg class="buttons__icon" style=" width: 18.5px; height: 17.83px;">
-            <use xlink:href="img/icons/sprite.svg#icon-cart"></use>
-          </svg>
-          <span class="buttons__span">4</span>
-          <span class="sr-only">Перейти в корзину</span>
-        </button>
-      </div>
-    </nav>
-  </div>
-</header>
-  <main class="main">
-  
-  
-  
-  
-  
-  
-</main>
+    <div class="container">
+      <nav class="navbar">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
+        </a>
+        <div class="navbar__inner">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link-active" href="dishes.html">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <button class="btn" type="search">
+            <svg class="btn__icon" style=" width: 18.76px; height: 19px;">
+              <use xlink:href="img/icons/sprite.svg#icon-search"></use>
+            </svg>
+            <span class="sr-only">Поиск по сайту</span>
+          </button>
+          <button class="btn" type="button">
+            <svg class="btn__icon" style=" width: 18.5px; height: 17.83px;">
+              <use xlink:href="img/icons/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="btn__span">4</span>
+            <span class="sr-only">Перейти в корзину</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="main"></main>
   <footer class="footer">
   <div class="container">
     <div class="footer__top">
       <div class="footer__inner">
-        <a class="logo" href="index.html">
+        <a class="logo" href="#" id="top">
           <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
         </a>
         <form class="form">
@@ -125,10 +118,10 @@
             </a>
           </li>
           <li class="address__item">
-            <a class="address__link" href="tel:380501112233">
+            <a class="address__link" href="tel:+380501112233">
               <svg class="address__icon" style="width: 24px; height: 24px">
                 <use xlink:href="img/icons/sprite.svg#icon-call"></use>
-              </svg>380501112233
+              </svg>+380501112233
             </a>
           </li>
           <li class="address__item">
@@ -172,8 +165,7 @@
     <p>© 2022 Simple Food</p>
   </div>
 </footer>
-  <!-- <script src="js/mixitup.min.js"></script> -->
-<script src="js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,6 @@
-window.onscroll = function () { myFunction() };
+$(function () {
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+  var containerEl = document.querySelector('.popular-food');
+  var mixer = mixitup(containerEl);
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+})

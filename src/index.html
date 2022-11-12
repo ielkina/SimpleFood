@@ -16,53 +16,198 @@
 
 <body>
   <header class="header">
-  <div class="container">
-    <nav class="navbar">
-      <a class="logo" href="index.html">
-        <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
-      </a>
-      <div class="navbar__inner">
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link menu__link-active" href="index.html">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="dishes.html">Блюда</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-        <button class="btn" type="button">
-          <svg class="btn__icon" style=" width: 19px; height: 19px;">
-            <use xlink:href="img/icons/sprite.svg#icon-search"></use>
-          </svg>
-          <span class="sr-only">Поиск по сайту</span>
-        </button>
-        <button class="btn" type="button">
-          <svg class="btn__icon" style=" width: 19px; height: 19px;">
-            <use xlink:href="img/icons/sprite.svg#icon-cart"></use>
-          </svg>
-          <span class="btn__span">4</span>
-          <span class="sr-only">Перейти в корзину</span>
-        </button>
-      </div>
-    </nav>
-  </div>
-</header>
+    <div class="container">
+      <nav class="navbar">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
+        </a>
+        <div class="navbar__inner">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link-active" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="dishes.html">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <button class="btn" type="button">
+            <svg class="btn__icon" style=" width: 19px; height: 19px;">
+              <use xlink:href="img/icons/sprite.svg#icon-search"></use>
+            </svg>
+            <span class="sr-only">Поиск по сайту</span>
+          </button>
+          <button class="btn" type="button">
+            <svg class="btn__icon" style=" width: 19px; height: 19px;">
+              <use xlink:href="img/icons/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="btn__span">4</span>
+            <span class="sr-only">Перейти в корзину</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
   <main class="main">
-  
-  
-  
-  
-  
-  
-</main>
+    <section class="section hero">
+  <div class="container">
+    <h1 class="sr-only">Сервис быстрой доставки еды</h1>
+    <div class="hero__inner" style="background-image: url(../img/bg/hero-bg.png)">
+      <div class="hero__content">
+        <h2 class="hero__title">Доставка<span class="hero__title-span">за 15 минут</span>
+        </h2>
+        <div class="hero__text">
+          <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
+        </div>
+        <button class="hero__btn" type="button">Заказать</button>
+        <a class="hero__link" href="#no__scroll">Подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="popular">
+  <div class="container">
+    <h2 class="popular__title">Популярные категории</h2>
+    <div class="popular__filter">
+      <button class="popular__btn" type="button" data-filter="all">
+        <svg class="popular__icon" style="width: 44px; height: 44px">
+          <use xlink:href="img/icons/sprite.svg#icon-burger"></use>
+        </svg>Бургеры
+      </button>
+      <button class="popular__btn" type="button" data-filter=".pizza">
+        <svg class="popular__icon" style="width: 44px; height: 44px">
+          <use xlink:href="img/icons/sprite.svg#icon-pizza"></use>
+        </svg>Пицца
+      </button>
+      <button class="popular__btn" type="button" data-filter=".sandwich">
+        <svg class="popular__icon" style="width: 44px; height: 44px">
+          <use xlink:href="img/icons/sprite.svg#icon-sandwich"></use>
+        </svg>Сендвичи
+      </button>
+      <button class="popular__btn" type="button" data-filter=".asia">
+        <svg class="popular__icon" style="width: 44px; height: 44px">
+          <use xlink:href="img/icons/sprite.svg#icon-asia"></use>
+        </svg>Азиатская кухня
+      </button>
+      <button class="popular__btn" type="button" data-filter=".dish">
+        <svg class="popular__icon" style="width: 44px; height: 44px">
+          <use xlink:href="img/icons/sprite.svg#icon-dish"></use>
+        </svg>Cеты
+      </button>
+    </div>
+    <ul class="popular-food">
+      <li class="popular-food__card mix burger">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/cheeseburger-1.png" alt="Фото чисбургера с листьями салата">
+            <p class="popular-food__name">Чизбургер с листьями салата</p>
+          </a>
+          <p class="popular-food__price">160 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix pizza">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/burger-1.png" alt="Фото бифбургера">
+            <p class="popular-food__name">Бифбургер</p>
+          </a>
+          <p class="popular-food__price">190 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix sandwich">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/cheeseburger-2.png" alt="Фото королевского чисбургера">
+            <p class="popular-food__name">Королевский чизбургер</p>
+          </a>
+          <p class="popular-food__price">260 <span>грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix asia">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/hamburger-1.png" alt="Фото черного гамбургера">
+            <p class="popular-food__name">Черный гамбургер</p>
+          </a>
+          <p class="popular-food__price">199 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix dish">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/burger-2.png" alt="Фото чикен бургера">
+            <p class="popular-food__name">Чикен бургер</p>
+          </a>
+          <p class="popular-food__price">180 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix burger">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/cheeseburger-1.png" alt="Фото чисбургера с листьями салата">
+            <p class="popular-food__name">Чизбургер с листьями салата</p>
+          </a>
+          <p class="popular-food__price">160 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix pizza">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/burger-1.png" alt="Фото бифбургера">
+            <p class="popular-food__name">Бифбургер</p>
+          </a>
+          <p class="popular-food__price">190 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix sandwich">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/cheeseburger-2.png" alt="Фото королевского чисбургера">
+            <p class="popular-food__name">Королевский чизбургер</p>
+          </a>
+          <p class="popular-food__price">260 <span>грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix asia">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/hamburger-1.png" alt="Фото черного гамбургера">
+            <p class="popular-food__name">Черный гамбургер</p>
+          </a>
+          <p class="popular-food__price">199 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+      <li class="popular-food__card mix dish">
+        <article class="popular-food__product">
+          <a class="popular-food__link" href="#">
+            <img class="popular-food__img" src="img/product/burger-2.png" alt="Фото чикен бургера">
+            <p class="popular-food__name">Чикен бургер</p>
+          </a>
+          <p class="popular-food__price">180 <span class="popular-food__span">грн.</span></p>
+          <button class="popular-food__btn" type="button">В корзину</button>
+        </article>
+      </li>
+    </ul>
+    <button class="popular__link" type="button">Показать еще</button>
+  </div>
+</section>
+  </main>
   <footer class="footer">
   <div class="container">
     <div class="footer__top">
       <div class="footer__inner">
-        <a class="logo" href="index.html">
+        <a class="logo" href="#" id="top">
           <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
         </a>
         <form class="form">
@@ -125,10 +270,10 @@
             </a>
           </li>
           <li class="address__item">
-            <a class="address__link" href="tel:380501112233">
+            <a class="address__link" href="tel:+380501112233">
               <svg class="address__icon" style="width: 24px; height: 24px">
                 <use xlink:href="img/icons/sprite.svg#icon-call"></use>
-              </svg>380501112233
+              </svg>+380501112233
             </a>
           </li>
           <li class="address__item">
@@ -172,8 +317,7 @@
     <p>© 2022 Simple Food</p>
   </div>
 </footer>
-  <!-- <script src="js/mixitup.min.js"></script> -->
-<script src="js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

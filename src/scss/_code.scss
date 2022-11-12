@@ -13,6 +13,12 @@ body {
   flex-grow: 1;
 }
 
+// плавный переход по якорям
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 // скрытый элемент для скрин-ридера
 .sr-only {
   position: absolute;

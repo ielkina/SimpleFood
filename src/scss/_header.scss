@@ -19,9 +19,8 @@
 
   &__link {
     font-size: 18px;
-    line-height: 0.21;
-    color: $text;
-    border-radius: 5px;
+    line-height: 1.3;
+    @extend %link-1;
   }
 
   &__link-active {
