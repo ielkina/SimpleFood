@@ -1,0 +1,181 @@
+.reviews {
+  &__title {
+    @extend %title-h2;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+}
+
+.reviews-slider {
+  position: relative;
+
+  &__item {
+    display: flex !important;
+    margin-bottom: 48px;
+  }
+
+  &__photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; //обрезка фото по размеру контейнера
+    border-radius: 50%;
+    margin-left: 90px;
+    margin-right: 40px;
+  }
+
+  &__quotes {
+    width: 650px;
+    height: 239px;
+    padding: 0px 40px;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 20px;
+      background-image: url(../img/icons/icon-quotes.svg);
+    }
+
+    &::before {
+      left: 0px;
+    }
+
+    &::after {
+      bottom: 79px;
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__comment {
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    color: $link;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  &__prof {
+    margin-top: 15px;
+    font-size: 14px;
+    color: $text;
+    font-style: normal;
+    display: block;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  bottom: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #C2C2C2;
+  transition: border 0.3s,
+    background-color 0.3s,
+    box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #FFF2ED;
+    border: 3px solid #FFAE94;
+  }
+
+  &:focus {
+    background-color: #ffffff03;
+    border: 3px solid #C2C2C2;
+    box-shadow: 0px 0px 0px 2px #ff6838b3;
+  }
+
+  &:active {
+    background-color: #FFF2ED;
+    border: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px transparent;
+  }
+}
+
+.slick-prev {
+  left: 41%;
+  transform: translateX(-15%);
+}
+
+.slick-next {
+  left: 57%;
+  transform: translateX(-22%);
+}
+
+.slick-prev__icon,
+.slick-next__icon {
+  fill: #C2C2C2;
+  transition: fill 0.3s, transform 0.3s ease-in-out;
+
+  &:hover {
+    fill: #ff6838b3;
+    transform: rotate(90deg);
+  }
+
+  &:focus {
+    fill: #C2C2C2;
+    transform: rotate(90deg);
+  }
+
+  &:active {
+    fill: #FF7A50;
+    transform: rotate(90deg);
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  display: inline-flex;
+  font-size: 0;
+
+  & li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  & button {
+    width: 15px;
+    height: 15px;
+    border: transparent;
+    border-radius: 50%;
+    background-color: #C2C2C2;
+    cursor: pointer;
+    transition: box-shadow 0.3s, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #FFF2ED;
+      box-shadow: 0px 0px 0px 2px #ff7a50b3;
+    }
+
+    &:focus {
+      background-color: #c2c2c22a;
+      box-shadow: 0px 0px 0px 2px $link;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      box-shadow: none;
+    }
+
+  }
+}
+
+.slick-active {
+  & button {
+    background-color: $link;
+  }
+}
