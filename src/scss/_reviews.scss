@@ -8,9 +8,9 @@
 
 .reviews-slider {
   position: relative;
-
   &__item {
     display: flex !important;
+    align-items: center;
     margin-bottom: 48px;
   }
 
@@ -20,162 +20,423 @@
     object-fit: cover; //обрезка фото по размеру контейнера
     border-radius: 50%;
     margin-left: 90px;
-    margin-right: 40px;
   }
 
   &__quotes {
-    width: 650px;
-    height: 239px;
-    padding: 0px 40px;
+    margin-left: 40px;
+  }
+
+  &__comment {
+    font-style: italic;
+    max-width: 650px;
+    padding-left: 40px;
+    padding-right: 40px;
     position: relative;
+    margin-bottom: 30px;
 
     &::before,
     &::after {
       position: absolute;
       content: '';
       width: 24px;
-      height: 20px;
+      height: 19px;
       background-image: url(../img/icons/icon-quotes.svg);
     }
 
     &::before {
-      left: 0px;
+      left: 0;
     }
 
     &::after {
-      bottom: 79px;
       right: 0;
-      transform: rotate(180deg);
+      bottom: 0;
+      transform: scaleX(-1);
     }
-  }
-
-  &__comment {
-    font-style: italic;
-    margin-bottom: 30px;
   }
 
   &__name {
-    color: $link;
-    line-height: 1.3;
+    font-style: normal;
     font-weight: 500;
+    line-height: 1.3;
+    color: $link;
+    padding-left: 40px;
   }
 
   &__prof {
-    margin-top: 15px;
-    font-size: 14px;
-    color: $text;
     font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $text;
     display: block;
+    margin-top: 15px;
   }
 }
 
-.slick-prev,
-.slick-next {
-  position: absolute;
-  bottom: 0;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 3px solid #C2C2C2;
-  transition: border 0.3s,
-    background-color 0.3s,
-    box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    background-color: #FFF2ED;
-    border: 3px solid #FFAE94;
-  }
-
-  &:focus {
-    background-color: #ffffff03;
-    border: 3px solid #C2C2C2;
-    box-shadow: 0px 0px 0px 2px #ff6838b3;
-  }
-
-  &:active {
-    background-color: #FFF2ED;
-    border: 3px solid transparent;
-    box-shadow: 0px 0px 0px 2px transparent;
-  }
-}
-
-.slick-prev {
-  left: 41%;
-  transform: translateX(-15%);
-}
-
-.slick-next {
-  left: 57%;
-  transform: translateX(-22%);
-}
-
-.slick-prev__icon,
-.slick-next__icon {
-  fill: #C2C2C2;
-  transition: fill 0.3s, transform 0.3s ease-in-out;
-
-  &:hover {
-    fill: #ff6838b3;
-    transform: rotate(90deg);
-  }
-
-  &:focus {
-    fill: #C2C2C2;
-    transform: rotate(90deg);
-  }
-
-  &:active {
-    fill: #FF7A50;
-    transform: rotate(90deg);
-  }
-}
-
-.slick-dots {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
-  display: inline-flex;
-  font-size: 0;
-
-  & li:not(:last-child) {
-    margin-right: 15px;
-  }
-
-  & button {
-    width: 15px;
-    height: 15px;
-    border: transparent;
+.slick-slider {
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background-color: #C2C2C2;
+    background-color: $bg-focus;
+    border: 3px solid $grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    bottom: 0;
     cursor: pointer;
-    transition: box-shadow 0.3s, background-color 0.3s ease-in-out;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s ease-in-out;
 
     &:hover {
-      background-color: #FFF2ED;
-      box-shadow: 0px 0px 0px 2px #ff7a50b3;
+      background-color: $lite;
+      border: 3px solid $pink;
     }
 
     &:focus {
-      background-color: #c2c2c22a;
-      box-shadow: 0px 0px 0px 2px $link;
+      background: $bg-focus;
+      border: 3px solid $grey;
+      box-shadow: 0px 0px 0px 2px $bs-focus;
     }
 
     &:active {
-      background-color: #FFF2ED;
-      box-shadow: none;
+      background: $lite;
+      border: 3px solid $lite;
+      box-shadow: 0px 0px 0px 2px transparent;
+    }
+  }
+
+  .slick-prev {
+    border: 3px solid $link;
+    left: 41%;
+    transform: translateX(-15%);
+  }
+
+  .slick-next {
+    left: 57%;
+    transform: translateX(-22%);
+  }
+
+  .slick-prev__icon {
+    fill: $link;
+  }
+
+  .slick-next__icon {
+    fill: $grey;
+  }
+
+  .slick-prev__icon,
+  .slick-next__icon {
+    transition: fill 0.3s, transform 0.3s ease-in-out;
+
+    &:hover {
+      fill: $pink;
+      transform: rotate(90deg);
     }
 
+    &:focus {
+      fill: $grey;
+      transform: rotate(90deg);
+    }
+
+    &:active {
+      fill: $link;
+      transform: rotate(90deg);
+    }
+  }
+
+  .slick-dots {
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    & button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $grey;
+      border: transparent;
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $lite;
+        box-shadow: 0px 0px 0px 2px $bs-focus;
+      }
+
+      &:focus {
+        background-color: $dots-focus;
+        box-shadow: 0px 0px 0px 2px $link;
+      }
+
+      &:active {
+        background-color: $lite;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .slick-active {
+    & button {
+      background-color: $link;
+    }
   }
 }
 
-.slick-active {
-  & button {
-    background-color: $link;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .slick-prev,
+// .slick-next {
+//   // position: absolute;
+//   // bottom: 0;
+//   // width: 34px;
+//   // height: 34px;
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   // padding: 0;
+//   // border-radius: 50%;
+//   // background-color: transparent;
+//   // border: 3px solid #C2C2C2;
+//   // transition: border 0.3s,
+//   //   background-color 0.3s,
+//   //   box-shadow 0.3s ease-in-out;
+//   position: absolute;
+//   bottom: 0;
+//   border-radius: 50%;
+//   background-color: #ffffff03;
+//   border: 3px solid #C2C2C2;
+//   width: 34px;
+//   height: 34px;
+//   padding: 0;
+//   outline: transparent;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   transition: background-color 0.3s, border 0.3s, box-shadow 0.3s ease-in-out;
+
+//   &:hover {
+//     // background-color: #FFF2ED;
+//     // border: 3px solid #FFAE94;
+//     background-color: #FFF2ED;
+//     border: 3px solid #FFAE94;
+
+//     & .slick-prev__icon-use,
+//     & .slick-next__icon-use {
+//       fill: #FFAE94;
+//     }
+//   }
+
+//   &:focus {
+//     // background-color: #ffffff03;
+//     // border: 3px solid #C2C2C2;
+//     // box-shadow: 0px 0px 0px 2px #ff6838b3;
+//     background-color: #ffffff03;
+//     border: 3px solid #C2C2C2;
+//     box-shadow: 0px 0px 0px 2px #ff6838b3;
+
+//     & .slick-prev__icon-use,
+//     & .slick-next__icon-use {
+//       fill: #C2C2C2;
+//     }
+
+//     & .slick-prev__icon {
+//       transform: rotate(90deg);
+//     }
+
+//     & .slick-next__icon {
+//       transform: rotate(-90deg);
+
+//     }
+//   }
+
+//   &:active {
+//     // background-color: #FFF2ED;
+//     // border: 3px solid transparent;
+//     // box-shadow: 0px 0px 0px 2px transparent;
+//     background-color: #FFF2ED;
+//     border: 3px solid #FFF2ED;
+//     box-shadow: none;
+
+//     & .slick-prev__icon-use,
+//     & .slick-next__icon-use {
+//       fill: #FF7A50;
+//     }
+
+//     & .slick-prev__icon {
+//       transform: rotate(90deg);
+//     }
+
+//     & .slick-next__icon {
+//       transform: rotate(-90deg);
+//     }
+//   }
+
+//   &__icon {
+//     width: 34px;
+//     height: 34px;
+//     outline: transparent;
+//     border-radius: 50%;
+//     transition: transform 0.3s ease-in-out;
+//   }
+
+//   &__icon-use {
+//     width: 18.5px;
+//     height: 10.83px;
+//     fill: #C2C2C2;
+//     transition: fill 0.3s ease-in-out;
+//   }
+
+// }
+
+
+
+
+
+
+// .slick-prev {
+//   // left: 41%;
+//   // transform: translateX(-15%);
+//   border: 3px solid $link;
+
+//     & .slick-prev__icon-use {
+//       fill: $link;
+//     }
+
+//     left: 41%;
+//     transform: translateX(-15%);
+// }
+
+// .slick-next {
+//   left: 57%;
+//   transform: translateX(-22%);
+// }
+
+// // .slick-prev__icon,
+// // .slick-next__icon {
+// //   fill: #C2C2C2;
+// //   transition: fill 0.3s, transform 0.3s ease-in-out;
+
+// //   &:hover {
+// //     fill: #ff6838b3;
+// //     transform: rotate(90deg);
+// //   }
+
+// //   &:focus {
+// //     fill: #C2C2C2;
+// //     transform: rotate(90deg);
+// //   }
+
+// //   &:active {
+// //     fill: #FF7A50;
+// //     transform: rotate(90deg);
+// //   }
+// // }
+
+// .slick-dots {
+//   // position: absolute;
+//   // left: 50%;
+//   // transform: translateX(-50%);
+//   // bottom: 10px;
+//   // display: inline-flex;
+//   // font-size: 0;
+
+//   // & li:not(:last-child) {
+//   //   margin-right: 15px;
+//   // }
+
+//   // & button {
+//   //   width: 15px;
+//   //   height: 15px;
+//   //   border: transparent;
+//   //   border-radius: 50%;
+//   //   background-color: #C2C2C2;
+//   //   cursor: pointer;
+//   //   transition: box-shadow 0.3s, background-color 0.3s ease-in-out;
+
+//   //   &:hover {
+//   //     background-color: #FFF2ED;
+//   //     box-shadow: 0px 0px 0px 2px #ff7a50b3;
+//   //   }
+
+//     // &:focus {
+//     //   background-color: #c2c2c22a;
+//     //   box-shadow: 0px 0px 0px 2px $link;
+//     // }
+
+//     // &:active {
+//     //   background-color: #FFF2ED;
+//     //   box-shadow: none;
+//     // }
+//   // }
+// display: flex;
+// font-size: 0px;
+// position: absolute;
+// left: 50%;
+// transform: translateX(-50%);
+// bottom: 10px;
+
+// & li {
+//   &:not(:last-child) {
+//     margin-right: 15px;
+//   }
+// }
+
+// & button {
+//   width: 15px;
+//   height: 15px;
+//   border-radius: 50%;
+//   border: transparent;
+//   background-color: #c2c2c22a;
+//   outline: transparent;
+//   transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+
+//   &:hover {
+//     background-color: #FFF2ED;
+//     box-shadow: 0px 0px 0px 2px #ff7a50b3;
+//   }
+
+//   &:focus {
+//     background-color: #c2c2c22a;
+//     box-shadow: 0px 0px 0px 2px $link;
+//   }
+
+//   &:active {
+//     background-color: #c2c2c22a;
+//     box-shadow: none;
+//   }
+// }
+
+// }
+
+// .slick-active {
+//   & button {
+//     background-color: $link;
+//   }
+// }

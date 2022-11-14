@@ -32,3 +32,8 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+// убираем горионтальный скролл
+::-webkit-scrollbar {
+  width: 0;
+}

@@ -1,11 +1,11 @@
 .service {
-
   &__inner {
     min-height: 585px;
     background-image: url(../img/content/service.png);
     background-repeat: no-repeat;
+    margin: 0 70px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -27,7 +27,7 @@
   }
 
   &__list {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
   }
 
   &__item {

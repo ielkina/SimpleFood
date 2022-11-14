@@ -1,5 +1,4 @@
 .footer {
-
   &__top {
     display: grid;
     grid-template-columns: 200px auto 259px;
@@ -11,8 +10,8 @@
 
   &__list {
     display: grid;
-    // grid-template-columns: 39% 29% 32%;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 39% 29% 33%;
+    line-height: 0.7;
   }
 
   &__item {}
@@ -27,7 +26,7 @@
   &__address {}
 
   &__copy {
-    border-top: 2px solid $grey-light;
+    border-top: 2px solid $grey-opacity;
     height: 74px;
     display: flex;
     align-items: center;
@@ -38,7 +37,7 @@
 }
 
 .form {
-  margin-top: 30px;
+  margin-top: 23px;
   display: flex;
   flex-direction: column;
 
@@ -48,13 +47,13 @@
     border-radius: 5px;
     font-size: 14px;
     line-height: 1.3;
-    color: $grey;
     padding: 12px 15px;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
     transition: box-shadow 0.3s,
       color 0.3s ease-in-out;
 
     &::placeholder {
+      color: $grey;
       transition: color 0.3s ease-in-out;
     }
 
@@ -71,7 +70,6 @@
   }
 
   &__btn {
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.3;
@@ -107,7 +105,12 @@
 .address {
   margin-bottom: 15px;
 
-  &__item {}
+  &__item {
+    height: 32px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 
   &__link {
     font-style: normal;
@@ -149,8 +152,6 @@
   align-items: center;
 
   &__item {
-
-
     &:not(:last-child) {
       margin-right: 13px;
     }

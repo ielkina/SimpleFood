@@ -1,5 +1,4 @@
 .popular {
-
   &__title {
     text-align: center;
     margin-bottom: 60px;
@@ -16,7 +15,7 @@
   &__icon {
     fill: $stroke;
     margin-right: 10px;
-    // transition: fill 0.3s ease-in-out;
+    transition: fill 0.3s ease-in-out;
   }
 
   &__btn {
