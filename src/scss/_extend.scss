@@ -1,0 +1,154 @@
+%title-h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.3;
+  color: $stroke;
+}
+
+%title-card {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.125;
+  color: $text;
+}
+
+%link-1 {
+  border-radius: 5px;
+  transition: color 0.3s,
+    background-color 0.3s,
+    tex-shadow 0.3s,
+    box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    color: $link;
+  }
+
+  &:focus {
+    color: $text;
+    background-color: $bg-focus;
+    box-shadow: 0px 0px 0px 2px $bs-focus;
+  }
+
+  &:active {
+    color: $text;
+    text-shadow: 2px 2px 5px $text-shadow-active;
+    box-shadow: 0px 0px 0px 2px transparent;
+  }
+}
+
+%link-2 {
+  color: $stroke;
+  position: relative;
+  border-radius: 5px;
+  outline: 1px solid transparent;
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s, text-shadow 0.3s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 1px;
+    opacity: 1;
+    background-color: $stroke;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: $stroke;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &:focus {
+    color: $stroke;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 2px $bs-focus;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+    text-shadow: 2px 2px 5px $text-shadow;
+  }
+
+  // &:hover {
+  //   color: $link;
+  // }
+
+  // &:focus {
+  //   color: $text;
+  //   background-color: $bg-focus;
+  //   box-shadow: 0px 0px 0px 2px $bs-focus;
+  // }
+
+  // &:active {
+  //   color: $text;
+  //   text-shadow: 2px 2px 5px $text-shadow-active;
+  //   box-shadow: 0px 0px 0px 2px transparent;
+  // }
+}
+
+%btn-1 {
+  background-color: $link;
+  color: $wite;
+  border: transparent;
+  border-radius: 6px;
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s ease-in-out;
+
+  &:hover {
+    color: $link;
+    background-color: $bg-btn-hover;
+    box-shadow: 0px 5px 12px $bs-hover,
+      0px 0px 0px 2px $bs-focus;
+  }
+
+  &:focus {
+    color: $link;
+    background-color: $bg-btn-focus;
+    box-shadow: 0px 0px 0px 2px $bs-focus;
+  }
+
+
+  &:active {
+    color: $link;
+    background-color: $bg-btn-focus;
+    box-shadow: none;
+  }
+
+}
+
+%btn-2{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%btn {
+  background: $link;
+  border-radius: 5px;
+  color: $bg;
+}

@@ -1,0 +1,163 @@
+.popular {
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+    @extend %title-h2;
+  }
+
+  &__filter {
+    display: flex;
+    margin-bottom: 45px;
+    overflow-x: auto;
+    padding: 2px;
+  }
+
+  &__icon {
+    fill: $stroke;
+    margin-right: 10px;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+    padding: 13px 32px;
+    color: $stroke;
+    background-color: $wite;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px 1px $grey-e;
+    border: transparent;
+    transition: color 0.3s,
+      background-color 0.3s,
+      box-shadow 0.3s,
+      ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      color: $link;
+      background-color: $bg-btn-focus;
+      box-shadow: 0px 0px 0px 2px $bs-focus;
+
+      & .popular__icon {
+        fill: $link;
+      }
+    }
+
+    &:focus {
+      color: $stroke;
+      background-color: $wite;
+      box-shadow: 0px 0px 0px 2px $bs-focus;
+
+      & .popular__icon {
+        fill: $stroke;
+      }
+    }
+
+    &:active {
+      color: $stroke;
+      background-color: $wite;
+      box-shadow: inset 0px -5px 12px $bs-hover;
+
+      & .popular__icon {
+        fill: $stroke;
+      }
+    }
+  }
+
+  &__link {
+    line-height: 1.2;
+    padding: 0;
+    border: transparent;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    @extend %link-2;
+  }
+}
+
+.mixitup-control-active {
+  color: $wite;
+  background-color: $link;
+  transition: color 0.3s ease-in-out;
+
+  & .popular__icon {
+    transition: fill 0.3s ease-in-out;
+  }
+
+  & .popular__icon {
+    fill: $wite;
+  }
+
+  &:focus {
+    color: $stroke;
+
+    & .popular__icon {
+      fill: $stroke;
+    }
+  }
+}
+
+.popular-food {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+
+  &__card {
+    max-width: 210px;
+    width: 100%;
+    min-height: 297px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    box-shadow: 0px 0px 0px 1px $grey-e;
+    background-color: $wite;
+    border-radius: 5px;
+    padding: 20px 15px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 1px $link
+    }
+  }
+
+  &__product {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    flex: 1;
+  }
+
+  &__img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    @extend %title-card;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $stroke;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    padding: 7px 16px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.3;
+    @extend %btn-1;
+  }
+}

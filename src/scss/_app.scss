@@ -1,0 +1,53 @@
+.apps {
+
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: right;
+    object-fit: cover;
+   
+  }
+
+  &__content {
+    margin-top: 41px;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+   margin-bottom: 45px;
+    @extend %title-h2;
+  }
+
+  &__title-span {
+    display: block;
+  }
+
+  &__text {
+    opacity: 0.9;
+    max-width: 538px;
+    margin-bottom: 34px;
+   
+  }
+
+  &__list {
+    display: flex;
+    height: 40px;
+    // margin-bottom: 31px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
