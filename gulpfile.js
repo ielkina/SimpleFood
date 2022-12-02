@@ -136,6 +136,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.htmlInclude = htmlInclude;
 exports.pugs = pugs;
-// exports.build = build;
+
 exports.build = series(cleanDist, images, build); //gulp build
 exports.default = parallel(pugs, htmlInclude, styles, scripts, browsersync, watching) //gulp
