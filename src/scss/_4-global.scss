@@ -163,4 +163,7 @@ body {
   @include r(375) {
     padding: 40px 0;
   }
+  @include r(785){
+    padding: 60px 0;
+  }
 }

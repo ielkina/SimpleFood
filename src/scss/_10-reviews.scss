@@ -4,6 +4,10 @@
 
   &__title {
     margin-bottom: 47px;
+
+    @include r(675) {
+      margin-bottom: 30px;
+    }
   }
 }
 

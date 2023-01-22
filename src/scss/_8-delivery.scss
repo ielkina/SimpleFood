@@ -25,6 +25,9 @@
     padding-top: 59px;
     max-width: 454px;
     margin-right: 15px;
+    @include r(375){
+      padding-top: 0;
+    }
   }
 
   &__title {

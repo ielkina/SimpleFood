@@ -4,7 +4,7 @@
   &__title {
     margin-bottom: 60px;
 
-    @include r(375) {
+    @include r(675) {
       margin-bottom: 30px;
     }
   }
@@ -148,7 +148,7 @@
     width: 140px;
     height: 140px;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 10px;
   }
 
