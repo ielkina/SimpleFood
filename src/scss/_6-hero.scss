@@ -1,0 +1,60 @@
+.hero {
+  &__inner {
+    background-image: url(../img/decore/scooter-guy.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    height: 660px;
+    position: relative;
+
+    @include r(970) {
+      background-position: center;
+      height: 500px;
+      box-shadow: inset 0 0 0 200vw #f9faffd9;
+    }
+
+    @include r(576) {
+      height: 400px;
+    }
+
+    @include r(375) {
+      height: 300px;
+      background-size: contain;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__title-span {
+    display: block;
+    color: $orange;
+  }
+
+  &__text {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    font-size: 18px;
+    margin-right: 34px;
+    padding: 13px 32px;
+
+    @include r(375) {
+      font-size: 14px;
+      padding: 8px 24px;
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}

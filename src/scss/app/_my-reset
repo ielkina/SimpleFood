@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a,
+input,
+button {
+  outline: 0;
+  border: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}

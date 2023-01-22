@@ -1,0 +1,55 @@
+//контейнер
+@mixin container($padding) {
+  max-width: #{$maxWidth}px;
+  padding: 0 #{$padding}px;
+  margin: 0 auto;
+}
+
+//применение
+//.container {
+//@include container(15)
+
+@mixin container2($max-width, $padding) {
+  max-width: #{$max-width}px;
+  width: 100%;
+  padding: 0 #{$padding}px;
+  margin: 0 auto;
+}
+
+//применение
+// .container {
+//   @include container2(1200, 15);
+// }
+
+
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//применение
+// @include sr-only();
+
+//медиа
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+//применение
+// body {
+//   font-size: 18px;
+//   @include r(992) {
+//     font-size: 15px;
+//   }
+// }
+

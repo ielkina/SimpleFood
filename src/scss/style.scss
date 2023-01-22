@@ -1,0 +1,25 @@
+$maxWidth: 1200; //макс ширина контейнера
+$minWidth: 375; //мин ширина контейнера
+$bg: #f9faff;
+$orange: #ff6838;
+$silver: #ececec;
+$silverLight: #f9faff;
+$gray: #c2c2c2;
+$dark: #31352b;
+$darkBlue: #363853;
+
+
+@import 'app/1-mixin';
+@import 'app/2-fonts';
+@import 'app/3-reset';
+/*---------------------------------*/
+@import '4-global';
+/*---------------------------------*/
+@import '5-header';
+@import '6-hero';
+@import '7-popular';
+@import '8-delivery';
+@import '9-restaurant';
+@import '10-reviews';
+@import '11-apps';
+@import '12-footer';
