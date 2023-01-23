@@ -8,13 +8,13 @@
     background-repeat: no-repeat;
     background-position: center right;
 
-    @include r(1100) {
+    @include r(1130) {
       background-size: cover;
       box-shadow: inset 0 0 0 200vw #f9faffc4;
       justify-content: center;
     }
 
-    @include r(375) {
+    @include r(480) {
       min-height: 195px;
       background-image: none;
     }
@@ -28,7 +28,7 @@
     text-align: left;
     margin-bottom: 45px;
 
-    @include r(675) {
+    @include r(685) {
       margin-bottom: 15px;
     }
   }
@@ -37,7 +37,7 @@
     margin-bottom: 30px;
     @include font-media(20, 14);
 
-    @include r(375) {
+    @include r(480) {
       margin-bottom: 15px;
     }
   }

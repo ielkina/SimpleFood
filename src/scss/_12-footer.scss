@@ -32,11 +32,7 @@
         "list-one"
         "list-two"
         "list-three";
-      grid-gap: 0;
-    }
-
-    @include r(375) {
-      justify-content: flex-start;
+      grid-gap: 0;justify-content: flex-start;
     }
   }
 
@@ -53,7 +49,7 @@
   }
 
   &__logo {
-    @include r(400) {
+    @include r(480) {
       width: 200px;
       height: 39px;
     }
@@ -64,7 +60,7 @@
     display: flex;
     flex-direction: column;
 
-    @include r(400) {
+    @include r(480) {
       margin-top: 25px;
     }
   }
@@ -176,7 +172,7 @@
     font-size: 14px;
     line-height: 1;
 
-    @include r(375) {
+    @include r(480) {
       padding: 21px 0;
     }
   }
@@ -198,7 +194,7 @@
   &__item {
     margin-bottom: 15px;
 
-    @include r(400) {
+    @include r(480) {
       margin-bottom: 16px;
     }
   }

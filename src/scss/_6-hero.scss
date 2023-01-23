@@ -13,11 +13,11 @@
       box-shadow: inset 0 0 0 200vw #f9faffd9;
     }
 
-    @include r(576) {
+    @include r(685) {
       height: 400px;
     }
 
-    @include r(375) {
+    @include r(480) {
       height: 300px;
       background-size: contain;
     }
@@ -54,7 +54,7 @@
     margin-right: 34px;
     padding: 13px 32px;
 
-    @include r(375) {
+    @include r(480) {
       font-size: 14px;
       padding: 10px 26px;
       margin-right: 29px;

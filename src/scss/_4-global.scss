@@ -39,7 +39,7 @@ body {
   border-radius: 5px;
   transition: opacity 0.3s, box-shadow 0.3s ease-in-out;
 
-  @include r(400) {
+  @include r(480) {
     width: 115px;
     height: 24px;
   }
@@ -160,7 +160,7 @@ body {
 .apps {
   padding: 120px 0;
 
-  @include r(375) {
+  @include r(480) {
     padding: 40px 0;
   }
   @include r(785){

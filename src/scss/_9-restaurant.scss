@@ -1,7 +1,7 @@
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 
 .restaurant {
-      @include r(375) {
+      @include r(480) {
         padding-top: 7px;
       }
   &__title {
@@ -10,7 +10,7 @@
     line-height: 1.3;
     margin-bottom: 46px;
 
-    @include r(675) {
+    @include r(685) {
       margin-bottom: 30px;
       padding-right: 0;
     }
@@ -23,13 +23,13 @@
     justify-items: center;
     gap: 30px;
 
-    @include r(960) {
+    @include r(970) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &__item {
-    @include r(675) {
+    @include r(685) {
       display: flex !important;
       justify-content: center;
     }
@@ -120,10 +120,10 @@
   }
 
   .slick-list {
-    @include r(675) {
+    @include r(685) {
       min-height: 464px;
     }
-    @include r(375) {
+    @include r(480) {
       min-height: 450px;
     }
   }

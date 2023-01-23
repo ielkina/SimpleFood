@@ -1,7 +1,7 @@
 .header {
   padding: 57px 0;
 
-  @include r(768) {
+  @include r(785) {
     padding: 14px 0;
   }
 }
@@ -17,15 +17,13 @@
   }
 }
 
-
-
 .menu {
   width: 301px;
   display: flex;
   justify-content: space-between;
   margin-right: 50px;
 
-  @include r(768) {
+  @include r(785) {
     display: none;
   }
   
@@ -130,7 +128,7 @@
     box-shadow 0.3s ease-in-out;
   display: none;
 
-  @include r(768) {
+  @include r(785) {
     display: initial;
   }
 

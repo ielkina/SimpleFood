@@ -4,7 +4,7 @@
   &__title {
     margin-bottom: 60px;
 
-    @include r(675) {
+    @include r(685) {
       margin-bottom: 29px;
     }
   }
@@ -14,7 +14,7 @@
     overflow: auto;
     padding: 2px;
     margin-bottom: 45px;
-     @include r(760) {
+     @include r(785) {
        margin-bottom: 23px;
      }
   }
@@ -22,7 +22,7 @@
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
-      @include r(375){
+      @include r(480){
         margin-right: 10px;
       }
     }
@@ -42,7 +42,7 @@
       box-shadow 0.3s,
       background-color 0.3s ease-in-out;
 
-    @include r(375) {
+    @include r(480) {
       padding: 11px 13px;
       font-size: 14px;
     }
@@ -93,7 +93,7 @@
     margin-right: 10px;
     transition: fill 0.3s ease-in-out;
 
-    @include r(375) {
+    @include r(480) {
       width: 20px;
       height: 20px;
     }
@@ -114,20 +114,20 @@
   gap: 30px;
   margin-bottom: 60px;
 
-  @include r(1100) {
+  @include r(1130) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include r(900) {
+  @include r(970) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include r(800) {
+  @include r(785) {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 33px;
   }
 
-  @include r(400) {
+  @include r(480) {
     grid-gap: 10px;
   }
 

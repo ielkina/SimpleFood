@@ -169,7 +169,7 @@ $myriadpro: "MyriadPro";
   $addSize: $pcSize - $mobSize;
   $addMobSize: $addSize + $addSize * 0.7;
 
-  @media (max-width: 767px) {
+  @media (max-width: 785px) {
     font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth}));
   }
 }
