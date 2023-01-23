@@ -1,4 +1,13 @@
 "use strict";
+//бургер меню
+$(".burger").on("click", function () {
+  $(".burger-menu").addClass("burger-menu__active");
+  $("body").addClass("lock");
+});
+$(".burger-menu__close").on("click", function () {
+  $(".burger-menu").removeClass("burger-menu__active");
+  $("body").removeClass("lock");
+});
 //липкая шапка
 $(document).ready(function () {
   $(window).scroll(function () {

@@ -9,6 +9,7 @@
     @include r(685) {
       margin-bottom: 30px;
     }
+
     @include r(480) {
       padding-top: 0;
     }
@@ -250,14 +251,14 @@
       }
 
       &:focus {
-        .slick-arrow__icon {
+        & .slick-arrow__icon {
           fill: $gray;
           transform: matrix(0, 1, 1, 0, 0, 0);
         }
       }
 
       &:active {
-        .slick-arrow__icon {
+        & .slick-arrow__icon {
           fill: $orange;
           transform: matrix(0, 1, 1, 0, 0, 0);
         }
