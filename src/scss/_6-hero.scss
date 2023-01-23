@@ -24,9 +24,16 @@
   }
 
   &__content {
+    max-width: 450px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    @include r(970) {
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
   }
 
   &__title {
@@ -39,7 +46,6 @@
   }
 
   &__text {
-    max-width: 450px;
     margin-bottom: 20px;
   }
 
@@ -50,7 +56,8 @@
 
     @include r(375) {
       font-size: 14px;
-      padding: 8px 24px;
+      padding: 10px 26px;
+      margin-right: 29px;
     }
 
     &:hover {

@@ -2,20 +2,71 @@
 
   &__top {
     display: grid;
-    grid-template-columns: 23.33% 54.33% 16.33%;
+    grid-template-columns: 200px 153px 89px 187px 261px;
+    justify-content: space-between;
     padding-bottom: 57px;
+
+    @include r(1130) {
+      grid-template-columns: repeat(3, 200px);
+      grid-gap: 30px;
+      justify-content: space-around;
+      grid-template-areas:
+        "form address address"
+        "list-one list-two list-three";
+    }
+
+    @include r(685) {
+      grid-template-columns: repeat(2, 200px);
+      grid-template-areas:
+        "form address"
+        "list-one list-two"
+        "list-three list-three";
+      padding-bottom: 30px;
+    }
+
+    @include r(480) {
+      grid-template-columns: repeat(1, 200px);
+      grid-template-areas:
+        "form"
+        "address"
+        "list-one"
+        "list-two"
+        "list-three";
+      grid-gap: 0;
+    }
+
+    @include r(375) {
+      justify-content: flex-start;
+    }
   }
 
   &__inner {
     max-width: 200px;
+
+    @include r(1130) {
+      grid-area: form;
+    }
+
+    @include r(685) {
+      margin-bottom: 30px;
+    }
   }
 
-  &__logo {}
+  &__logo {
+    @include r(400) {
+      width: 200px;
+      height: 39px;
+    }
+  }
 
   &__form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+
+    @include r(400) {
+      margin-top: 25px;
+    }
   }
 
   &__input {
@@ -27,8 +78,9 @@
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px $gray;
     padding: 13px 5px 13px 15px;
-    margin-bottom: 11px;
-    transition: color 0.3s, box-shadow 0.3s ease-in-out;
+    margin-bottom: 12px;
+    transition: color 0.3s,
+      box-shadow 0.3s ease-in-out;
 
     &::placeholder {
       color: $gray;
@@ -52,14 +104,6 @@
     }
   }
 
-  &__icon {
-    width: 16.51px;
-    height: 15.6px;
-    fill: #fff;
-    margin-right: 15px;
-    transition: fill 0.3s ease-in-out;
-  }
-
   &__button {
     padding: 13px 0;
     font-size: 14px;
@@ -81,21 +125,48 @@
     }
   }
 
-  &__list {
-    max-width: 571px;
-    display: grid;
-    grid-template-columns: 38.33% 28.33% 33.33%;
-   grid-template-rows: repeat(4, 41px);
+  &__icon {
+    width: 16.51px;
+    height: 15.6px;
+    fill: #fff;
+    margin-right: 15px;
+    transition: fill 0.3s ease-in-out;
   }
 
+  &__list-one {
+    @include r(1130) {
+      grid-area: list-one;
+    }
+  }
+
+
+  &__list-two {
+    @include r(1130) {
+      grid-area: list-two;
+    }
+  }
+
+  &__list-three {
+    @include r(1130) {
+      grid-area: list-three;
+    }
+  }
+
+
   &__item {
+    margin-bottom: 25px;
+  }
+
+  &__link {
     white-space: nowrap;
     font-weight: 400;
     font-size: 18px;
+    line-height: 1;
     letter-spacing: 0.01em;
-  }
+    display: flex;
+    align-items: center;
 
-  &__link {}
+  }
 
   &__copy {
     border-top: 1px solid #c2c2c27e;
@@ -104,19 +175,31 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1;
+
+    @include r(375) {
+      padding: 21px 0;
+    }
   }
 }
 
 .address {
   font-style: normal;
 
-  &__list {
-    margin-bottom: 15px;
+  @include r(1130) {
+    grid-area: address;
   }
 
+  @include r(685) {
+    margin-bottom: 30px;
+  }
+
+  &__list {}
+
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
+
+    @include r(400) {
+      margin-bottom: 16px;
     }
   }
 
@@ -134,15 +217,12 @@
       }
     }
 
-    &:focus {
-      .address__icon {}
-    }
-
     &:active {
       .address__icon {
         filter: drop-shadow(2px 2px 5px #31352b80);
       }
     }
+
   }
 
   &__icon {
@@ -151,6 +231,7 @@
     stroke: $dark;
     margin-right: 7px;
     transition: stroke 0.3s ease-in-out;
+
   }
 }
 
@@ -161,9 +242,11 @@
   }
 
   &__item {
-    &:nth-child(1) {
+    &:not(:last-child) {
       margin-right: 13px;
+    }
 
+    &:nth-child(1) {
       .social__icon {
         width: 9.98px;
         height: 20.53px;
@@ -171,8 +254,6 @@
     }
 
     &:nth-child(2) {
-      margin-right: 13px;
-
       .social__icon {
         width: 20.53px;
         height: 16.68px;

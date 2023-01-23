@@ -11,9 +11,12 @@
     @include r(1100) {
       background-size: cover;
       box-shadow: inset 0 0 0 200vw #f9faffc4;
+      justify-content: center;
     }
-    @include r(375){
+
+    @include r(375) {
       min-height: 195px;
+      background-image: none;
     }
   }
 
@@ -32,6 +35,7 @@
 
   &__text {
     margin-bottom: 30px;
+    @include font-media(20, 14);
 
     @include r(375) {
       margin-bottom: 15px;

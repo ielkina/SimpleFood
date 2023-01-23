@@ -5,7 +5,7 @@
     margin-bottom: 60px;
 
     @include r(675) {
-      margin-bottom: 30px;
+      margin-bottom: 29px;
     }
   }
 
@@ -14,11 +14,17 @@
     overflow: auto;
     padding: 2px;
     margin-bottom: 45px;
+     @include r(760) {
+       margin-bottom: 23px;
+     }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
+      @include r(375){
+        margin-right: 10px;
+      }
     }
   }
 
@@ -37,7 +43,7 @@
       background-color 0.3s ease-in-out;
 
     @include r(375) {
-      padding: 11px 16px;
+      padding: 11px 13px;
       font-size: 14px;
     }
 
@@ -80,8 +86,6 @@
     }
   }
 
-
-
   &__icon {
     width: 44px;
     height: 44px;
@@ -96,6 +100,9 @@
   }
 
   &__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
     line-height: 1;
     padding: 0;
   }
@@ -117,8 +124,11 @@
 
   @include r(800) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
+  }
+
+  @include r(400) {
+    grid-gap: 10px;
   }
 
   &__card {
@@ -133,7 +143,7 @@
   }
 
   &__product {
-    min-height: 297px;
+    min-height: 299px;
     height: 100%;
     padding: 20px 9px;
     display: flex;
