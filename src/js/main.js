@@ -1,5 +1,17 @@
 "use strict";
+//липкая шапка
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 57) {
+      $("body").addClass("header-fixed");
+    } else {
+      $("body").removeClass("header-fixed");
+    }
+  });
+});
 $(function () {
+  //слайдер ресторанов
   $(".restaurant__list").slick({
     dots: true,
     arrows: false,
@@ -16,6 +28,7 @@ $(function () {
       },
     ],
   });
+  //слайдер популярны продуктов
   $(".reviews-slider").slick({
     dots: true,
     arrows: true,
@@ -26,6 +39,7 @@ $(function () {
     nextArrow:
       '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/sprite.svg#icon-prev-arrow"></use></svg></button>',
   });
+  //фильтр продуктов
   var containerEl = document.querySelector(".popular-food");
   var mixer = mixitup(containerEl);
 });

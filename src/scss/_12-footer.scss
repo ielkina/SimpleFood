@@ -74,9 +74,12 @@
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px $gray;
     padding: 13px 5px 13px 15px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     transition: color 0.3s,
       box-shadow 0.3s ease-in-out;
+      @include r(480){
+        margin-bottom: 10px;
+      }
 
     &::placeholder {
       color: $gray;
@@ -150,7 +153,10 @@
 
 
   &__item {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
+      @include r(480) {
+      margin-bottom: 19px;
+      }
   }
 
   &__link {
@@ -159,14 +165,14 @@
     font-size: 18px;
     line-height: 1;
     letter-spacing: 0.01em;
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    align-items: flex-start;
 
   }
 
   &__copy {
     border-top: 1px solid #c2c2c27e;
-    padding: 30px 0;
+    padding: 32px 0;
     text-align: center;
     font-weight: 400;
     font-size: 14px;
@@ -192,14 +198,15 @@
   &__list {}
 
   &__item {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 
     @include r(480) {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
   }
 
   &__link {
+    height: 32px;
     display: inline-flex;
     justify-content: start;
     align-items: center;

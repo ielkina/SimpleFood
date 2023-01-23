@@ -28,3 +28,12 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+
+
+.sticky {
+  max-width: 1170px;
+  width: 100%;
+  top: 5px;
+  position: fixed;
+  background-color: $bg;
+}

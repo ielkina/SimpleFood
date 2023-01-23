@@ -111,7 +111,7 @@
 .popular-food {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  gap: 28px;
   margin-bottom: 60px;
 
   @include r(1130) {
@@ -145,7 +145,7 @@
   &__product {
     min-height: 299px;
     height: 100%;
-    padding: 20px 9px;
+    padding: 20px 9px 22px;
     display: flex;
     flex-direction: column;
   }
