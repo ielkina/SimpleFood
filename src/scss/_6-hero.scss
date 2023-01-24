@@ -1,12 +1,14 @@
 .hero {
   padding-top: 159px;
 
-  @include r(785){
+  @include r(785) {
     padding-top: 90px;
   }
-  @include r(480){
+
+  @include r(480) {
     padding-top: 73px;
   }
+
   &__inner {
     background-image: url(../img/decore/scooter-guy.png);
     background-repeat: no-repeat;
@@ -70,6 +72,14 @@
 
     &:hover {
       background-color: #fff;
+    }
+  }
+}
+
+.burger-menu__active {
+  .hero {
+    .hero__inner {
+      z-index: -1;
     }
   }
 }
