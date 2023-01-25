@@ -129,8 +129,8 @@ function html() {
     src(["src/html/*.html", "src/pages/*.html", "src/*.njk", "src/*.pug"])
       .pipe(size({ title: "html, pug до" }))
       // .pipe(gulpPug()) //при работе с Pug раскоментировать
-      .pipe(fileInclude({ prefix: "@", basepath: "@file" }))
       .pipe(htmlmin({ collapseWhitespace: true })) //при работе с Html раскоментировать
+      .pipe(fileInclude({ prefix: "@", basepath: "@file" }))
       .pipe(size({ title: "html, pug" }))
       .pipe(dest("src"))
       .pipe(browserSync.reload({ stream: true }))

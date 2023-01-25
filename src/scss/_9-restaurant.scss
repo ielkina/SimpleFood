@@ -1,10 +1,11 @@
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 
 .restaurant {
- 
-      @include r(480) {
-        padding-top: 7px;
-      }
+
+  @include r(480) {
+    padding-top: 7px;
+  }
+
   &__title {
     padding-right: 18px;
     padding-top: 3px;
@@ -39,20 +40,20 @@
   &__card {
     max-width: 370px;
     border-radius: 10px;
-    box-shadow: 0px 3px 3px #0000001a;
+    box-shadow: 0 3px 3px #0000001a;
     background-color: #fff;
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
 
     &:hover {
-      box-shadow: 0px 3px 15px #ff683880;
+      box-shadow: 0 3px 15px #ff683880;
     }
   }
 
   &__img {
     width: 370px;
     height: 300px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
   }
 
@@ -124,6 +125,7 @@
     @include r(685) {
       min-height: 464px;
     }
+
     @include r(480) {
       min-height: 450px;
     }
@@ -156,12 +158,12 @@
 
         &:hover {
           background-color: #fff2ed;
-          box-shadow: 0px 0px 0px 2px #ff7a50b3;
+          box-shadow: 0 0 0 2px #ff7a50b3;
         }
 
         &:focus {
           background-color: $gray;
-          box-shadow: 0px 0px 0px 2px $orange;
+          box-shadow: 0 0 0 2px $orange;
         }
 
         &:active {

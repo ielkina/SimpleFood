@@ -3,11 +3,12 @@
     <div class="footer__top">
       <div class="footer__inner">
         <a class="logo footer__logo" href="#no__scroll">
-          <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта">
+          <img class="logo__img footer__logo-img" src="img/logo/logo.svg" alt="Логотип сайта" width="200" height="39">
         </a>
         <form class="footer__form">
-          <input class="footer__input" id="email" type="email" name="email" required="required" placeholder="Ваш email">
-          <button class="btn-bg footer__button" type="button">
+          <label class="sr-only" for="email">Поле для ввода вашего Email</label>
+          <input class="footer__input" id="email" type="email" name="email" placeholder="Ваш email" required="requared">
+          <button class="btn-bg footer__button" type="submit">
             <svg class="footer__icon">
               <use xlink:href="img/svg/sprite.svg#icon-frame"></use>
             </svg>

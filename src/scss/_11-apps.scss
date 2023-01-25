@@ -1,10 +1,11 @@
 .apps {
-padding-bottom: 117px;
+  padding-bottom: 117px;
+
   &__inner {
     min-height: 385px;
     display: flex;
     align-items: center;
-    background-image: url(../img/decore/app-bg.jpg);
+
     background-repeat: no-repeat;
     background-position: center right;
 
@@ -48,28 +49,24 @@ padding-bottom: 117px;
 
   &__item {
     height: 40px;
-
     &:nth-child(1) {
       .apps__link {
-        display: inline-block;
         width: 120px;
-        height: 40px;
         margin-right: 30px;
-        background-image: url(../img/decore/app-store.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
       }
     }
 
     &:nth-child(2) {
       .apps__link {
-        display: inline-block;
         width: 135px;
-        height: 40px;
-        background-image: url(../img/decore/google-play.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
       }
     }
+  }
+
+  &__link {
+    height: 40px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }

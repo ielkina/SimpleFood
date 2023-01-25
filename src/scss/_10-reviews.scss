@@ -163,12 +163,12 @@
 
         &:hover {
           background-color: #fff2ed;
-          box-shadow: 0px 0px 0px 2px #ff7a50b3;
+          box-shadow: 0 0 0 2px #ff7a50b3;
         }
 
         &:focus {
           background-color: $gray;
-          box-shadow: 0px 0px 0px 2px $orange;
+          box-shadow: 0 0 0 2px $orange;
         }
 
         &:active {
@@ -199,10 +199,6 @@
     transition: box-shadow 0.3s, border 0.3s,
       background-color 0.3s ease-in-out;
 
-    // @include r(760) {
-    //   top: 0;
-    // }
-
     &:hover {
       background-color: #fff2ed;
       border: 2px solid #ffae94;
@@ -210,14 +206,14 @@
 
     &:focus {
       border: 2px solid $gray;
-      box-shadow: 0px 0px 0px 2px #ff6838b3;
+      box-shadow: 0 0 0 2px #ff6838b3;
       background-color: #fff;
     }
 
     &:active {
       border: 2px solid transparent;
       background-color: #fff2ed;
-      box-shadow: 0px 0px 0px 2px transparent;
+      box-shadow: 0 0 0 2px transparent;
     }
 
     &__prev {
@@ -231,11 +227,6 @@
       @include r(785) {
         left: 30%;
         top: 23%;
-      }
-
-      @include r(480) {
-        left: 36%;
-        top: 17%;
       }
 
       @include r(480) {
@@ -275,11 +266,6 @@
       @include r(785) {
         right: 30%;
         top: 23%;
-      }
-
-      @include r(480) {
-        right: 36%;
-        top: 17%;
       }
 
       @include r(480) {
