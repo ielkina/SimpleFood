@@ -7,6 +7,10 @@
     @include r(685) {
       margin-bottom: 29px;
     }
+    @include r(480) {
+     text-align: center;
+     padding-right: 20px;
+    }
   }
 
   &__filter {
@@ -43,7 +47,7 @@
       background-color 0.3s ease-in-out;
 
     @include r(480) {
-      padding: 11px 13px;
+      padding: 10px 13px;
       font-size: 14px;
     }
 
@@ -128,7 +132,7 @@
   }
 
   @include r(480) {
-    grid-gap: 10px;
+    grid-gap: 11px;
   }
 
   &__card {

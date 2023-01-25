@@ -10,11 +10,15 @@
     padding-right: 18px;
     padding-top: 3px;
     line-height: 1.3;
-    margin-bottom: 45px;
+    margin-bottom: 41px;
 
     @include r(685) {
       margin-bottom: 30px;
       padding-right: 0;
+    }
+
+    @include r(480) {
+      margin-bottom: 27px;
     }
 
   }
@@ -59,7 +63,6 @@
 
   &__time {
     padding-left: 32px;
-    background-image: url(../img/svg/icon-timer.svg);
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;

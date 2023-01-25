@@ -10,7 +10,7 @@
   }
 
   &__inner {
-    
+
     background-repeat: no-repeat;
     background-position: right top;
     background-size: contain;
@@ -30,6 +30,7 @@
     @include r(480) {
       height: 300px;
       background-size: contain;
+      background-position: right;
     }
   }
 

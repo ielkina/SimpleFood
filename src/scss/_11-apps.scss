@@ -17,7 +17,7 @@
 
     @include r(480) {
       min-height: 195px;
-      background-image: none;
+      box-shadow: inset 0 0 0 200vw $bg;
     }
   }
 
@@ -39,7 +39,7 @@
     @include font-media(20, 14);
 
     @include r(480) {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
   }
 
@@ -49,6 +49,7 @@
 
   &__item {
     height: 40px;
+
     &:nth-child(1) {
       .apps__link {
         width: 120px;

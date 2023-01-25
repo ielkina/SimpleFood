@@ -17,7 +17,7 @@ $(function () {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 6000,
     responsive: [
       {
         breakpoint: 3800,
@@ -34,7 +34,7 @@ $(function () {
     dots: true,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 6000,
     prevArrow:
       '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/sprite.svg#icon-prev-arrow"></use></svg></button >',
     nextArrow:

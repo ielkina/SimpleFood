@@ -2,7 +2,7 @@
 
   &__inner {
     max-width: 1030px;
-
+    height: 585px;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
@@ -13,6 +13,11 @@
     @include r(970) {
       box-shadow: inset 0 0 0 200vw #f9faffd9;
       justify-content: center;
+    }
+
+    @include r(480) {
+      height: 494px;
+      background-position: top center;
     }
   }
 
@@ -27,41 +32,51 @@
   }
 
   &__title {
-    text-align-last: left;
+    text-align: left;
     margin-bottom: 30px;
   }
 
   &__text {
     word-spacing: -1px;
     margin-bottom: 30px;
+
+    @include r(480) {
+      margin-bottom: 26px;
+    }
   }
 
   &__list {
-    margin-bottom: 28px;
+    margin-bottom: 35px;
 
     @include r(480) {
-      margin-bottom: 22px;
+      margin-bottom: 30px;
     }
 
   }
 
   &__item {
     font-size: 24px;
+    height: 36px;
+    display: flex;
+    align-items: center;
     color: $darkBlue;
     padding-left: 66px;
     @include font-media(24, 18);
     background-repeat: no-repeat;
-    &:not(:last-child) {
-      margin-bottom: 20px;
-
-      @include r(480) {
-        margin-bottom: 24px;
-      }
-    }
 
     @include r(480) {
       padding-left: 45px;
     }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include r(480) {
+        margin-bottom: 13px;
+      }
+    }
+
+
   }
 
   &__button {

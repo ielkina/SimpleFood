@@ -82,6 +82,10 @@ body {
   }
 }
 
+.link--active{
+  color: $orange;
+}
+
 .link--line {
   color: $darkBlue;
   position: relative;
@@ -128,6 +132,7 @@ body {
 
 .title--span {
   display: block;
+  text-align: left;
 }
 
 .btn-bg {
