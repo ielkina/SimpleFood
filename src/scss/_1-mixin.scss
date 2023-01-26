@@ -54,3 +54,9 @@
 //   }
 // }
 
+@mixin line-height($font-size, $line-height-px) {
+  line-height: calc($line-height-px / $font-size);
+}
+
+//использование  миксина 
+//@include line-height(10, 12);(font-size в рх, line-height рх

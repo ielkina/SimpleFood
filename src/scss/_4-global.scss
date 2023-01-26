@@ -31,33 +31,43 @@ body {
   color: $dark;
   background-color: $silver-100;
   @include font-media(20, 16);
+  // &.header-fixed {
+  //   .header{
+  //       position: fixed; //!
+  //       top: 0;
+  //       right: 0;
+  //       padding-top: 0;
+  //       width: 100%; //!
+  //       z-index: 2;
+  //   }
+  // }
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 200px;
-  height: 39px;
+  display: inline-block;
   border-radius: 5px;
   transition: opacity 0.3s, box-shadow 0.3s ease-in-out;
 
-  @include r(480) {
-    width: 115px;
-    height: 24px;
-  }
+  &__img {
+    width: 200px;
+    height: 39px;
 
+    @include r(480) {
+      width: 115px;
+      height: 24px;
+    }
+  }
 
   &:hover {
     opacity: 0.8;
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px #ff6838b3;
+    box-shadow: 0 0 0 2px $orange-opacity-7;
   }
 
   &:active {
-    box-shadow: 0 0 0 2px #ff673800;
+    box-shadow: 0 0 0 2px transparent;
     opacity: 0.5;
   }
 }
@@ -71,12 +81,12 @@ body {
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px #ff6838b3;
+    box-shadow: 0 0 0 2px $orange-opacity-7;
   }
 
   &:active {
-    box-shadow: 0 0 0 2px #ff673800;
-    text-shadow: 2px 2px 5px #31352b80;
+    box-shadow: 0 0 0 2px transparent;
+    text-shadow: 2px 2px 5px $dark-opacity-5;
   }
 
   &--active {
@@ -89,7 +99,6 @@ body {
     border-radius: 5px;
 
     &:hover,
-    &:focus,
     &:active {
       &::after {
         opacity: 0;
@@ -105,6 +114,19 @@ body {
       bottom: 0;
       background-color: $darkBlue-900;
       transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $orange-opacity-7;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px transparent;
+      text-shadow: 2px 2px 5px $dark-opacity-5;
     }
   }
 }
@@ -123,7 +145,6 @@ body {
   }
 }
 
-
 .btn-bg {
   padding: 0;
   line-height: 1;
@@ -134,20 +155,20 @@ body {
 
   &:hover {
     color: $orange-900;
-    background-color: #ffffff1a;
-    box-shadow: 0 5px 12px #ff683833,
-      0 0 0 2px #ff6838b3;
+    background-color: $darkBlue-opacity-01;
+    box-shadow: 0 5px 12px $orange-opacity-02,
+      0 0 0 2px $orange-opacity-7;
   }
 
   &:focus {
     color: $orange-900;
-    background-color: #ff7a501a;
-    box-shadow: 0 0 0 2px #ff6838b3;
+    background-color: $orange-opacity-01;
+    box-shadow: 0 0 0 2px $orange-opacity-7;
   }
 
   &:active {
     color: $orange-900;
-    background-color: #ff7a501a;
+    background-color: $orange-opacity-00;
     box-shadow: 0 0 0 2px transparent;
   }
 }

@@ -2,7 +2,7 @@
 
   &__inner {
     max-width: 1030px;
-    height: 585px;
+    min-height: 585px;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
@@ -16,7 +16,7 @@
     }
 
     @include r(480) {
-      height: 494px;
+      min-height: 494px;
       background-position: top center;
     }
   }

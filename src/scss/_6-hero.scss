@@ -23,11 +23,11 @@
     }
 
     @include r(685) {
-      height: 400px;
+      min-height: 400px;
     }
 
     @include r(480) {
-      height: 300px;
+      min-height: 300px;
       background-size: contain;
       background-position: right;
     }

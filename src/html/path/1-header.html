@@ -1,37 +1,37 @@
 <header class="header">
   <div class="container">
-    <nav class="navbar">
-      <a class="logo" href="index.html">
+    <nav class="header__navbar navbar">
+      <a class="navbar__logo logo" href="index.html">
         <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта" width="200" height="39">
       </a>
       <div class="navbar__inner">
         <ul class="menu">
           <li class="menu__item">
-            <a class="link link--active menu__link " href="index.html">Главная</a>
+            <a class="menu__link link--active" href="index.html">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="link menu__link" href="catalog.html">Блюда</a>
+            <a class="menu__link link" href="catalog.html">Блюда</a>
           </li>
           <li class="menu__item">
-            <a class="link menu__link" href="#">Контакты</a>
+            <a class="menu__link link" href="#">Контакты</a>
           </li>
         </ul>
-        <ul class="buttons">
-          <li class="buttons__item">
-            <button class="buttons__btn" type="button">
-              <svg class="buttons__icon" style=" width: 18.76px; height: 19px;">
-                <use xlink:href="img/svg/sprite.svg#icon-search"></use>
+        <ul class="user">
+          <li class="user__item">
+            <button class="user__btn" type="button">
+              <svg class="user__icon" width="18.76" height="19">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-search"></use>
               </svg>
               <span class="sr-only">Поиск по сайту</span>
             </button>
           </li>
-          <li class="buttons__item">
-            <button class="buttons__btn" type="button">
-              <svg class="buttons__icon" style="width: 18.5px; height: 17.83px;">
-                <use xlink:href="img/svg/sprite.svg#icon-cart"></use>
+          <li class="user__item">
+            <button class="user__btn" type="button">
+              <svg class="user__icon" width="18.5" height="17.83">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-cart"></use>
               </svg>
               <span class="sr-only">Перейти в корзину заказа</span>
-              <span class="buttons__count">4</span>
+              <span class="user__count">4</span>
             </button>
           </li>
         </ul>
@@ -42,55 +42,55 @@
       </div>
       <div class="burger-menu">
         <div class="burger-menu__top">
-          <a class="burger-menu__logo logo " href="index.html">
+          <a class="burger-menu__logo logo " href="index.html"  width="200" height="39">
             <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта" width="200" height="39">
           </a>
           <button class="burger-menu__close" type="button">
             <svg class="burger-menu__icon">
-              <use xlink:href="img/svg/sprite.svg#icon-close-btn"></use>
+              <use xlink:href="img/svg/stack/sprite.svg#icon-close-btn"></use>
             </svg>
             <span class="sr-only">Закрыть бургер меню</span>
           </button>
         </div>
-        <ul class="menu">
+        <ul class="burger-menu__menu menu">
           <li class="menu__item">
-            <a class="link menu__link link--active" href="index.html">Главная</a>
+            <a class="menu__link link--active" href="index.html">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="link menu__link" href="catalog.html">Блюда</a>
+            <a class="menu__link link" href="catalog.html">Блюда</a>
           </li>
           <li class="menu__item">
-            <a class="link menu__link" href="#">Контакты</a>
+            <a class="menu__link link" href="#">Контакты</a>
           </li>
         </ul>
-        <address class="address">
-          <ul class="address__list">
-            <li class="address__item">
-              <a class="link address__link" target="_blank" rel="noopener" href="https://goo.gl/maps/7L8NBMK4bPohY8wr5">
-                <svg class="address__icon">
-                  <use xlink:href="img/svg/sprite.svg#icon-loc"></use>
+        <address class="burger-menu__contact contact">
+          <ul class="contact__list">
+            <li class="contact__item">
+              <a class="contact__link link" target="_blank" rel="noopener" href="https://goo.gl/maps/7L8NBMK4bPohY8wr5">
+                <svg class="contact__icon" width="24" height="24">
+                  <use xlink:href="img/svg/stack/sprite.svg#icon-loc"></use>
                 </svg>
                 ул. Т.Г.Шевченко, 1
               </a>
             </li>
-            <li class="address__item">
-              <a class="link address__link" href="tel:380501112233">
-                <svg class="address__icon">
-                  <use xlink:href="img/svg/sprite.svg#icon-call"></use>
+            <li class="contact__item">
+              <a class="contact__link link" href="tel:380501112233">
+                <svg class="contact__icon"  width="24" height="24">
+                  <use xlink:href="img/svg/stack/sprite.svg#icon-call"></use>
                 </svg>
                 380501112233
               </a>
             </li>
-            <li class="address__item">
-              <a class="link address__link" href="mailto:support@sfood.com">
-                <svg class="address__icon">
-                  <use xlink:href="img/svg/sprite.svg#icon-message"></use>
+            <li class="contact__item">
+              <a class="contact__link link" href="mailto:support@sfood.com">
+                <svg class="contact__icon"  width="24" height="24">
+                  <use xlink:href="img/svg/stack/sprite.svg#icon-message"></use>
                 </svg>
                 support@sfood.com
               </a>
             </li>
           </ul>
-          <ul class="social social__list">
+          <ul class="social__list">
             <li class="social__item">
               <a class="social__link" target="_blank" rel="noopener" href="https://www.facebook.com/">
                 <span class="social__icon"
