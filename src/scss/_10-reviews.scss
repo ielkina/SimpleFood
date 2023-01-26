@@ -108,7 +108,7 @@
   &__name {
     font-weight: 500;
     line-height: 1.3;
-    color: $orange;
+    color: $orange-900;
   }
 
   &__prof {
@@ -168,7 +168,7 @@
 
         &:focus {
           background-color: $gray;
-          box-shadow: 0 0 0 2px $orange;
+          box-shadow: 0 0 0 2px $orange-900;
         }
 
         &:active {
@@ -180,7 +180,7 @@
 
     .slick-active {
       & button {
-        background-color: $orange;
+        background-color: $orange-900;
       }
     }
   }
@@ -250,7 +250,7 @@
 
       &:active {
         & .slick-arrow__icon {
-          fill: $orange;
+          fill: $orange-900;
           transform: matrix(0, 1, 1, 0, 0, 0);
         }
       }
@@ -293,7 +293,7 @@
 
       &:active {
         .slick-arrow__icon {
-          fill: $orange;
+          fill: $orange-900;
           transform: matrix(0, -1, -1, 0, 0, 0);
         }
       }

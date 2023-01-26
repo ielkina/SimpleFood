@@ -2,7 +2,7 @@
   position: fixed; //!
   padding-top: 57px;
   width: 100%; //!
-  background-color: $bg;
+  background-color: $silver-100;
   transition: 0.2s all;
 
   @include r(785) {
@@ -14,7 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   & .logo {
     padding-left: 5px;
   }
@@ -38,8 +37,8 @@
   &__link {
     font-size: 18px;
 
-    &__link--active {
-      color: $orange;
+    &--active {
+      color: $orange-900;
     }
   }
 }
@@ -65,7 +64,7 @@
       box-shadow 0.3s ease-in-out;
 
     &:hover {
-      background-color: $orange;
+      background-color: $orange-900;
 
       .buttons__icon {
         stroke: #fff;
@@ -73,7 +72,7 @@
 
       .buttons__count {
         background-color: #fff;
-        color: $orange;
+        color: $orange-900;
       }
     }
 
@@ -82,11 +81,11 @@
       box-shadow: 0 0 0 2px #ff6838b3;
 
       .buttons__icon {
-        stroke: $darkBlue;
+        stroke: $darkBlue-900;
       }
 
       .buttons__count {
-        background-color: $orange;
+        background-color: $orange-900;
         color: #fff;
       }
     }
@@ -96,13 +95,13 @@
       background-color: #fff2ed;
 
       .buttons__icon {
-        stroke: $darkBlue;
+        stroke: $darkBlue-900;
       }
     }
   }
 
   &__icon {
-    stroke: $darkBlue;
+    stroke: $darkBlue-900;
     transition: stroke 0.3s ease-in-out;
   }
 
@@ -113,8 +112,8 @@
     border-radius: 50%;
     font-size: 10px;
     text-align: center;
-    color: #ffffff;
-    background-color: $orange;
+    color: #fff;
+    background-color: $orange-900;
     top: 7px;
     right: 3px;
     transition: color 0.3s, background-color 0.3s ease-in-out;
@@ -140,7 +139,7 @@
   }
 
   &:hover {
-    background-color: $orange;
+    background-color: $orange-900;
 
     .burger__line {
       background-color: #fff;
@@ -157,12 +156,12 @@
     box-shadow: 0 0 0 2px #ff6838b3;
 
     .burger__line {
-      background-color: $darkBlue;
+      background-color: $darkBlue-900;
     }
 
     .burger__line::before,
     .burger__line::after {
-      background-color: $darkBlue;
+      background-color: $darkBlue-900;
     }
   }
 
@@ -174,7 +173,7 @@
   &__line {
     width: 30px;
     height: 2px;
-    background-color: $darkBlue;
+    background-color: $darkBlue-900;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -185,7 +184,7 @@
       content: '';
       width: 30px;
       height: 2px;
-      background-color: $darkBlue;
+      background-color: $darkBlue-900;
       top: -10px;
       left: 0;
       transition: background-color 0.3s ease-in-out;
@@ -196,7 +195,7 @@
       content: '';
       width: 30px;
       height: 2px;
-      background-color: $darkBlue;
+      background-color: $darkBlue-900;
       top: 10px;
       left: 0;
       transition: background-color 0.3s ease-in-out;
@@ -236,6 +235,7 @@
     width: 18px;
     height: 18px;
     padding: 3px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,7 +282,7 @@
     top: 0;
     bottom: 0;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
   }
 }
 

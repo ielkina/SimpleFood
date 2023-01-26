@@ -7,9 +7,10 @@
     @include r(685) {
       margin-bottom: 29px;
     }
+
     @include r(480) {
-     text-align: center;
-     padding-right: 20px;
+      text-align: center;
+      padding-right: 20px;
     }
   }
 
@@ -18,15 +19,17 @@
     overflow: auto;
     padding: 2px;
     margin-bottom: 45px;
-     @include r(785) {
-       margin-bottom: 23px;
-     }
+
+    @include r(785) {
+      margin-bottom: 23px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
-      @include r(480){
+
+      @include r(480) {
         margin-right: 10px;
       }
     }
@@ -36,12 +39,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $darkBlue;
+    color: $darkBlue-900;
     padding: 0;
     white-space: nowrap;
     border-radius: 5px;
     padding: 13px 32px;
-    box-shadow: 0 0 0 1px #ececec;
+    box-shadow: 0 0 0 1px $silver-200;
+    background-color: #fff;
     transition: color 0.3s,
       box-shadow 0.3s,
       background-color 0.3s ease-in-out;
@@ -52,38 +56,38 @@
     }
 
     &:hover {
-      color: $orange;
-      background-color: rgba(255, 122, 80, 0.1);
+      color: $orange-900;
+      background-color: #ff7a501a;
       box-shadow: 0 0 0 2px #ff6838b3;
 
       & .popular__icon {
-        fill: $orange;
+        fill: $orange-900;
       }
     }
 
     &:focus {
-      color: $darkBlue;
+      color: $darkBlue-900;
       background-color: #fff;
       box-shadow: 0 0 0 2px #ff6838b3;
 
       & .popular__icon {
-        fill: $darkBlue;
+        fill: $darkBlue-900;
       }
     }
 
     &:active {
-      color: $darkBlue;
+      color: $darkBlue-900;
       box-shadow: inset 0 -5px 12px #ff683833;
 
       & .popular__icon {
-        fill: $darkBlue;
+        fill: $darkBlue-900;
       }
     }
   }
 
   &__button--active {
     color: #fff;
-    background-color: $orange;
+    background-color: $orange-900;
 
     & .popular__icon {
       fill: #fff;
@@ -93,7 +97,7 @@
   &__icon {
     width: 44px;
     height: 44px;
-    fill: $darkBlue;
+    fill: $darkBlue-900;
     margin-right: 10px;
     transition: fill 0.3s ease-in-out;
 
@@ -135,10 +139,10 @@
     grid-gap: 11px;
   }
 
-  &__card {
+  &__item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 0 1px #ececec;
+    box-shadow: 0 0 0 1px $silver-200;
     transition: box-shadow 0.3s ease-in-out;
 
     &:hover {
@@ -146,7 +150,7 @@
     }
   }
 
-  &__product {
+  &__card {
     min-height: 299px;
     height: 100%;
     padding: 20px 9px 22px;
@@ -192,7 +196,7 @@
 
 .mixitup-control-active {
   color: #fff;
-  background-color: $orange;
+  background-color: $orange-900;
 
   & .popular__icon {
     fill: #fff;

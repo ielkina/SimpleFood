@@ -59,7 +59,7 @@
     height: 36px;
     display: flex;
     align-items: center;
-    color: $darkBlue;
+    color: $darkBlue-900;
     padding-left: 66px;
     @include font-media(24, 18);
     background-repeat: no-repeat;
@@ -75,8 +75,6 @@
         margin-bottom: 13px;
       }
     }
-
-
   }
 
   &__button {

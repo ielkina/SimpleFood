@@ -80,21 +80,20 @@
 
     &:hover {
       & .restaurant__icon {
-        fill: $orange;
+        fill: $orange-900;
         transform: translateX(17px);
       }
     }
 
     &:focus {
       & .restaurant__icon {
-        fill: $orange;
-
+        fill: $orange-900;
       }
     }
 
     &:active {
       & .restaurant__icon {
-        fill: $orange;
+        fill: $orange-900;
       }
     }
   }
@@ -102,7 +101,7 @@
   &__icon {
     width: 24px;
     height: 24px;
-    fill: white;
+    fill: #fff;
     transition: fill 0.3s, transform 0.3s ease-in-out;
   }
 
@@ -166,7 +165,7 @@
 
         &:focus {
           background-color: $gray;
-          box-shadow: 0 0 0 2px $orange;
+          box-shadow: 0 0 0 2px $orange-900;
         }
 
         &:active {
@@ -178,7 +177,7 @@
 
     .slick-active {
       & button {
-        background-color: $orange;
+        background-color: $orange-900;
       }
     }
   }

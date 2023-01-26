@@ -1,18 +1,7 @@
-$maxWidth: 1200; //макс ширина контейнера
-$minWidth: 375; //мин ширина контейнера
-$bg: #f9faff;
-$orange: #ff6838;
-$silver: #ececec;
-$silverLight: #f9faff;
-$gray: #c2c2c2;
-$dark: #31352b;
-$darkBlue: #363853;
-
-
-@import 'app/1-mixin';
-@import 'app/2-fonts';
-@import 'app/3-reset';
-@import 'app/3-my-reset';
+@import '0-vars';
+@import '1-mixin';
+@import '2-fonts';
+@import '3-reset';
 /*---------------------------------*/
 @import '4-global';
 /*---------------------------------*/
