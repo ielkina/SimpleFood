@@ -6,7 +6,7 @@
     padding-top: 3px;
     margin-bottom: 45px;
 
-    @include r(375) {
+    @include r(420) {
       padding-top: 0;
       margin-bottom: 30px;
     }
@@ -39,7 +39,7 @@
       margin-right: 0;
     }
 
-    @include r(375) {
+    @include r(420) {
       width: 100px;
       height: 100px;
       margin-bottom: 30px;
@@ -58,7 +58,7 @@
     padding-right: 40px;
     position: relative;
 
-    @include r(375) {
+    @include r(420) {
       margin-bottom: 20px;
     }
 
@@ -72,7 +72,7 @@
       background-size: contain;
       left: -37px;
 
-      @include r(375) {
+      @include r(420) {
         top: -11px;
         left: -32px;
       }
@@ -90,7 +90,7 @@
       bottom: -1px;
       transform: rotateY(180deg);
 
-      @include r(375) {
+      @include r(420) {
         right: 6px;
         bottom: 11px;
       }
@@ -112,7 +112,7 @@
     color: $dark;
     display: block;
 
-    @include r(375) {
+    @include r(420) {
       padding-top: 10px;
     }
   }
@@ -139,7 +139,7 @@
       top: 82px;
     }
 
-    @include r(375) {
+    @include r(420) {
       top: 32px;
     }
 
@@ -171,7 +171,7 @@
         transform: translateX(-499%);
       }
 
-      @include r(375) {
+      @include r(420) {
         transform: translateX(-393%);
       }
 
@@ -208,7 +208,7 @@
         transform: translateX(499%);
       }
 
-      @include r(375) {
+      @include r(420) {
         transform: translateX(393%);
       }
 
@@ -263,7 +263,7 @@
       justify-content: center;
       align-items: center;
 
-      @include r(807) {
+      @include r(787) {
         display: none;
       }
 
@@ -304,6 +304,4 @@
       }
     }
   }
-
-
 }

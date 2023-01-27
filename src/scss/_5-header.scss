@@ -57,7 +57,7 @@ body.header-fixed header {
   justify-content: space-between;
   margin-right: 50px;
 
-  @include r(728) {
+  @include r(787) {
     display: none;
   }
 
@@ -145,7 +145,7 @@ body.header-fixed header {
   display: none;
   transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
 
-  @include r(728) {
+  @include r(787) {
     display: initial;
   }
 

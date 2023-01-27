@@ -1,7 +1,7 @@
 .hero {
   padding-top: 160px;
 
-  @include r(543) {
+  @include r(787) {
     padding-top: 140px;
   }
 
@@ -17,20 +17,14 @@
     display: flex;
     align-items: center;
 
-    @include r(990) {
-      min-height: 500px;
-    }
-
-    @include r(829) {
+    @include r(962) {
       min-height: 300px;
     }
 
-    @include r(615) {
+    @include r(787) {
       box-shadow: inset 0 0 0 200vw $blue-extraLight-opacity;
     }
   }
-
-  &__content {}
 
   &__title {
     font-size: 66px;
@@ -51,7 +45,7 @@
     max-width: 450px;
     margin-bottom: 20px;
 
-    @include r(759) {
+    @include r(787) {
       max-width: 345px;
     }
 
@@ -64,7 +58,7 @@
     letter-spacing: 0.03em;
     margin-right: 30px;
 
-    @include r(375) {
+    @include r(420) {
       font-size: 14px;
       padding: 8px 24px;
     }

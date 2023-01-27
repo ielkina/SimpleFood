@@ -5,7 +5,7 @@
     padding-left: 5px;
     margin-bottom: 60px;
 
-    @include r(375) {
+    @include r(420) {
       margin-bottom: 28px;
       padding-left: 0;
       padding-right: 15px;
@@ -18,7 +18,7 @@
     padding: 2px;
     margin-bottom: 42px;
 
-    @include r(375) {
+    @include r(420) {
       margin-bottom: 25px;
     }
   }
@@ -27,7 +27,7 @@
     &:not(:last-child) {
       margin-right: 20px;
 
-      @include r(375) {
+      @include r(420) {
         margin-right: 10px;
       }
     }
@@ -48,7 +48,7 @@
       box-shadow 0.3s,
       background-color 0.3s ease-in-out;
 
-    @include r(375) {
+    @include r(420) {
       font-size: 14px;
       padding: 11px 13px;
     }
@@ -98,7 +98,7 @@
     margin-right: 10px;
     transition: fill 0.3s ease-in-out;
 
-    @include r(375) {
+    @include r(420) {
       width: 20px;
       height: 20px;
     }
@@ -132,7 +132,7 @@
   gap: 30px;
   margin-bottom: 61px;
 
-  @include r(1200) {
+  @include r(1130) {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -140,7 +140,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include r(665) {
+  @include r(787) {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 10px;
     grid-column-gap: 5px;

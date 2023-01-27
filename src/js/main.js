@@ -37,7 +37,7 @@ $(function () {
         settings: "unslick",
       },
       {
-        breakpoint: 807,
+        breakpoint: 962,
         settings: "slick",
       },
     ],

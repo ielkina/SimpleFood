@@ -82,13 +82,13 @@ body {
 .apps {
   padding: 120px 0;
 
-  @include r(1200) {
+  @include r(962) {
     padding: 90px 0;
   }
-  @include r(767) {
+  @include r(787) {
     padding: 60px 0;
   }
-  @include r(375) {
+  @include r(560) {
     padding: 40px 0;
   }
 }
