@@ -2,15 +2,11 @@
   text-align: center;
 
   &__title {
+    padding-left: 5px;
     margin-bottom: 60px;
 
-    @include r(685) {
-      margin-bottom: 29px;
-    }
-
-    @include r(480) {
-      text-align: center;
-      padding-right: 20px;
+    @include r(375) {
+      margin-bottom: 30px;
     }
   }
 
@@ -18,20 +14,13 @@
     display: flex;
     overflow: auto;
     padding: 2px;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
 
-    @include r(785) {
-      margin-bottom: 23px;
-    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
-
-      @include r(480) {
-        margin-right: 10px;
-      }
     }
   }
 
@@ -43,17 +32,17 @@
     padding: 0;
     white-space: nowrap;
     border-radius: 5px;
-    padding: 13px 32px;
+    padding: 12px 32px;
     box-shadow: 0 0 0 1px $silver-200;
     background-color: #fff;
     transition: color 0.3s,
       box-shadow 0.3s,
       background-color 0.3s ease-in-out;
 
-    @include r(480) {
-      padding: 10px 13px;
-      font-size: 14px;
+    @include r(375) {
+      padding: 11px 15px;
     }
+
 
     &:hover {
       color: $orange-900;
@@ -95,13 +84,11 @@
   }
 
   &__icon {
-    width: 44px;
-    height: 44px;
     fill: $darkBlue-900;
     margin-right: 10px;
     transition: fill 0.3s ease-in-out;
 
-    @include r(480) {
+    @include r(375) {
       width: 20px;
       height: 20px;
     }
@@ -118,24 +105,20 @@
 .popular-food {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 28px;
+  gap: 30px;
   margin-bottom: 60px;
 
-  @include r(1130) {
+  @include r(1200) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include r(970) {
+  @include r(962) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include r(785) {
+  @include r(665) {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 33px;
-  }
-
-  @include r(480) {
-    grid-gap: 11px;
+    gap: 10px;
   }
 
   &__item {
@@ -150,20 +133,20 @@
   }
 
   &__card {
-    min-height: 299px;
+    max-width: 210px;
     height: 100%;
     padding: 20px 9px 22px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
 
   &__link {
     flex-grow: 1;
+    margin-bottom: 17px;
   }
 
   &__img {
-    width: 140px;
-    height: 140px;
     margin: 0 auto;
     object-fit: contain;
     margin-bottom: 10px;
@@ -181,7 +164,7 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 1.4;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 
   &__button {

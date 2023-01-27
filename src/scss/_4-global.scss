@@ -1,10 +1,10 @@
 ::-webkit-scrollbar {
-  // width: 0;
+  width: 0;
 }
 
 *::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 2px;
+  height: 2px;
 }
 
 *::-webkit-scrollbar-track {
@@ -31,103 +31,25 @@ body {
   color: $dark;
   background-color: $silver-100;
   @include font-media(20, 16);
-  // &.header-fixed {
-  //   .header{
-  //       position: fixed; //!
-  //       top: 0;
-  //       right: 0;
-  //       padding-top: 0;
-  //       width: 100%; //!
-  //       z-index: 2;
-  //   }
-  // }
 }
 
 .logo {
   display: inline-block;
   border-radius: 5px;
-  transition: opacity 0.3s, box-shadow 0.3s ease-in-out;
+  @include logo-actions();
 
   &__img {
     width: 200px;
     height: 39px;
-
-    @include r(480) {
-      width: 115px;
-      height: 24px;
-    }
-  }
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px $orange-opacity-7;
-  }
-
-  &:active {
-    box-shadow: 0 0 0 2px transparent;
-    opacity: 0.5;
   }
 }
 
 .link {
   border-radius: 5px;
-  transition: color 0.3s, box-shadow 0.3s, text-shadow 0.3s ease-in-out;
-
-  &:hover {
-    color: $orange-900;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px $orange-opacity-7;
-  }
-
-  &:active {
-    box-shadow: 0 0 0 2px transparent;
-    text-shadow: 2px 2px 5px $dark-opacity-5;
-  }
+  @include link-actions();
 
   &--active {
     color: $orange-900;
-  }
-
-  &--line {
-    color: $darkBlue-900;
-    position: relative;
-    border-radius: 5px;
-
-    &:hover,
-    &:active {
-      &::after {
-        opacity: 0;
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      background-color: $darkBlue-900;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    &:hover {
-      color: $orange-900;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px $orange-opacity-7;
-    }
-
-    &:active {
-      box-shadow: 0 0 0 2px transparent;
-      text-shadow: 2px 2px 5px $dark-opacity-5;
-    }
   }
 }
 
@@ -151,26 +73,7 @@ body {
   color: #fff;
   border-radius: 5px;
   background-color: $orange-900;
-  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s ease-in-out;
-
-  &:hover {
-    color: $orange-900;
-    background-color: $darkBlue-opacity-01;
-    box-shadow: 0 5px 12px $orange-opacity-02,
-      0 0 0 2px $orange-opacity-7;
-  }
-
-  &:focus {
-    color: $orange-900;
-    background-color: $orange-opacity-01;
-    box-shadow: 0 0 0 2px $orange-opacity-7;
-  }
-
-  &:active {
-    color: $orange-900;
-    background-color: $orange-opacity-00;
-    box-shadow: 0 0 0 2px transparent;
-  }
+  @include btn-bg-actions();
 }
 
 .popular,
@@ -178,11 +81,13 @@ body {
 .apps {
   padding: 120px 0;
 
-  @include r(785) {
+  @include r(1200) {
+    padding: 90px 0;
+  }
+  @include r(767) {
     padding: 60px 0;
   }
-
-  @include r(480) {
+  @include r(375) {
     padding: 40px 0;
   }
 }

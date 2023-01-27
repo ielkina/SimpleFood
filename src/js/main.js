@@ -1,16 +1,29 @@
 "use strict";
 // alert("hello");
-// $(document).ready(function () {
-//   $(window).scroll(function () {
-//     //липкая шапка
-//     var scrollTop = $(window).scrollTop();
-//     if (scrollTop > 57) {
-//       $("body").addClass("header-fixed");
-//     } else {
-//       $("body").removeClass("header-fixed");
-//     }
-//   });
-// });
+
+//липкая шапка
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 57) {
+      $("body").addClass("header-fixed");
+    } else {
+      $("body").removeClass("header-fixed");
+    }
+  });
+});
+
+//бургер меню
+$(".burger").on("click", function () {
+  $(".burger-menu").addClass("burger-menu--active");
+  $("body").addClass("lock");
+});
+$(".burger-menu__close").on("click", function () {
+  $(".burger-menu").removeClass("burger-menu--active");
+  $("body").removeClass("lock");
+});
+
+
 $(function () {
   //слайдер ресторанов
   $(".restaurant__list").slick({
@@ -29,7 +42,7 @@ $(function () {
       },
     ],
   });
-  //слайдер популярны продуктов
+  //слайдер отзывов
   $(".reviews-slider").slick({
     dots: true,
     arrows: true,
@@ -40,15 +53,7 @@ $(function () {
     nextArrow:
       '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/sprite.svg#icon-prev-arrow"></use></svg></button>',
   });
-  //бургер меню
-  // $(".burger").on("click", function () {
-  //   $(".burger-menu").addClass("burger-menu__active");
-  //   $("body").addClass("lock");
-  // });
-  // $(".burger-menu__close").on("click", function () {
-  //   $(".burger-menu").removeClass("burger-menu__active");
-  //   $("body").removeClass("lock");
-  // });
+
   //фильтр продуктов
   var containerEl = document.querySelector(".popular-food");
   var mixer = mixitup(containerEl);

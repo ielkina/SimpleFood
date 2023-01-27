@@ -60,3 +60,84 @@
 
 //использование  миксина 
 //@include line-height(10, 12);(font-size в рх, line-height рх
+
+@mixin btn-bg-actions() {
+  transition: color 0.3s,
+    box-shadow 0.3s,
+    background-color 0.3s ease-in-out;
+
+  &:hover {
+    color: $orange-900;
+    background-color: $darkBlue-opacity-01;
+    box-shadow: 0 5px 12px $orange-opacity-02,
+      0 0 0 2px $orange-opacity-7;
+  }
+
+  &:focus {
+    color: $orange-900;
+    background-color: $orange-opacity-01;
+    box-shadow: 0 0 0 2px $orange-opacity-7;
+  }
+
+  &:active {
+    color: $orange-900;
+    background-color: $orange-opacity-00;
+    box-shadow: 0 0 0 2px transparent;
+  }
+}
+
+@mixin link-actions() {
+  transition: color 0.3s,
+    box-shadow 0.3s,
+    text-shadow 0.3s ease-in-out;
+
+  &:hover {
+    color: $orange-900;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $orange-opacity-7;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px transparent;
+    text-shadow: 2px 2px 5px $dark-opacity-5;
+  }
+}
+
+@mixin logo-actions() {
+  transition: opacity 0.3s,
+    box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $orange-opacity-7;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px transparent;
+    opacity: 0.5;
+  }
+}
+
+@mixin nav-btn-actions() {
+  transition: background-color 0.3s,
+    box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $orange-900;
+  }
+
+  &:focus {
+    background-color: $orange-opacity-00;
+    box-shadow: 0 0 0 2px inset $orange-opacity-7;
+  }
+
+  &:active {
+    background-color: $orange-extraLight;
+    box-shadow: 0 0 0 2px transparent;
+  }
+}
