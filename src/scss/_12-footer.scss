@@ -1,51 +1,59 @@
 .footer {
   &__top {
     display: grid;
-    grid-template-columns: 200px 153px 89px 187px 261px;
-    justify-content: space-between;
+    // grid-template-columns: 200px 153px 89px 187px 261px;
+    grid-template-columns: 23% 19% 14% 22% 17%;
     margin-bottom: 53px;
 
-    // @include r(1130) {
-    //   grid-template-columns: repeat(3, 200px);
-    //   grid-gap: 30px;
-    //   justify-content: space-around;
-    //   grid-template-areas:
-    //     "form address address"
-    //     "list-one list-two list-three";
-    // }
+    @include r(1130) {
+      grid-template-columns: 25.33% 20.33% 22.33%;
+      grid-row-gap: 30px;
+      grid-template-areas:
+        "form address address"
+        "list-one list-two list-three";
+    }
 
-    // @include r(685) {
-    //   grid-template-columns: repeat(2, 200px);
-    //   grid-template-areas:
-    //     "form address"
-    //     "list-one list-two"
-    //     "list-three list-three";
-    //   padding-bottom: 30px;
-    // }
+    @include r(962) {
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+        "form address"
+        "list-one list-two"
+        "list-three list-three";
+      padding-bottom: 30px;
+    }
 
-    // @include r(480) {
-    //   grid-template-columns: repeat(1, 200px);
-    //   grid-template-areas:
-    //     "form"
-    //     "address"
-    //     "list-one"
-    //     "list-two"
-    //     "list-three";
-    //   grid-gap: 0;
-    //   justify-content: start;
-    // }
+    @include r(560) {
+      grid-template-columns: 100%;
+      grid-template-areas:
+        "form"
+        "address"
+        "list-one"
+        "list-two"
+        "list-three";
+      grid-gap: 0;
+      justify-content: start;
+    }
+
+    @include r(375) {
+      margin-bottom: 0px;
+    }
   }
 
   &__form-box {
-    max-width: 200px;
+    // max-width: 200px;
+    width: 200px;
 
-    // @include r(1130) {
-    //   grid-area: form;
-    // }
+    @include r(1130) {
+      grid-area: form;
+    }
+
+    @include r(560) {
+      margin-bottom: 30px;
+    }
   }
 
   &__logo {
-    margin-bottom: 21px;
+    margin-bottom: 23px;
 
     .logo__img {}
   }
@@ -121,6 +129,10 @@
 
   &__item {
     margin-bottom: 11px;
+
+    @include r(375) {
+      margin-bottom: 19px;
+    }
   }
 
   &__link {
@@ -140,13 +152,21 @@
     padding: 30px 0;
     text-align: center;
     font-size: 14px;
+
+    @include r(375) {
+      padding: 18px 0;
+    }
   }
 }
 
 .contact {
-  // @include r(1130) {
-  //   grid-area: address;
-  // }
+  @include r(1130) {
+    grid-area: address;
+  }
+
+  @include r(560) {
+    margin-bottom: 30px;
+  }
 
   &__list {}
 
@@ -188,7 +208,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 14px;
+      margin-right: 13px;
     }
   }
 

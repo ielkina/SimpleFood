@@ -6,7 +6,9 @@
     margin-bottom: 60px;
 
     @include r(375) {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
+      padding-left: 0;
+      padding-right: 15px;
     }
   }
 
@@ -16,11 +18,18 @@
     padding: 2px;
     margin-bottom: 42px;
 
+    @include r(375) {
+      margin-bottom: 25px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
+
+      @include r(375) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -40,7 +49,8 @@
       background-color 0.3s ease-in-out;
 
     @include r(375) {
-      padding: 11px 15px;
+      font-size: 14px;
+      padding: 11px 13px;
     }
 
 
@@ -72,17 +82,16 @@
         fill: $darkBlue-900;
       }
     }
-  }
 
-  &__button--active {
-    color: #fff;
-    background-color: $orange-900;
+    &--active {
+      color: #fff;
+      background-color: $orange-900;
 
-    & .popular__icon {
-      fill: #fff;
+      & .popular__icon {
+        fill: #fff;
+      }
     }
   }
-
   &__icon {
     fill: $darkBlue-900;
     margin-right: 10px;
@@ -106,7 +115,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 61px;
 
   @include r(1200) {
     grid-template-columns: repeat(4, 1fr);
@@ -118,8 +127,9 @@
 
   @include r(665) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 30px;
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+    margin-bottom: 33px;
   }
 
   &__item {
@@ -135,6 +145,7 @@
 
   &__card {
     max-width: 210px;
+    min-height: 299px;
     height: 100%;
     padding: 20px 9px 22px;
     display: flex;
@@ -144,7 +155,7 @@
 
   &__link {
     flex-grow: 1;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
   }
 
   &__img {
