@@ -3,7 +3,7 @@
 }
 
 *::-webkit-scrollbar {
-  width: 2px;
+  // width: 2px;
   height: 2px;
 }
 
@@ -13,6 +13,7 @@
 
 *::-webkit-scrollbar-thumb {
   background-color: $orange-900;
+  border-radius: 5px
 }
 
 .container {

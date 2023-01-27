@@ -92,6 +92,7 @@
       }
     }
   }
+
   &__icon {
     fill: $darkBlue-900;
     margin-right: 10px;
@@ -107,7 +108,21 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 1;
+    color: $darkBlue-900;
     padding: 0;
+    border-radius: 5px;
+    @include link-line();
+    @include link-actions();
+    
+    &:hover {
+      &:after {
+        background-color: transparent;
+      }
+    }
+
+    &:active {
+      color: $darkBlue-900;
+    }
   }
 }
 

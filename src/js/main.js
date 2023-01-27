@@ -46,7 +46,7 @@ $(function () {
   $(".reviews-slider").slick({
     dots: true,
     arrows: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 6000,
     prevArrow:
       '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button >',

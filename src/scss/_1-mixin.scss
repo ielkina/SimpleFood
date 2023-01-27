@@ -100,8 +100,24 @@
   }
 
   &:active {
+    color: $dark;
     box-shadow: 0 0 0 2px transparent;
     text-shadow: 2px 2px 5px $dark-opacity-5;
+  }
+}
+
+@mixin link-line() {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: $darkBlue-900;
+    transition: background-color 0.3s ease-in-out;
   }
 }
 

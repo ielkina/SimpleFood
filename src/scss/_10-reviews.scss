@@ -117,63 +117,8 @@
     }
   }
 
-  .slick-dots {
-    max-width: 219px;
-    height: 34px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-
-    @include r(787) {
-      display: none;
-      height: 0;
-    }
-
-    & li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @include r(807) {
-        display: none;
-      }
-
-
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
-
-      & button {
-        font-size: 0;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: $gray;
-        transition: background-color 0.3s,
-          box-shadow 0.3s ease-in-out;
-
-        &:hover {
-          background-color: $orange-extraLight;
-          box-shadow: 0 0 0 2px $pink-opacity;
-        }
-
-        &:focus {
-          background-color: $gray;
-          box-shadow: 0 0 0 2px $orange-900;
-        }
-
-        &:active {
-          background-color: $pink;
-          box-shadow: none;
-        }
-      }
-    }
-
-    .slick-active {
-      & button {
-        background-color: $orange-900;
-      }
-    }
+  .slick-list {
+    z-index: -1;
   }
 
   .slick-arrow {
@@ -223,7 +168,6 @@
       transform: translateX(-325%);
 
       @include r(787) {
-        z-index: 1;
         transform: translateX(-499%);
       }
 
@@ -301,4 +245,65 @@
       transition: transform 0.3s, fill 0.3s, stroke 0.3s ease-in-out;
     }
   }
+
+  .slick-dots {
+    max-width: 219px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include r(787) {
+      display: none;
+      height: 0;
+    }
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include r(807) {
+        display: none;
+      }
+
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      & button {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $gray;
+        transition: background-color 0.3s,
+          box-shadow 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $orange-extraLight;
+          box-shadow: 0 0 0 2px $pink-opacity;
+        }
+
+        &:focus {
+          background-color: $gray;
+          box-shadow: 0 0 0 2px $orange-900;
+        }
+
+        &:active {
+          background-color: $pink;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .slick-active {
+      & button {
+        background-color: $orange-900;
+      }
+    }
+  }
+
+
 }

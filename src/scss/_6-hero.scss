@@ -72,5 +72,16 @@
 
   &__link {
     color: $darkBlue-900;
+    @include link-line();
+
+    &:hover {
+      &:after {
+        background-color: transparent;
+      }
+    }
+
+    &:active {
+      color: $darkBlue-900;
+    }
   }
 }
