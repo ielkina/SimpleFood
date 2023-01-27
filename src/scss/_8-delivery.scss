@@ -10,16 +10,23 @@
     display: flex;
     justify-content: flex-end;
 
-    // @include r(970) {
-    //   box-shadow: inset 0 0 0 200vw #f9faffd9;
-    //   justify-content: center;
-    // }
+    @include r(971) {
+      min-height: 462px;
+      box-shadow: inset 0 0 0 200vw #f9faffd9;
+      // justify-content: start;
+    }
   }
 
   &__content {
     padding-top: 60px;
     max-width: 454px;
     margin-right: 15px;
+
+    @include r(971) {
+      padding-top: 0px;
+      max-width: 348px;
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -45,10 +52,14 @@
     padding-left: 66px;
     @include font-media(24, 18);
     background-repeat: no-repeat;
+    @include r(375){
+      padding-left: 44px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
   }
 
   &__button {

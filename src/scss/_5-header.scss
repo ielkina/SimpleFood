@@ -258,7 +258,7 @@ body.header-fixed header {
     }
 
     &:active {
-      background-color: #fff2ed;
+      background-color: $orange-extraLight;
       box-shadow: 0 0 0 2px transparent;
     }
   }

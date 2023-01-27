@@ -37,7 +37,7 @@ $(function () {
         settings: "unslick",
       },
       {
-        breakpoint: 675,
+        breakpoint: 807,
         settings: "slick",
       },
     ],
@@ -49,9 +49,9 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 6000,
     prevArrow:
-      '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/sprite.svg#icon-prev-arrow"></use></svg></button >',
+      '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button >',
     nextArrow:
-      '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/sprite.svg#icon-prev-arrow"></use></svg></button>',
+      '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button>',
   });
 
   //фильтр продуктов

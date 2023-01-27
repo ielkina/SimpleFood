@@ -14,25 +14,29 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     grid-gap: 31px;
+
+    @include r(1200) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
-    // @include r(685) {
-    //   display: flex !important;
-    //   justify-content: center;
-    // }
+    @include r(807) {
+      display: flex !important;
+      justify-content: center;
+    }
   }
 
   &__card {
     max-width: 370px;
     border-radius: 10px;
-    box-shadow: 0 3px 3px #0000001a;
+    box-shadow: 0 3px 3px $shadow;
     background-color: #fff;
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
 
     &:hover {
-      box-shadow: 0 3px 15px #ff683880;
+      box-shadow: 0 3px 15px $orange-opacity-7;
     }
   }
 
@@ -102,13 +106,9 @@
   }
 
   .slick-list {
-    // @include r(685) {
-    //   min-height: 464px;
-    // }
-
-    // @include r(480) {
-    //   min-height: 450px;
-    // }
+    @include r(807) {
+      min-height: 450px;
+    }
   }
 
   .slick-dots {
@@ -137,8 +137,8 @@
           box-shadow 0.3s ease-in-out;
 
         &:hover {
-          background-color: #fff2ed;
-          box-shadow: 0 0 0 2px #ff7a50b3;
+          background-color: $orange-extraLight;
+          box-shadow: 0 0 0 2px $pink-opacity;
         }
 
         &:focus {
@@ -147,7 +147,7 @@
         }
 
         &:active {
-          background-color: #ffae94;
+          background-color: $pink;
           box-shadow: none;
         }
       }
