@@ -13,7 +13,7 @@
 
 *::-webkit-scrollbar-thumb {
   background-color: $orange-900;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 .container {
@@ -98,11 +98,9 @@ body {
 .lock {
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
 
   .hero__link {
     z-index: -1;
   }
 }
-
-
-

@@ -2,14 +2,16 @@ body.breadcrumbs-fixed .breadcrumbs {
   z-index: 1;
   margin-top: 44px;
 }
+body.lock.breadcrumbs-fixed .breadcrumbs {
+  z-index: 0;
+}
 
 .breadcrumbs {
   position: fixed;
   width: 100%;
   margin-top: 157px;
   background: #f9eded;
-  transition: 0.2s all;
-
+  transition: all 0.3s;
   &__list {
     padding: 24px 0;
     display: flex;
@@ -31,7 +33,7 @@ body.breadcrumbs-fixed .breadcrumbs {
   }
 
   &__link {
-    font-family: 'Rubik';
+    font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

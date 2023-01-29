@@ -44,15 +44,12 @@
     padding: 12px 32px;
     box-shadow: 0 0 0 1px $silver-200;
     background-color: #fff;
-    transition: color 0.3s,
-      box-shadow 0.3s,
-      background-color 0.3s ease-in-out;
+    transition: color 0.3s, box-shadow 0.3s, background-color 0.3s ease-in-out;
 
     @include r(420) {
       font-size: 14px;
       padding: 11px 13px;
     }
-
 
     &:hover {
       color: $orange-900;
@@ -113,7 +110,7 @@
     border-radius: 5px;
     @include link-line();
     @include link-actions();
-    
+
     &:hover {
       &:after {
         background-color: transparent;
@@ -161,16 +158,16 @@
   &__card {
     max-width: 210px;
     min-height: 299px;
-    height: 100%;
     padding: 20px 9px 22px;
     display: flex;
     flex-direction: column;
+    height: 100%;
     margin: 0 auto;
   }
 
   &__link {
     flex-grow: 1;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   &__img {
@@ -184,7 +181,7 @@
     word-spacing: 1px;
     font-weight: 400;
     font-size: 15px;
-    line-height: 1;
+    @include line-height(15, 18);
   }
 
   &__price {

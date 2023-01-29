@@ -34,7 +34,6 @@ $(".burger-menu__close").on("click", function () {
   $("body").removeClass("lock");
 });
 
-
 $(function () {
   //слайдер ресторанов
   $(".restaurant__list").slick({
@@ -59,6 +58,28 @@ $(function () {
     arrows: true,
     // autoplay: true,
     autoplaySpeed: 6000,
+    prevArrow:
+      '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button >',
+    nextArrow:
+      '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 787,
+        settings: {
+          dots: false,
+        },
+      },
+    ],
+  });
+  //слайдер секции interes
+  $(".interes-food__slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 3000,
     prevArrow:
       '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button >',
     nextArrow:
