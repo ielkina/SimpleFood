@@ -80,17 +80,19 @@ body {
 .popular,
 .restaurant,
 .apps {
+  // padding: 120px 0;
+  // padding-top: calc(120 / 1905) * 100%;
+  // padding-bottom: calc(120 / 1905) * 100%;
   padding: 120px 0;
-
-  @include r(962) {
+  @include r($lg) {
     padding: 90px 0;
   }
 
-  @include r(787) {
+  @include r($md) {
     padding: 60px 0;
   }
 
-  @include r(560) {
+  @include r($sm) {
     padding: 40px 0;
   }
 }

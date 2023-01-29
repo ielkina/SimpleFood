@@ -129,15 +129,15 @@
   gap: 30px;
   margin-bottom: 61px;
 
-  @include r(1130) {
+  @include r($xl) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include r(962) {
+  @include r($lg) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include r(787) {
+  @include r($md) {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 10px;
     grid-column-gap: 5px;

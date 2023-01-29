@@ -6,13 +6,13 @@
     background-repeat: no-repeat;
     background-position: center right;
 
-    @include r(1130) {
+    @include r($xl) {
       background-size: cover;
       box-shadow: inset 0 0 0 200vw #f9faffc4;
       justify-content: center;
     }
 
-    @include r(560) {
+    @include r($sm) {
       min-height: 195px;
       box-shadow: inset 0 0 0 200vw $silver-100;
     }
@@ -21,7 +21,7 @@
   &__content {
     max-width: 540px;
 
-    @include r(560) {
+    @include r($sm) {
       max-width: 345px;
     }
   }
@@ -31,7 +31,7 @@
     text-align: left;
     margin-bottom: 45px;
 
-    @include r(560) {
+    @include r($sm) {
       padding-top: 0;
       margin-bottom: 15px;
     }
@@ -40,7 +40,7 @@
   &__text {
     margin-bottom: 30px;
     @include font-media(20, 14);
-    @include r(560){
+    @include r($sm){
       margin-bottom: 15px;
     }
   }

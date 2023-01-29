@@ -1,15 +1,15 @@
 .discount {
   padding-bottom: 120px;
 
-  @include r(962) {
+  @include r($lg) {
     padding-bottom: 90px;
   }
 
-  @include r(787) {
+  @include r($md) {
     padding-bottom: 60px;
   }
 
-  @include r(560) {
+  @include r($sm) {
     padding-bottom: 40px;
   }
 

@@ -14,7 +14,7 @@ body.header-fixed .header {
   background-color: $silver-100;
   transition: 0.3s all ease-in-out;
 
-  @include r(420) {
+  @include r($xsm) {
     padding-top: 14px;
   }
 }
@@ -26,12 +26,12 @@ body.header-fixed .header {
 
   &__logo {
     margin-left: 5px;
-    @include r(420) {
+    @include r($xsm) {
       margin-left: 0;
     }
 
     .logo__img {
-      @include r(420) {
+      @include r($xsm) {
         width: 116px;
         height: 23px;
       }
@@ -50,7 +50,7 @@ body.header-fixed .header {
   justify-content: space-between;
   margin-right: 50px;
 
-  @include r(787) {
+  @include r($md) {
     display: none;
   }
 
@@ -138,7 +138,7 @@ body.header-fixed .header {
   display: none;
   transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
 
-  @include r(787) {
+  @include r($md) {
     display: initial;
   }
 
