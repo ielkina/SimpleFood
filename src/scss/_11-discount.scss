@@ -1,0 +1,59 @@
+.discount {
+  padding-bottom: 120px;
+
+  @include r(962) {
+    padding-bottom: 90px;
+  }
+
+  @include r(787) {
+    padding-bottom: 60px;
+  }
+
+  @include r(560) {
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    text-align-last: left;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {}
+
+  &__card {
+    max-width: 370px;
+    min-height: 392px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 3px #0000001a;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 3px 15px $orange-opacity-7;
+    }
+  }
+
+  &__link {}
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+
+  &__description {
+    display: inline-block;
+    padding: 15px 20px;
+    overflow: hidden;
+
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}

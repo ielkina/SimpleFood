@@ -1,0 +1,42 @@
+body.breadcrumbs-fixed .breadcrumbs {
+  z-index: 1;
+  margin-top: 44px;
+}
+
+.breadcrumbs {
+  position: fixed;
+  width: 100%;
+  margin-top: 157px;
+  background: #f9eded;
+  transition: 0.2s all;
+
+  &__list {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      background-image: url(../img/svg/stack/sprite.svg#icon-chevron);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 10px;
+      margin-right: 6px;
+    }
+  }
+
+  &__link {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #505050;
+  }
+}

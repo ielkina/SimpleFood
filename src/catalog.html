@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="ru"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>SimpleFood | Каталог товаров</title>
+</head><body><header class="header">
+  <div class="container">
+    <nav class="header__navbar navbar">
+      <a class="navbar__logo logo" href="index.html">
+        <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта" width="200" height="39">
+      </a>
+      <div class="navbar__inner">
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link--active" href="catalog.html">Блюда</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="user">
+          <li class="user__item">
+            <button class="user__btn" type="button">
+              <svg class="user__icon" width="18.76" height="19">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="sr-only">Поиск по сайту</span>
+            </button>
+          </li>
+          <li class="user__item">
+            <button class="user__btn" type="button">
+              <svg class="user__icon" width="18.5" height="17.83">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="sr-only">Перейти в корзину заказа</span>
+              <span class="user__count">4</span>
+            </button>
+          </li>
+        </ul>
+        <button class="burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+      </div>
+      <div class="burger-menu">
+        <div class="burger-menu__content">
+          <div class="burger-menu__top">
+            <a class="burger-menu__logo logo" href="index.html">
+              <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта" width="200" height="39">
+            </a>
+            <button class="burger-menu__close" type="button">
+              <svg class="burger-menu__icon" width="18" height="18">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-close-btn"></use>
+              </svg>
+              <span class="sr-only">Закрыть бургер меню</span>
+            </button>
+          </div>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link--active" href="catalog.html">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <address class="contact">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <a class="contact__link link" target="_blank" rel="noopener"
+                  href="https://goo.gl/maps/7L8NBMK4bPohY8wr5">
+                  <svg class="contact__icon" width="24" height="24">
+                    <use xlink:href="img/svg/stack/sprite.svg#icon-loc"></use>
+                  </svg>
+                  ул. Т.Г.Шевченко, 1
+                </a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link link" href="tel:380501112233">
+                  <svg class="contact__icon" width="24" height="24">
+                    <use xlink:href="img/svg/stack/sprite.svg#icon-call"></use>
+                  </svg>
+                  380501112233
+                </a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link link" href="mailto:support@sfood.com">
+                  <svg class="contact__icon" width="24" height="24">
+                    <use xlink:href="img/svg/stack/sprite.svg#icon-message"></use>
+                  </svg>
+                  support@sfood.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" target="_blank" rel="noopener" href="https://www.facebook.com/">
+                  <span class="social__icon"
+                    style="-webkit-mask-image: url(img/svg/stack/sprite.svg#icon-facebook); width: 9.98px; height: 20.53px;"></span>
+                  <span class="sr-only">перейти в facebook</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" target="_blank" rel="noopener" href="https://twitter.com/?lang=uk">
+                  <span class="social__icon"
+                    style="-webkit-mask-image: url(img/svg/stack/sprite.svg#icon-twitter); width: 20.53px; height: 16.68px;"></span>
+                  <span class="sr-only">перейти в twitter</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" target="_blank" rel="noopener" href="https://www.instagram.com/">
+                  <span class="social__icon"
+                    style="-webkit-mask-image: url(img/svg/stack/sprite.svg#icon-instagram); width: 19.5px; height: 19.5px;"></span>
+                  <span class="sr-only">перейти в instagram</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <span class="burger-menu__bg"></span>
+      </div>
+    </nav>
+  </div>
+</header><main class="main"><section class="breadcrumbs">
+  <div class="container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+      </li>
+    </ul>
+  </div>
+</section> <section class="catalog">
+  <div class="container">
+    <div class="catalog__top">
+      <h2 class="catalog__title title">Каталог продуктов</h2>
+      <div class="catalog-filter__selects">
+          <form class="catalog-filter__form" action="#">
+            <select class="catalog-filter__name select-style">
+              <option value="">По названию</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+            </select>
+            <select class="catalog-filter__number select-style">
+              <option value="">по 12</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+            </select>
+          </form>
+      </div>
+    </div>
+  </div>
+</section> <section class="apps">
+  <div class="container">
+    <div class="apps__inner" style="background-image: url(img/decore/app-bg.jpg);">
+      <div class="apps__content">
+        <h2 class="title apps__title">Скачайте мобильное<span class="title title--span">приложение</span></h2>
+        <div class="apps__text">
+          <p>Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
+            месте.</p>
+        </div>
+        <ul class="apps__list">
+          <li class="apps__item">
+            <a class="apps__link" target="_blank" rel="noopener" href="https://www.apple.com/ua/app-store/" style="background-image: url(img/decore/app-store.svg);">
+              <span class="sr-only">открыть AppStore для установки приложения</span>
+            </a>
+          </li>
+          <li class="apps__item">
+            <a class="apps__link" target="_blank" rel="noopener" href="https://play.google.com/store/games?gl=TR" style="background-image: url(img/decore/google-play.svg);">
+              <span class="sr-only">открыть GooglePlay для установки приложения</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> <section class="discount">
+  <div class="container">
+    <h2 class="discount__title title">Акции и скидки</h2>
+    <ul class="discount__list">
+      <li class="discount__item">
+        <article class="discount__card">
+          <a class="discount__link" href="#">
+            <img class="discount__img" src="img/content/restaurant/blaze-pizza.jpg"
+              alt="Фото продукта ресторана Blaze Pizza" width="370" height="300">
+            <span class="discount__description">Скидка 50% на вторую пиццу</span>
+          </a>
+        </article>
+      </li>
+      <li class="discount__item">
+        <article class="discount__card">
+          <a class="discount__link" href="#">
+            <img class="discount__img" src="img/content/restaurant/kfc.jpg" alt="Фото продукта ресторана KFC"
+              width="370" height="300">
+            <p class="discount__description">Картошечка из KFC даром при заказе бургера</p>
+          </a>
+        </article>
+      </li>
+      <li class="discount__item">
+        <article class="discount__card">
+          <a class="discount__link" href="#">
+            <img class="discount__img" src="img/content/restaurant/star-burgers.jpg"
+              alt="Фото продукта ресторана Star Burgers" width="370" height="300">
+            <p class="discount__description">Чёрные бургеры на чёрный день</p>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section></main><footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__form-box">
+        <a class="footer__logo logo" href="index.html">
+          <img class="logo__img" src="img/logo/logo.svg" alt="Логотип сайта" width="200" height="39">
+        </a>
+        <form class="footer__form">
+          <label class="sr-only" for="email">Поле для ввода вашего Email</label>
+          <input class="footer__input" id="email" type="email" name="email" placeholder="Ваш email" required>
+          <button class="footer__btn btn-bg" type="submit">
+            <svg class="footer__icon" width="16.51" height="15.6">
+              <use xlink:href="img/svg/stack/sprite.svg#icon-frame"></use>
+            </svg>
+            Подписаться</button>
+        </form>
+      </div>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Как это работает</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Продукты</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Блюда</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Меню</a>
+        </li>
+      </ul>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">О нас</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Новости</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Партнеры</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">ЧаВо</a>
+        </li>
+      </ul>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link link " href="#no__scroll">Скачать приложение</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link" href="#no__scroll">Блог</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link" href="#no__scroll">Что нового?</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link" href="#no__scroll">Карта сайта</a>
+        </li>
+      </ul>
+      <address class="footer__contact contact">
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link link" target="_blank" rel="noopener" href="https://goo.gl/maps/7L8NBMK4bPohY8wr5">
+              <svg class="contact__icon" width="24" height="24">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-loc"></use>
+              </svg>
+              ул. Т.Г.Шевченко, 1
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link link" href="tel:380501112233">
+              <svg class="contact__icon" width="24" height="24">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-call"></use>
+              </svg>
+              380501112233
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link link" href="mailto:support@sfood.com">
+              <svg class="contact__icon" width="24" height="24">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-message"></use>
+              </svg>
+              support@sfood.com
+            </a>
+          </li>
+        </ul>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" target="_blank" rel="noopener" href="https://www.facebook.com/">
+              <span class="social__icon"
+                style="-webkit-mask-image: url(img/svg/stack/sprite.svg#icon-facebook); width: 9.98px; height: 20.53px;"></span>
+              <span class="sr-only">перейти в facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" rel="noopener" href="https://twitter.com/?lang=uk">
+              <span class="social__icon"
+                style="-webkit-mask-image: url(img/svg/stack/sprite.svg#icon-twitter); width: 20.53px; height: 16.68px;"></span>
+              <span class="sr-only">перейти в twitter</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" rel="noopener" href="https://www.instagram.com/">
+              <span class="social__icon"
+                style="-webkit-mask-image: url(img/svg/stack/sprite.svg#icon-instagram); width: 19.5px; height: 19.5px;"></span>
+              <span class="sr-only">перейти в instagram</span>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <p>© 2022 Simple Food</p>
+  </div>
+</footer><script src="js/main.min.js"></script></body></html>

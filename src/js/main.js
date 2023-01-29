@@ -12,6 +12,17 @@ $(document).ready(function () {
     }
   });
 });
+//липкие хлебные крошки
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 57) {
+      $("body").addClass("breadcrumbs-fixed");
+    } else {
+      $("body").removeClass("breadcrumbs-fixed");
+    }
+  });
+});
 
 //бургер меню
 $(".burger").on("click", function () {

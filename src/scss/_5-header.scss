@@ -1,13 +1,4 @@
-.lock {
-  overflow: hidden;
-  position: relative;
-
-  .hero__link {
-    z-index: -1;
-  }
-}
-
-body.header-fixed header {
+body.header-fixed .header {
   position: fixed; //!
   top: 0;
   right: 0;
@@ -17,9 +8,9 @@ body.header-fixed header {
 }
 
 .header {
+  position: fixed; //!
   padding-top: 57px;
   width: 100%; //!
-  position: fixed; //!
   background-color: $silver-100;
   transition: 0.2s all;
 
@@ -283,7 +274,7 @@ body.header-fixed header {
   &__bg {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: #0000008a;
   }
 
   &--active {
