@@ -1,5 +1,13 @@
 "use strict";
 // alert("hello");
+//добавление/удаление классы при клике на кнопку
+$(".filter-select__btn").click(function () {
+  $(".filter-select__btn").toggleClass("filter-select__btn-down");
+});
+$(".filter-select__btn").click(function () {
+  $(".filter-select__list").toggleClass("filter-select__list-active");
+});
+
 //прайс рандж
 $(function () {
   var $range = $(".filter-price__range"),
@@ -72,16 +80,16 @@ $(document).ready(function () {
   });
 });
 //липкие хлебные крошки
-$(document).ready(function () {
-  $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop > 57) {
-      $("body").addClass("breadcrumbs-fixed");
-    } else {
-      $("body").removeClass("breadcrumbs-fixed");
-    }
-  });
-});
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//     var scrollTop = $(window).scrollTop();
+//     if (scrollTop > 57) {
+//       $("body").addClass("breadcrumbs-fixed");
+//     } else {
+//       $("body").removeClass("breadcrumbs-fixed");
+//     }
+//   });
+// });
 //бургер меню
 $(".burger").on("click", function () {
   $(".burger-menu").addClass("burger-menu--active");
@@ -163,27 +171,3 @@ $(function () {
   var containerEl = document.querySelector(".popular-food");
   var mixer = mixitup(containerEl);
 });
-
-// //каталог топ фильтр
-// $(".filter-select__title").on("click", function () {
-//   $(this).siblings().slideToggle();
-//   // $(this).toggleClass("filter-select__arrow-down");
-// });
-// //каталог топ фильтр
-// $(".filter-number__title").on("click", function () {
-//   $(this).siblings().slideToggle();
-//   // $(this).toggleClass("filter-select__arrow-down");
-// });
-//стилизация  выпадающих списков
-// $(".filter-selects__style").styler();
-
-// $(".filter-selects__btn").on("click", function () {
-//   $(".filter-selects__btn").toggleClass("filter-selects__btn-down");
-//   $(".filter-selects__list").toggleClass("filter-selects__list-open");
-//   $(".filter-selects__choice").toggleClass("filter-selects__choice-open");
-// });
-// $(".filter-selects__btn-down").on("click", function () {
-//   $(".filter-selects__btn").removeClass(".filter-selects__btn-down");
-//   $(".filter-selects__list").removeClass(".filter-selects__list-open");
-//   $(".filter-selects__choice").removeClass(".filter-selects__choice-open");
-// });

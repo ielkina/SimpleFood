@@ -1,16 +1,28 @@
+body.breadcrumbs-fixed .breadcrumbs {
+  z-index: 1;
+  margin-top: 44px;
+}
+
+body.lock.breadcrumbs-fixed .breadcrumbs {
+  z-index: 0;
+}
+
 .breadcrumbs {
+  position: fixed;
+  width: 100%;
   margin-top: 157px;
   background-color: $pink-light;
+  transition: all 0.3s;
 
   &__list {
-    padding: 26px 0;
+    padding: 24px 0;
     display: flex;
+    align-items: center;
   }
 
   &__item {
     padding-right: 15px;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     &:not(:last-child) {
@@ -23,9 +35,10 @@
   }
 
   &__link {
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.2;
-    letter-spacing: 0.01em;
-    color: $gray-dark;
+    letter-spacing: 0.03em;
+    color: #505050;
   }
 }
