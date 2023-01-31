@@ -1,13 +1,114 @@
 "use strict";
 // alert("hello");
-//добавление/удаление классы при клике на кнопку
-$(".filter-select__btn").click(function () {
-  $(".filter-select__btn").toggleClass("filter-select__btn-down");
-});
-$(".filter-select__btn").click(function () {
-  $(".filter-select__list").toggleClass("filter-select__list-active");
-});
 
+//добавление класса .active filter-top
+$(".filter-select").click(function () {
+  $(this).toggleClass("filter-select--active");
+});
+$(".filter-number").click(function () {
+  $(this).toggleClass("filter-number--active");
+});
+$(".filter-select").each(function () {
+  $(this).children("select").css("display", "none");
+  var $current = $(this);
+  $(this)
+    .find("option")
+    .each(function (i) {
+      if (i == 0) {
+        $current.prepend(
+          $("<div>", {
+            class: $current
+              .attr("class")
+              .replace(/filter-select/g, "filter-select__box"),
+          })
+        );
+
+        var placeholder = $(this).text();
+        $current.prepend(
+          $("<span>", {
+            class: $current
+              .attr("class")
+              .replace(/filter-select/g, "filter-select__placeholder"),
+            text: placeholder,
+            "data-placeholder": placeholder,
+          })
+        );
+
+        return;
+      }
+
+      $current.children("div").append(
+        $("<span>", {
+          class: $current
+            .attr("class")
+            .replace(/filter-select/g, "filter-select__options"),
+          text: $(this).text(),
+        })
+      );
+    });
+});
+$(".filter-number").each(function () {
+  $(this).children("select").css("display", "none");
+  var $current = $(this);
+  $(this)
+    .find("option")
+    .each(function (i) {
+      if (i == 0) {
+        $current.prepend(
+          $("<div>", {
+            class: $current
+              .attr("class")
+              .replace(/filter-number/g, "filter-number__box"),
+          })
+        );
+
+        var placeholder = $(this).text();
+        $current.prepend(
+          $("<span>", {
+            class: $current
+              .attr("class")
+              .replace(/filter-number/g, "filter-number__placeholder"),
+            text: placeholder,
+            "data-placeholder": placeholder,
+          })
+        );
+
+        return;
+      }
+
+      $current.children("div").append(
+        $("<span>", {
+          class: $current
+            .attr("class")
+            .replace(/filter-number/g, "filter-number__options"),
+          text: $(this).text(),
+        })
+      );
+    });
+});
+$(".filter-select__options").click(function () {
+  var txt = $(this).text();
+  var index = $(this).index();
+
+  $(this).siblings(".filter-select__options").removeClass("selected");
+  $(this).addClass("selected");
+
+  var $currentSel = $(this).closest(".filter-select");
+  $currentSel.children(".filter-select__placeholder").text(txt);
+  $currentSel.children("select").prop("selectedIndex", index + 1);
+});
+$(".filter-number__options").click(function () {
+  var txt = $(this).text();
+  var index = $(this).index();
+
+  $(this).siblings(".filter-number__options").removeClass("selected");
+  $(this).addClass("selected");
+
+  var $currentSel = $(this).closest(".filter-number");
+  $currentSel.children(".filter-number__placeholder").text(txt);
+  $currentSel.children("select").prop("selectedIndex", index + 1);
+});
+// --------------------------------------------------------------------------
 //прайс рандж
 $(function () {
   var $range = $(".filter-price__range"),
@@ -79,17 +180,6 @@ $(document).ready(function () {
     }
   });
 });
-//липкие хлебные крошки
-// $(document).ready(function () {
-//   $(window).scroll(function () {
-//     var scrollTop = $(window).scrollTop();
-//     if (scrollTop > 57) {
-//       $("body").addClass("breadcrumbs-fixed");
-//     } else {
-//       $("body").removeClass("breadcrumbs-fixed");
-//     }
-//   });
-// });
 //бургер меню
 $(".burger").on("click", function () {
   $(".burger-menu").addClass("burger-menu--active");

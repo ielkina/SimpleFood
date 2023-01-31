@@ -569,3 +569,374 @@
     color: #363853;
   }
 }
+
+
+
+.catalog__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 400px;
+}
+
+.filter-select {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #c2c2c2;
+  border-radius: 3px;
+  // display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  // white-space: nowrap; //Запрещаем перенос слов
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url(../img/svg/icon-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    right: 18px;
+    width: 10.85px;
+    height: 7px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--active {
+    &::before {
+      transform: rotateX(-180deg);
+    }
+
+    &.filter-select__placeholder {
+      // white-space: nowrap;
+      // visibility: hidden;
+    }
+
+    & .filter-select__box {
+      display: block;
+      animation: fadeInUp 500ms;
+    }
+  }
+
+  &__placeholder {
+    width: 147px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+    // color: #31352B;
+    padding: 15px;
+    padding-right: 41px;
+    // text-align: left;
+    // pointer-events: none;
+    // user-select: none;
+    // visibility: visible;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:before {
+      position: absolute;
+      top: 15px;
+      // bottom: 0;
+      left: 15px;
+      // right: 0;
+      content: attr(data-placeholder);
+      visibility: hidden;
+    }
+
+  }
+
+  &__box {
+    // width: 147px;
+    // word-break: normal;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px #c2c2c2;
+    position: absolute;
+    // top: calc(100% + 4px);
+    top: 48px;
+    left: 0px;
+    display: none;
+    list-style-type: none;
+    // text-align: left;
+    font-size: 14px;
+    background-color: #FFF;
+    // padding: 15px;
+    // width: calc(100% + 8px);
+    // box-sizing: border-box;
+
+    &.selected {
+      // white-space: nowrap; //Запрещаем перенос слов
+      // white-space: nowrap;
+      // overflow: hidden;
+    }
+  }
+
+  &__options {
+    // width: 147px;
+    // font-size: 14px;
+    display: list-item;
+    // padding: 0.5em 1em;
+    // padding: 15px;
+    // user-select: none;
+    padding: 6px 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    transition: all 0.3s;
+    // &:not(:last-child){
+    //   margin-bottom: 12px;
+    // }
+
+    // white-space: nowrap; //Запрещаем перенос слов
+    &:after {
+      margin-left: 5px;
+      display: none;
+    }
+
+    &:hover {
+      background-color: $pink-light;
+    }
+
+    &.selected {
+
+      // white-space: nowrap; //Запрещаем перенос слов
+      &::after {
+        display: inline;
+        content: "*";
+      }
+
+      // &.selected {
+      //   // white-space: nowrap; //Запрещаем перенос слов
+      //   white-space: nowrap;
+      //   overflow: hidden;
+      // }
+      &.filter-select__placeholder {
+        // white-space: nowrap;
+        //   overflow: hidden;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* ----- Select Box Black Panther ----- */
+// .filter-select // .sel--black-panther 
+
+//   {
+//   // z-index: 3;
+//   z-index: 0;
+// }
+
+// /* ----- Select Box Superman ----- */
+// .sel--superman {
+//   /*   display: none; */
+//   // z-index: 2;
+//   z-index: 0;
+// }
+
+/* ===== Keyframes ===== */
+
+.catalog__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-bottom: 400px;
+}
+
+.filter-select {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #c2c2c2;
+  border-radius: 3px;
+  // display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  // white-space: nowrap; //Запрещаем перенос слов
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url(../img/svg/icon-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    right: 18px;
+    width: 10.85px;
+    height: 7px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--active {
+    &::before {
+      transform: rotateX(-180deg);
+    }
+
+    &.filter-select__placeholder {
+      // white-space: nowrap;
+      // visibility: hidden;
+    }
+
+    & .filter-select__box {
+      display: block;
+      animation: fadeInUp 500ms;
+    }
+  }
+
+  &__placeholder {
+    width: 147px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+    // color: #31352B;
+    padding: 15px;
+    padding-right: 41px;
+    // text-align: left;
+    // pointer-events: none;
+    // user-select: none;
+    // visibility: visible;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:before {
+      position: absolute;
+      top: 15px;
+      // bottom: 0;
+      left: 15px;
+      // right: 0;
+      content: attr(data-placeholder);
+      visibility: hidden;
+    }
+
+  }
+
+  &__box {
+    // width: 147px;
+    // word-break: normal;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px #c2c2c2;
+    position: absolute;
+    // top: calc(100% + 4px);
+    top: 48px;
+    left: 0px;
+    display: none;
+    list-style-type: none;
+    // text-align: left;
+    font-size: 14px;
+    background-color: #FFF;
+    // padding: 15px;
+    // width: calc(100% + 8px);
+    // box-sizing: border-box;
+    z-index: 1;
+
+    &.selected {
+      // white-space: nowrap; //Запрещаем перенос слов
+      // white-space: nowrap;
+      // overflow: hidden;
+    }
+  }
+
+  &__options {
+    // width: 147px;
+    // font-size: 14px;
+    display: list-item;
+    // padding: 0.5em 1em;
+    // padding: 15px;
+    // user-select: none;
+    padding: 6px 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    transition: all 0.3s;
+    // &:not(:last-child){
+    //   margin-bottom: 12px;
+    // }
+
+    // white-space: nowrap; //Запрещаем перенос слов
+    &:after {
+      margin-left: 5px;
+      display: none;
+    }
+
+    &:hover {
+      background-color: $pink-light;
+    }
+
+    &.selected {
+
+      // white-space: nowrap; //Запрещаем перенос слов
+      &::after {
+        display: inline;
+        content: "*";
+      }
+
+      // &.selected {
+      //   // white-space: nowrap; //Запрещаем перенос слов
+      //   white-space: nowrap;
+      //   overflow: hidden;
+      // }
+      &.filter-select__placeholder {
+        // white-space: nowrap;
+        //   overflow: hidden;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* ----- Select Box Black Panther ----- */
+// .filter-select // .sel--black-panther 
+
+//   {
+//   // z-index: 3;
+//   z-index: 0;
+// }
+
+// /* ----- Select Box Superman ----- */
+// .sel--superman {
+//   /*   display: none; */
+//   // z-index: 2;
+//   z-index: 0;
+// }
+
+/* ===== Keyframes ===== */
