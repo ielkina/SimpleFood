@@ -2,10 +2,10 @@
   <div class="container">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__link link" href="index.html">Главная</a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
       </li>
     </ul>
   </div>
@@ -14,15 +14,16 @@
 <section class="catalog">
   <div class="container">
     <div class="catalog__top">
-      <h2 class="catalog__title title">Каталог продуктов</h2>
+      <h1 class="catalog__title title">Каталог продуктов</h1>
       <div class="catalog__nav">
         <button class="catalog__filter-btn" type="button">
           <svg class="catalog__filter-icon" width="31.89" height="36">
             <use xlink:href="img/svg/stack/sprite.svg#icon-filter"></use>
           </svg>
+          <span class="sr-only">открыть меню фильтров</span>
         </button>
         <div class="catalog__filter filter-select">
-          <select name="select-name" id="select-name">
+          <select class="filter-select" name="select-name" id="select-name">
             <option value="" disabled>По названию</option>
             <option value="name">По названию</option>
             <option value="burger">Бургеры</option>
@@ -36,7 +37,7 @@
           </select>
         </div>
         <div class="catalog__filter filter-number">
-          <select name="select-number" id="select-number">
+          <select class="filter-number" name="select-number" id="select-number">
             <option value="" disabled>По 12</option>
             <option value="twelve">по 12</option>
             <option value="ten">по 10</option>
@@ -50,7 +51,9 @@
     </div>
     <div class="catalog__inner">
       <div class="catalog__filters filter">
+        <h2 class="sr-only">фильтры</h2>
         <button class="filter__btn">
+          <span class="sr-only">закрыть меню фильтров</span>
           <svg class="filter__icon" width="18" height="18">
             <use xlink:href="img/svg/stack/sprite.svg#icon-close-btn"></use>
           </svg>
@@ -92,25 +95,19 @@
         <div class="filter__item filter-offer">
           <h3 class="filter-offer__title filter__title">Предложения</h3>
           <form class="filter-offer__form filter__form" action="#">
-            <label class="filter-offer__label">
-              <div class="filter-offer__box">
-                <input class="filter-offer__input" type="checkbox">
-                <span class="filter-offer__checkbox"></span>
-              </div>
+            <label class="filter-offer__label" for="sales">
+              <input class="filter-offer__input" type="checkbox" id="sales" name="offer" value="sales">
+              <span class="filter-offer__checkbox"></span>
               <span class="filter-offer__text">Со скидкой</span>
             </label>
-            <label class="filter-offer__label">
-              <div class="filter-offer__box">
-                <input class="filter-offer__input" type="checkbox">
-                <span class="filter-offer__checkbox"></span>
-              </div>
+            <label class="filter-offer__label" for="new">
+              <input class="filter-offer__input" type="checkbox" id="new" name="new" value="new">
+              <span class="filter-offer__checkbox"></span>
               <span class="filter-offer__text">Новинка</span>
             </label>
-            <label class="filter-offer__label">
-              <div class="filter-offer__box">
-                <input class="filter-offer__input" type="checkbox">
-                <span class="filter-offer__checkbox"></span>
-              </div>
+            <label class="filter-offer__label" for="hit">
+              <input class="filter-offer__input" type="checkbox" id="hit" name="hit" value="hit">
+              <span class="filter-offer__checkbox"></span>
               <span class="filter-offer__text">Хит</span>
             </label>
           </form>
@@ -119,22 +116,27 @@
           <h3 class="filter-price__title filter__title">Цена</h3>
           <form class="filter-price__form filter__form" action="#">
             <div class="filter-price__control">
-              <label class="filter-price__label">
+              <label class="filter-price__label" for="price-from">
                 <span class="filter-price__text">от</span>
-                <input type="text" class="filter-price__input-from" value="100" autofocus>
+                <span class="sr-only">введите минимальную цену</span>
+                <input type="number" class="filter-price__input-from" value="100" id="price-from" name="price-from"
+                  autofocus>
                 <span class="filter-price__currency">₴</span>
               </label>
-              <label class="filter-price__label">
+              <label class="filter-price__label" for="price-to">
                 <span class="filter-price__text">до</span>
-                <input type="text" class="filter-price__input-to" value="1000" autofocus>
+                <span class="sr-only">введите максимальную цену</span>
+                <input type="number" class="filter-price__input-to" value="1000" id="price-to" name="price-to"
+                  autofocus>
                 <span class="filter-price__currency">₴</span>
               </label>
             </div>
-            <input class="filter-price__range" type="text" value="">
+            <label class="sr-only" for="range">ползунок</label>
+            <input class="filter-price__range" type="range" value="" id="range">
           </form>
         </div>
       </div>
-      <div class="catalog__content">
+      <di class="catalog__content">
         <ul class="catalog__food catalog-food">
           <li class="catalog-food__item">
             <article class="catalog-food__card">
@@ -305,36 +307,40 @@
             </article>
           </li>
         </ul>
-        <div class="catalog__pagination pagination">
-          <a class="pagination__prev pagination__arrows" href="#">
-            <svg class="pagination__icon">
-              <use xlink:href="img/svg/stack/sprite.svg#icon-chevron-left"></use>
-            </svg>
-          </a>
-          <ul class="pagination__list">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--active" href="#no__scrol">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#no__scrol">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#no__scrol">...</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#no__scrol">9</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#no__scrol">10</a>
-            </li>
-          </ul>
-          <a class="pagination__next pagination__arrows" href="#">
-            <svg class="pagination__icon">
-              <use xlink:href="img/svg/stack/sprite.svg#icon-chevron"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
+        <ul class="catalog__pagination pagination">
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--prev" href="#">
+              <span class="sr-only">перейти назад</span>
+              <svg width="10.52" height="18">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-chevron-left"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="pagination__item pagination__item--active">
+            <a class="pagination__link" href="#no__scrol">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#no__scrol">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#no__scrol">...</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#no__scrol">9</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#no__scrol">10</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--next" href="#">
+              <span class="sr-only">перейти вперед</span>
+              <svg width="10.52" height="18">
+                <use xlink:href="img/svg/stack/sprite.svg#icon-chevron"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
     </div>
+  </div>
   </div>
 </section>

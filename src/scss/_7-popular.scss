@@ -126,7 +126,9 @@
 .popular-food {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  grid-gap: 30px;
+  // // grid-column-gap: 30px;
+  // // grid-row-gap: 30px;
   margin-bottom: 61px;
 
   @include r($xl) {
@@ -139,15 +141,21 @@
 
   @include r($md) {
     grid-template-columns: repeat(2, 1fr);
+  }
+  @include r($sm) {
     grid-row-gap: 10px;
     grid-column-gap: 5px;
     margin-bottom: 33px;
   }
 
+
   &__item {
+
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 0 1px $silver-200;
+    // margin-right: 30px;
+    // margin-bottom: 30px;
     transition: box-shadow 0.3s ease-in-out;
 
     &:hover {

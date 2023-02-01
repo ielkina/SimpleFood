@@ -69,8 +69,8 @@
     transform: translateX(-100%);
   }
 
-  &--active {
-    transform: translateX(0%) !important;
+  &.filter--active {
+    transform: translateX(0%);
     box-shadow: 0 0 0 445vw #00000059;
   }
 
@@ -441,7 +441,9 @@
     transition: box-shadow 0.3s ease-in-out;
   }
 
-  &__text {}
+  &__text {
+    padding-left: 24px + 12px;
+  }
 }
 
 .filter-price {
@@ -584,88 +586,70 @@
 .pagination {
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  &__arrows {
-    width: 48px;
-    height: 48px;
-    background-color: $pink-light;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__prev {
-    margin-right: 6px;
-  }
-
-  &__next {
-    .pagination__icon {
-      fill: $dark;
-    }
-  }
-
-  &__icon {
-    width: 10.52px;
-    height: 18px;
-  }
-
-  &__list {
-    display: flex;
-    margin-right: 6px;
-  }
 
   &__item {
+    border-radius: 3px;
+
     &:not(:last-child) {
       margin-right: 6px;
     }
 
+
+
     @include r(560) {
 
-      &:nth-child(2),
-      &:nth-child(4) {
+      &:nth-child(3),
+      &:nth-child(5) {
         display: none;
       }
     }
   }
 
   &__link {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 100%;
-    color: $darkBlue-900;
     width: 48px;
     height: 48px;
-    background-color: $pink-light;
-    border-radius: 3px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s ease-in-out;
-
-    &--active {
-      box-shadow: 0 0 0 1px $darkBlue-900;
-      // transition: box-shadow 0.3s ease-in-out;
-
-      &:hover {
-        box-shadow: 0 0 0 1px $orange-900;
-      }
-    }
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 3px;
+    background-color: $pink-light;
+    transition: fill 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s ease-in-out;
 
     &:hover {
       color: #fff;
       background-color: $orange-900;
+      fill: #fff;
     }
 
     &:focus {
       color: $darkBlue-900;
       background-color: $pink-light;
       box-shadow: 0 0 0 1px $orange-900;
+      fill: $darkBlue-900;
     }
 
     &:active {
       box-shadow: inset 0px -1px 4px 2px #00000026;
     }
+  }
+
+  &__item--active {
+    box-shadow: 0 0 0 1px $darkBlue-900;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $orange-900;
+    }
+  }
+
+  &__link--prev {
+    fill: $gray;
+  }
+
+  &__link--next {
+    fill: $darkBlue-900;
   }
 }
