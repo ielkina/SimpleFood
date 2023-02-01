@@ -2,6 +2,10 @@
   margin-top: 157px;
   background-color: $pink-light;
 
+  @include r(560) {
+    margin-top: 72px;
+  }
+
   &__list {
     padding: 26px 0;
     display: flex;

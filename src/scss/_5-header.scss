@@ -7,11 +7,11 @@ body.header-fixed .header {
   z-index: 1;
 }
 
-.header-fixed {
-  // .filter-select__box {
-  //   z-index: -1;
-  // }
-}
+// .header-fixed {
+//   .filter-select__box {
+//     z-index: -1;
+//   }
+// }
 
 .header {
   position: fixed; //!
@@ -20,7 +20,7 @@ body.header-fixed .header {
   background-color: $silver-100;
   transition: 0.3s all ease-in-out;
 
-  @include r($xsm) {
+  @include r(560) {
     padding-top: 14px;
   }
 }
@@ -288,6 +288,7 @@ body.header-fixed .header {
 
   &--active {
     transform: translateX(0%);
+
   }
 
   .menu {

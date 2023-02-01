@@ -49,33 +49,68 @@
       </div>
     </div>
     <div class="catalog__inner">
-      <div class="catalog__aside filter">
+      <div class="catalog__filters filter">
+        <button class="filter__btn">
+          <svg class="filter__icon" width="18" height="18">
+            <use xlink:href="img/svg/stack/sprite.svg#icon-close-btn"></use>
+          </svg>
+        </button>
         <div class="filter__item filter-category">
           <h3 class="filter-category__title filter__title">Категории</h3>
           <ul class="filter-category__list filter__list">
-            <li class="filter-category__item">Бургеры</li>
-            <li class="filter-category__item">Пицца</li>
-            <li class="filter-category__item">Сендвичи</li>
-            <li class="filter-category__item">Азиатская кухня</li>
-            <li class="filter-category__item">Сеты</li>
-            <li class="filter-category__item">Европейская кухня</li>
-            <li class="filter-category__item">Напитки</li>
-            <li class="filter-category__item">Алкоголь</li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Бургеры</a>
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Пицца</a>
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Сендвичи</a>
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Азиатская кухня</a>
+
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Сеты</a>
+
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Европейская кухня</a>
+
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Напитки</a>
+
+            </li>
+            <li class="filter-category__item">
+              <a class="filter-category__link link" href="#">Алкоголь</a>
+
+            </li>
           </ul>
         </div>
         <div class="filter__item filter-offer">
           <h3 class="filter-offer__title filter__title">Предложения</h3>
           <form class="filter-offer__form filter__form" action="#">
             <label class="filter-offer__label">
-              <input class="filter-offer__input" type="checkbox" />
+              <div class="filter-offer__box">
+                <input class="filter-offer__input" type="checkbox">
+                <span class="filter-offer__checkbox"></span>
+              </div>
               <span class="filter-offer__text">Со скидкой</span>
             </label>
             <label class="filter-offer__label">
-              <input class="filter-offer__input" type="checkbox" />
+              <div class="filter-offer__box">
+                <input class="filter-offer__input" type="checkbox">
+                <span class="filter-offer__checkbox"></span>
+              </div>
               <span class="filter-offer__text">Новинка</span>
             </label>
             <label class="filter-offer__label">
-              <input class="filter-offer__input" type="checkbox" />
+              <div class="filter-offer__box">
+                <input class="filter-offer__input" type="checkbox">
+                <span class="filter-offer__checkbox"></span>
+              </div>
               <span class="filter-offer__text">Хит</span>
             </label>
           </form>
@@ -86,12 +121,12 @@
             <div class="filter-price__control">
               <label class="filter-price__label">
                 <span class="filter-price__text">от</span>
-                <input type="text" class="filter-price__input-from" value="100">
+                <input type="text" class="filter-price__input-from" value="100" autofocus>
                 <span class="filter-price__currency">₴</span>
               </label>
               <label class="filter-price__label">
                 <span class="filter-price__text">до</span>
-                <input type="text" class="filter-price__input-to" value="1000">
+                <input type="text" class="filter-price__input-to" value="1000" autofocus>
                 <span class="filter-price__currency">₴</span>
               </label>
             </div>
@@ -273,24 +308,24 @@
         <div class="catalog__pagination pagination">
           <a class="pagination__prev pagination__arrows" href="#">
             <svg class="pagination__icon">
-              <use xlink:href="img/svg/stack/sprite.svg#icon-chevron"></use>
+              <use xlink:href="img/svg/stack/sprite.svg#icon-chevron-left"></use>
             </svg>
           </a>
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
+              <a class="pagination__link pagination__link--active" href="#no__scrol">1</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
+              <a class="pagination__link" href="#no__scrol">2</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">...</a>
+              <a class="pagination__link" href="#no__scrol">...</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">9</a>
+              <a class="pagination__link" href="#no__scrol">9</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">10</a>
+              <a class="pagination__link" href="#no__scrol">10</a>
             </li>
           </ul>
           <a class="pagination__next pagination__arrows" href="#">

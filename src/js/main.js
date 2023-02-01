@@ -1,7 +1,12 @@
 "use strict";
 // alert("hello");
 
-//добавление класса .active filter-top
+//очистка  формы
+// $(".footer__btn").click(function () {
+//   $("input")[0].reset();
+// });
+
+//добавление класса .active filter-top  стилизация и взоимодейстие в фильтрами топ
 $(".filter-select").click(function () {
   $(this).toggleClass("filter-select--active");
 });
@@ -190,6 +195,13 @@ $(".burger-menu__close").on("click", function () {
   $("body").removeClass("lock");
 });
 $(function () {
+  // кнопка фильтров добавление/удаление класса active
+  $(".catalog__filter-btn").on("click", function () {
+    $(".filter").toggleClass("filter--active");
+  });
+  $(".filter__btn").on("click", function () {
+    $(".filter").removeClass("filter--active");
+  });
   //слайдер ресторанов
   $(".restaurant__list").slick({
     dots: true,

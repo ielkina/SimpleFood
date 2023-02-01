@@ -59,21 +59,25 @@
     @content;
   }
 }
+
 @mixin lg() {
   @media (max-width: #{$lg}px) {
     @content;
   }
 }
+
 @mixin md() {
   @media (max-width: #{$md}px) {
     @content;
   }
 }
+
 @mixin sm() {
   @media (max-width: #{$sm}px) {
     @content;
   }
 }
+
 @mixin xsm() {
   @media (max-width: #{$xsm}px) {
     @content;
@@ -188,6 +192,7 @@
 @mixin shadow($color) {
   box-shadow: inset 0 0 0 200vw $color;
 }
+
 // -----------------------------------------------------
 // @mixin responsive-ratio($x,$y, $pseudo: false) {
 //   $padding: unquote( ( $y / $x ) * 100 + '%' );
@@ -215,7 +220,24 @@
   // padding-top: calc(120/1905)*100%;
   // padding-top: calc(40/375)*100%;
 }
-.class{
+
+.class {
   // padding-top: calc((120/1905)*100%);
 
+}
+
+@mixin checkbox-hidden() {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+@mixin radio-hidden() {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }

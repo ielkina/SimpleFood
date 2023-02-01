@@ -1,5 +1,5 @@
 .discount {
-  padding-bottom: 110px;
+  padding-bottom: 118px;
 
   @include r($lg) {
     padding-bottom: 90px;
@@ -50,7 +50,7 @@
   &__card {
     max-width: 370px;
     min-height: 392px;
-    background-color: #FFFFFF;
+    background-color: #fff;
     box-shadow: 0px 3px 3px #0000001a;
     display: flex;
     flex-direction: column;
@@ -76,16 +76,21 @@
   }
 
   &__description {
-    display: inline-block;
+    max-width: 370px;
     padding: 15px 20px;
-    overflow: hidden;
     font-size: 24px;
     line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   .slick-list {
     @include r($lg) {
       min-height: 449px;
+      // z-index: -1;
     }
   }
 
@@ -95,6 +100,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    // z-index: -1;
 
     & li {
       display: flex;

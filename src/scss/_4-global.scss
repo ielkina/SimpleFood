@@ -104,7 +104,11 @@ body {
     z-index: -1;
   }
 
-  .filter-select__box {
+  .filter-select {
+    z-index: -1;
+  }
+
+  .filter-number {
     z-index: -1;
   }
 }
