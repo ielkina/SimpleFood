@@ -1,12 +1,20 @@
 "use strict";
 // alert("hello");
-
-//очистка  формы
-// $(".footer__btn").click(function () {
-//   $("input")[0].reset();
-// });
+$(function () {
+  $(".product__star").rateYo({
+    starWidth: "16px",
+    ratedFill: "#ffb800",
+    normalFill: "#c1c1c1",
+    readOnly: true,
+    starSvg:
+      '<svg class="product__star-icon">' +
+      '<use xlink:href="img/svg/stack/sprite.svg#icon-star"></use>' +
+      "</svg>",
+  });
+});
 
 //добавление класса .active filter-top  стилизация и взоимодейстие в фильтрами топ
+//фитльтры топа
 $(".filter-select").click(function () {
   $(this).toggleClass("filter-select--active");
 });
@@ -210,7 +218,7 @@ $(function () {
     autoplaySpeed: 6000,
     responsive: [
       {
-        breakpoint: 3800,
+        breakpoint: 10000000000,
         settings: "unslick",
       },
       {
@@ -236,7 +244,7 @@ $(function () {
       },
     ],
   });
-  //слайдер отзывов
+  //слайдер отзывов reviews
   $(".reviews-slider").slick({
     dots: true,
     arrows: true,
@@ -268,6 +276,28 @@ $(function () {
       '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button >',
     nextArrow:
       '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  });
+  //слайдер секции product
+  $(".product__slide").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 3000,
+    prevArrow:
+      '<button type="button" class="product__slide-arrow product__slide-arrow-prev">' +
+      '<svg class="product__slide-icon" width="18.7" height="31.55">' +
+      '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-left"></use>' +
+      "</svg>" +
+      "</button>",
+    nextArrow:
+      '<button type="button" class="product__slide-arrow product__slide-arrow-next">' +
+      '<svg class="product__slide-icon" width="18.7" height="31.55">' +
+      '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-right"></use>' +
+      "</svg>" +
+      "</button>",
   });
   //фильтр продуктов
   var containerEl = document.querySelector(".popular-food");
