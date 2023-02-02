@@ -141,7 +141,6 @@
 
 @mixin link-line() {
   position: relative;
-
   &::after {
     position: absolute;
     content: "";
@@ -150,9 +149,16 @@
     left: 0;
     bottom: 0;
     background-color: $darkBlue-900;
-    transition: background-color 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0;
+    }
   }
 }
+
 
 @mixin logo-actions() {
   transition: opacity 0.3s, box-shadow 0.3s ease-in-out;
