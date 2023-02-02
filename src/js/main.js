@@ -1,13 +1,15 @@
 "use strict";
 // alert("hello");
+$(".product__order-num").styler();
 $(function () {
   $(".product__star").rateYo({
     starWidth: "16px",
-    ratedFill: "#ffb800",
     normalFill: "#c1c1c1",
+    ratedFill: "#ffb800",
+    spacing: "6px",
     readOnly: true,
     starSvg:
-      '<svg class="product__star-icon">' +
+      '<svg>' +
       '<use xlink:href="img/svg/stack/sprite.svg#icon-star"></use>' +
       "</svg>",
   });

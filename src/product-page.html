@@ -137,29 +137,33 @@
       <ul class="product__slide">
         <li class="product__slide-item">
           <a class="product__slide-link">
-            <img class="product__slide-img" width="400" height="400" src="img/content/product/product-img.jpg" alt="Чизбургер с листьями салата">
+            <img class="product__slide-img" width="400" height="400" src="img/content/product/product-img.jpg"
+              alt="Чизбургер с листьями салата">
           </a>
         </li>
         <li>
           <a class="product__slide-link">
-            <img class="product__slide-img" width="400" height="400" src="img/content/avatar/anna.jpg" alt="Чизбургер с листьями салата">
+            <img class="product__slide-img" width="400" height="400" src="img/content/avatar/anna.jpg"
+              alt="Чизбургер с листьями салата">
           </a>
         </li>
         <li>
           <a class="product__slide-link">
-            <img class="product__slide-img" width="400" height="400" src="img/content/product/product-img.jpg" alt="Чизбургер с листьями салата">
+            <img class="product__slide-img" width="400" height="400" src="img/content/product/product-img.jpg"
+              alt="Чизбургер с листьями салата">
           </a>
         </li>
       </ul>
       <div>
-      <!-- <div class="product__info"> -->
+        <!-- <div class="product__info"> -->
         <h1 class="product__title title">Чизбургер с листьями салата</h1>
         <div class="product__star" data-rateyo-rating="4"></div>
         <span class="product__prise">160 <span>грн.</span></span>
         <div class="product__order-box">
-          <div class="product__order-num">1</div>
+          <!-- <label for="order-num"></label> -->
+          <input class="product__order-num" id="order-num" type="number" value="1" min="1">
           <button class="product__order-btn btn-bg">
-            <svg width="16" height="16" style="margin-right: 16px;">
+            <svg class="product__order-icon" width="16" height="16" style="margin-right: 16px;">
               <use xlink:href="img/svg/stack/sprite.svg#icon-cart"></use>
             </svg>
             Добавить в корзину
@@ -173,6 +177,38 @@
           <p>Окончательная сумма заказа формируется после сбора товаров.</p>
         </div>
         <a class="product__ref" href="#">Подробнее</a>
+      </div>
+    </div>
+  </div>
+  <div class="product-tabs">
+    <div class="product-tabs__top">
+      <a class="product-tabs__top-link product-tabs__top-link--active" href="#tab-1">
+        Описание
+      </a>
+      <a class="product-tabs__top-link product-tabs__top-link--active" href="#tab-2">
+        Характеристики
+      </a>
+      <a class="product-tabs__top-link product-tabs__top-link--active" href="#tab-3">
+        Отзывы (2)
+      </a>
+    </div>
+    <div class="product-tabs__content">
+      <div class="product-tabs__content-item product-tabs__content-item--active" id="tab-1">
+        <p>
+          Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
+          горчицей, луком и маринованными огурчиками.
+        </p>
+        <p>Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута</p>
+        <p> Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+      </div>
+      <div class="product-tabs__content-item" id="tab-2">
+        <span>Диаметр: 20 см</span>
+        <span>Вес: 300 гр</span>
+        <span>Калорийность (на 100г): 295 ккал</span>
+        <span>Срок хранения: до 3 дней</span>
+      </div>
+      <div class="product-tabs__content-item" id="tab-3">
+        h3.
       </div>
     </div>
   </div>
