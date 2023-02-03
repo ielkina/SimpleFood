@@ -1,15 +1,33 @@
 "use strict";
 // alert("hello");
-$(".product__order-num").styler();
+//очистка формы отзыва
+$(".comments-form__btn").click(function () {
+  $("form")[0].reset();
+});
+//табы
 $(function () {
-  $(".product__star").rateYo({
+  $(".tabs__top-item").on("click", function (e) {
+    e.preventDefault();
+    $(".tabs__top-item").removeClass("tabs__top-item--active");
+    $(this).addClass("tabs__top-item--active");
+    $(".tabs__content-item").removeClass(
+      "tabs__content-item--active"
+    );
+    $($(this).attr("href")).addClass("tabs__content-item--active");
+  });
+});
+//стилизация инпута выбора колличестава товара
+$(".product__order-num").styler();
+
+$(function () {
+  $(".product__star, .comments__star").rateYo({
     starWidth: "16px",
     normalFill: "#c1c1c1",
     ratedFill: "#ffb800",
     spacing: "6px",
     readOnly: true,
     starSvg:
-      '<svg>' +
+      "<svg>" +
       '<use xlink:href="img/svg/stack/sprite.svg#icon-star"></use>' +
       "</svg>",
   });

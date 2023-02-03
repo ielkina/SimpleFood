@@ -112,3 +112,54 @@ body {
     z-index: -1;
   }
 }
+
+.card {
+  max-width: 210px;
+  min-height: 299px;
+  padding: 20px 9px 22px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px $silver-200;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 2px 1px $orange-900;
+  }
+
+  &__link {
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    margin: 0 auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  &__alt {
+    padding: 0;
+    word-spacing: 1px;
+    font-weight: 400;
+    font-size: 15px;
+    @include line-height(15, 18);
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    padding: 6px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
