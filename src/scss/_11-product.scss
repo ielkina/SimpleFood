@@ -6,13 +6,21 @@
 .product {
   &__slide {
     max-width: 610px;
-    height: 550px;
-    margin-right: 30px;
+    min-height: 550px;
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px #ececec;
     border-radius: 5px;
     display: flex;
     align-items: center;
+
+    @include r($xl) {
+      margin-bottom: 30px;
+    }
+
+    @include r($md) {
+      max-width: 345px;
+      min-height: 345px;
+    }
   }
 
   &__slide-arrow {
@@ -35,42 +43,66 @@
     z-index: 1;
   }
 
-  // &__slide-item {}
-
-  // &__slide-link {}
-
   &__slide-img {
     object-fit: contain;
     margin: 0 auto;
+
+    @include r($md) {
+      width: 300px;
+      height: 300px;
+    }
   }
 }
 
 .product {
-  padding: 60px 0;
-  // box-shadow: 0px 1px 0px 0px #c2c2c2;
-
-  box-shadow: 0px 1px 0px 0px #ececec;
-  // border-top: 1px solid #c2c2c2;
-  &__inner {
-    display: flex;
+  &__tabs {
+    box-shadow: 0px -1px 0px 0px #c2c2c2;
   }
 
-  &__info {}
+  &__inner {
+    padding: 60px 0 58px;
+    display: flex;
+
+    @include r($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include r($xsm) {
+      padding: 30px 0;
+    }
+  }
+
+  &__info {
+    padding-left: 30px;
+
+    @include r($xl) {
+      padding-left: 0;
+    }
+  }
 
   &__title {
-    white-space: nowrap;
+    text-align: left;
     margin-bottom: 30px;
+
+    @include r($xsm) {
+      margin-bottom: 15px;
+    }
   }
 
   &__star {
     padding-left: 0;
     background-color: #fff;
-    z-index: 0;
+    z-index: -1;
     margin-bottom: 23px;
+
+    @include r($xsm) {
+      margin-bottom: 15px;
+    }
   }
 
   &__prise {
-    display: inline-block;
+    display: block;
     font-weight: 500;
     font-size: 25px;
     line-height: 1.4;
@@ -81,10 +113,19 @@
   &__order-box {
     display: flex;
     margin-bottom: 30px;
+
+    @include r($sm) {
+      flex-direction: column;
+    }
   }
 
   &__order-num {
+    max-width: 158px;
     margin-right: 20px;
+
+    @include r($sm) {
+      margin-bottom: 15px;
+    }
   }
 
   .jq-number {
@@ -183,12 +224,21 @@
     align-items: center;
     justify-content: space-between;
 
+    @include r($sm) {
+      // display: block;
+      margin-right: auto;
+    }
+
+
+
     &:hover {
       stroke: $orange-900;
     }
+
     &:focus {
       stroke: $orange-900;
     }
+
   }
 
   &__order-icon {
@@ -196,7 +246,6 @@
   }
 
   &__shipping {
-    max-width: 531px;
     width: 100%;
     font-weight: 400;
     font-size: 16px;
@@ -204,19 +253,28 @@
     color: #505050;
     letter-spacing: 0.02em;
     margin-bottom: 19px;
+
+    @include r($xsm) {
+      margin-bottom: 16px;
+    }
   }
 
   &__shipping-title {
     font-weight: 400;
     font-size: 24px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     color: #363853;
     padding-bottom: 15px;
     box-shadow: 0px 1px 0px 0px #ececec;
     margin-bottom: 20px;
+    @include font-media(24, 18);
+
+    @include r($xsm) {
+      // font-size: 18px;
+      padding-bottom: 13px;
+      margin-bottom: 15px;
+    }
   }
 
   &__ref {

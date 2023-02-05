@@ -4,15 +4,16 @@
 $(".comments-form__btn").click(function () {
   $("form")[0].reset();
 });
+$(".footer__btn").click(function () {
+  $(".footer__input")[0].reset();
+});
 //табы
 $(function () {
-  $(".tabs__top-item").on("click", function (e) {
+  $(".tabs__top-link").on("click", function (e) {
     e.preventDefault();
-    $(".tabs__top-item").removeClass("tabs__top-item--active");
-    $(this).addClass("tabs__top-item--active");
-    $(".tabs__content-item").removeClass(
-      "tabs__content-item--active"
-    );
+    $(".tabs__top-link").removeClass("tabs__top-link--active");
+    $(this).addClass("tabs__top-link--active");
+    $(".tabs__content-item").removeClass("tabs__content-item--active");
     $($(this).attr("href")).addClass("tabs__content-item--active");
   });
 });
@@ -20,12 +21,27 @@ $(function () {
 $(".product__order-num").styler();
 
 $(function () {
+  //рейтинг
   $(".product__star, .comments__star").rateYo({
     starWidth: "16px",
     normalFill: "#c1c1c1",
     ratedFill: "#ffb800",
     spacing: "6px",
     readOnly: true,
+    starSvg:
+      "<svg>" +
+      '<use xlink:href="img/svg/stack/sprite.svg#icon-star"></use>' +
+      "</svg>",
+  });
+  //поставить оценку
+  $("#star").rateYo({
+    maxValue: 1,
+    numStars: 5,
+    fullStar: true,
+    starWidth: "16px",
+    normalFill: "#c1c1c1",
+    ratedFill: "#ffb800",
+    spacing: "6px",
     starSvg:
       "<svg>" +
       '<use xlink:href="img/svg/stack/sprite.svg#icon-star"></use>' +
@@ -234,28 +250,9 @@ $(function () {
   $(".restaurant__list").slick({
     dots: true,
     arrows: false,
-    autoplay: true,
-    autoplaySpeed: 6000,
     responsive: [
       {
         breakpoint: 10000000000,
-        settings: "unslick",
-      },
-      {
-        breakpoint: 962,
-        settings: "slick",
-      },
-    ],
-  });
-  //слайдер дискаунт
-  $(".discount__list").slick({
-    dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    responsive: [
-      {
-        breakpoint: 3800,
         settings: "unslick",
       },
       {
@@ -293,9 +290,33 @@ $(function () {
     // autoplay: true,
     autoplaySpeed: 3000,
     prevArrow:
-      '<button type="button" class="slick-arrow__prev"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button >',
+      '<button type="button" class="interes-food__arrow interes-food__arrow-prev"><svg class="interes-food__arrow-icon"><use xlink:href="img/svg/stack/sprite.svg#icon-left"></use></svg></button >',
     nextArrow:
-      '<button type="button" class="slick-arrow__next"><svg class="slick-arrow__icon"><use xlink:href="img/svg/stack/sprite.svg#icon-prev-arrow"></use></svg></button>',
+      '<button type="button" class="interes-food__arrow interes-food__arrow-next"><svg class="interes-food__arrow-icon"><use xlink:href="img/svg/stack/sprite.svg#icon-slid-right"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1130,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 962,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 787,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          arrows: false,
+          // centerMode: true,
+          // variableWidth: true,
+        },
+      },
+    ],
   });
   //слайдер секции product
   $(".product__slide").slick({
@@ -318,6 +339,30 @@ $(function () {
       '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-right"></use>' +
       "</svg>" +
       "</button>",
+    responsive: [
+      {
+        breakpoint: 787,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
+  });
+  //слайдер дисконт
+  $(".discount__list").slick({
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 10000000000,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 1130,
+        settings: "slick",
+        // dots: true,
+      },
+    ],
   });
   //фильтр продуктов
   var containerEl = document.querySelector(".popular-food");

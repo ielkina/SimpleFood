@@ -8,12 +8,21 @@
 
     @include r(787) {
       display: block;
-      padding: 30px 0;
+      padding: 38px 0;
+    }
+
+    @include r($xsm) {
+      padding-bottom: 30px;
     }
   }
 
   &__title {
     @include r(787) {
+      margin-bottom: 20px;
+    }
+
+    @include r($xsm) {
+      text-align: left;
       margin-bottom: 20px;
     }
   }
@@ -27,11 +36,28 @@
     height: 47px;
     border-radius: 3px;
     background-color: $pink-light;
+    fill: $orange-900;
     border-radius: 3px;
     margin-right: 10px;
     justify-content: center;
     align-items: center;
     display: none;
+    transition: background-color 0.3s, fill 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $orange-900;
+      fill: #fff;
+    }
+
+    &:focus {
+      fill: $darkBlue-900;
+      background-color: #ff7a501a;
+      box-shadow: 0px 0px 0px 2px #ff6838b3;
+    }
+
+    &:active {
+      background-color: #fff2ed;
+    }
 
     @include r(1130) {
       display: inline-flex;
@@ -73,6 +99,7 @@
     transform: translateX(0%);
     box-shadow: 0 0 0 445vw #00000059;
   }
+
 
   &__btn {
     position: absolute;
@@ -135,6 +162,12 @@
   margin-right: 15px;
   transition: all 0.3s ease-in-out;
 
+  @include r($xsm) {
+    margin-right: 11px;
+  }
+
+  @include r($xsm) {}
+
   &:hover {
     box-shadow: 0 0 0 1px $orange-900;
 
@@ -180,6 +213,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     @include link-actions();
+
+    @include r($xsm) {
+      max-width: 139px;
+      padding-left: 11px;
+      padding-right: 11px;
+    }
 
     &:before {
       position: absolute;
@@ -326,6 +365,12 @@
     text-overflow: ellipsis;
     @include link-actions();
 
+    @include r($xsm) {
+      width: 82px;
+      padding-left: 11px;
+      padding-right: 35px;
+    }
+
     &:before {
       position: absolute;
       top: 15px;
@@ -397,7 +442,7 @@
   &__label {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     transition: color 0.3s ease-in-out;
 
     &:hover {
@@ -413,11 +458,11 @@
     }
   }
 
-  &__box {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-  }
+  // &__box {
+  //   width: 24px;
+  //   height: 24px;
+  //   margin-right: 12px;
+  // }
 
   &__input {
     @include checkbox-hidden();
@@ -529,6 +574,17 @@
 
   @include r(787) {
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+
+    @include r($xsm) {
+      &:nth-child(n+7) {
+        display: none;
+      }
+    }
   }
 
   &__card {
@@ -543,6 +599,8 @@
     flex-direction: column;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
+
+    @include r($xsm) {}
 
     &:hover {
       box-shadow: 0 0 0 1px $orange-900;
@@ -593,8 +651,6 @@
     &:not(:last-child) {
       margin-right: 6px;
     }
-
-
 
     @include r(560) {
 

@@ -1,8 +1,9 @@
 @import "../../node_modules/slick-carousel/slick/slick.scss";
+
 .reviews {
   &__title {
     padding-top: 3px;
-    margin-bottom: 45px;
+    margin-bottom: 43px;
 
     @include r($xsm) {
       padding-top: 0;
@@ -14,32 +15,46 @@
 .reviews-slider {
   &__item {
     margin-bottom: 50px;
+
     @include r($xsm) {
       margin-bottom: 0;
     }
   }
 
   &__quotes {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     max-width: 990px;
     margin: 0 auto;
-    @include r($md) {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-areas:
+      "photo comment"
+      "photo autor";
+
+    @include r($lg) {
+      display: flex;
       flex-direction: column;
       margin-bottom: 0;
     }
   }
 
   &__photo {
+    grid-area: photo;
     object-fit: cover;
     border-radius: 50%;
     margin-right: 40px;
+
+    @include r($lg) {
+      margin: 0 auto;
+    }
 
     @include r($md) {
       width: 200px;
       height: 200px;
       margin-bottom: 28px;
       margin-right: 0;
+      margin: 0 auto;
     }
 
     @include r($xsm) {
@@ -49,6 +64,7 @@
   }
 
   &__comment {
+    padding-top: 28px;
   }
 
   &__text {
@@ -57,10 +73,13 @@
     font-weight: 400;
     font-style: italic;
     position: relative;
-    margin-bottom: 30px;
+
+    @include r($lg) {
+      margin-bottom: 20px;
+    }
+
     @include r($xsm) {
       font-size: 14px;
-      margin-bottom: 20px;
     }
 
     &::before {
@@ -71,6 +90,7 @@
       background-image: url(../img/svg/quotes.svg);
       left: 0;
       top: 0;
+
       @include r($xsm) {
         left: 6px;
         top: -9px;
@@ -86,6 +106,7 @@
       right: 0;
       bottom: 0;
       transform: rotateY(180deg);
+
       @include r($xsm) {
         bottom: 9px;
         right: 6px;
@@ -117,6 +138,7 @@
   .slick-list {
     z-index: -1;
   }
+
   .slick-arrow {
     position: absolute;
     bottom: 0;
@@ -165,6 +187,7 @@
       @include r($md) {
         transform: translateX(-499%);
       }
+
       @include xsm() {
         transform: translateX(-393%);
       }
@@ -273,6 +296,7 @@
         background-color: $gray;
         box-shadow: 0 0 0 2px $orange-900;
       }
+
       &:active {
         background-color: $pink;
         box-shadow: none;

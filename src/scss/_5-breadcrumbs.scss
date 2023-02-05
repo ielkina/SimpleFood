@@ -2,10 +2,17 @@
   margin-top: 157px;
   background-color: $pink-light;
 
+  @include r(560) {
+    margin-top: 73px;
+  }
+
   &__list {
     padding: 26px 0;
     display: flex;
 
+    @include r(560) {
+      padding: 24px 0;
+    }
   }
 
   &__item {
@@ -19,6 +26,7 @@
         display: none;
       }
     }
+
     &:not(:last-child) {
       background-image: url(../img/svg/stack/sprite.svg#icon-chevron);
       background-repeat: no-repeat;
