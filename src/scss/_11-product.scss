@@ -1,17 +1,44 @@
-@import '../../node_modules/rateyo/src/jquery.rateyo';
-@import '../../node_modules/jquery-form-styler/dist/jquery.formstyler';
+@import "../../node_modules/rateyo/src/jquery.rateyo";
+@import "../../node_modules/jquery-form-styler/dist/jquery.formstyler";
+// @import '../../node_modules/vshowbox/dist/vshowbox';
+// @import '../../node_modules/slideshow-popup-modal/dist/modal';
 // @import '../../node_modules/jquery-form-styler/dist/jquery.formstyler.theme';
 
 //слайдер
 .product {
-  &__slide {
+
+  // &__slide-arrow {
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   width: 60px;
+  //   height: 60px;
+  // }
+
+  // &__slide-arrow-next {
+  //   right: 25px;
+  // }
+
+  // &__slide-arrow-prev {
+  //   left: 25px;
+  //   z-index: 1;
+  // }
+  &__item {
+    max-width: 610px;
+    width: 100%;
+    min-height: 550px;
     max-width: 610px;
     min-height: 550px;
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px #ececec;
     border-radius: 5px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
 
     @include r($xl) {
       margin-bottom: 30px;
@@ -21,31 +48,34 @@
       max-width: 345px;
       min-height: 345px;
     }
+
+    &:before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 18.7px;
+      height: 31.55px;
+    }
+
+    &::before {
+      left: 46px;
+      background-image: url(../img/svg/icon-arrow-left.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      right: 46px;
+      background-image: url(../img/svg/icon-arrow-right.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
-  &__slide-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-  }
-
-  &__slide-arrow-next {
-    right: 25px;
-  }
-
-  &__slide-arrow-prev {
-    left: 25px;
-    z-index: 1;
-  }
-
-  &__slide-img {
+  &__item-img {
     object-fit: contain;
-    margin: 0 auto;
+    // margin: 0 auto;
+    cursor: pointer;
 
     @include r($md) {
       width: 300px;
@@ -136,9 +166,9 @@
   .jq-number__field input {
     text-align: center;
     padding: 9px 6px;
-    background-color: #FAEDED;
+    background-color: #faeded;
     font: inherit;
-    border: 1px solid #FAEDED;
+    border: 1px solid #faeded;
     transition: all 0.3s ease-in-out;
 
     &:focus {
@@ -173,7 +203,7 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: #63A60E;
+      background-color: #63a60e;
     }
   }
 
@@ -188,7 +218,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 20px;
       height: 1.64px;
       background-color: #fff;
@@ -206,7 +236,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 20px;
       height: 20px;
       background-image: url(../img/svg/plus.svg);
@@ -229,8 +259,6 @@
       margin-right: auto;
     }
 
-
-
     &:hover {
       stroke: $orange-900;
     }
@@ -238,7 +266,6 @@
     &:focus {
       stroke: $orange-900;
     }
-
   }
 
   &__order-icon {
@@ -284,3 +311,4 @@
     @include link-actions();
   }
 }
+

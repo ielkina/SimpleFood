@@ -1,5 +1,7 @@
 "use strict";
 // alert("hello");
+
+// const vshowbox = window.vShowBox.init();
 //очистка формы отзыва
 $(".comments-form__btn").click(function () {
   $("form")[0].reset();
@@ -319,35 +321,43 @@ $(function () {
     ],
   });
   //слайдер секции product
-  $(".product__slide").slick({
-    dots: false,
-    arrows: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 3000,
-    prevArrow:
-      '<button type="button" class="product__slide-arrow product__slide-arrow-prev">' +
-      '<svg class="product__slide-icon" width="18.7" height="31.55">' +
-      '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-left"></use>' +
-      "</svg>" +
-      "</button>",
-    nextArrow:
-      '<button type="button" class="product__slide-arrow product__slide-arrow-next">' +
-      '<svg class="product__slide-icon" width="18.7" height="31.55">' +
-      '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-right"></use>' +
-      "</svg>" +
-      "</button>",
-    responsive: [
-      {
-        breakpoint: 787,
-        settings: {
-          arrows: false,
-        },
-      },
-    ],
-  });
+  // $(".product__slide").slick({
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   // autoplay: true,
+  //   autoplaySpeed: 3000,
+  //   prevArrow:
+  //     '<button type="button" class="product__slide-arrow product__slide-arrow-prev">' +
+  //     '<svg class="product__slide-icon" width="18.7" height="31.55">' +
+  //     '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-left"></use>' +
+  //     "</svg>" +
+  //     "</button>",
+  //   nextArrow:
+  //     '<button type="button" class="product__slide-arrow product__slide-arrow-next">' +
+  //     '<svg class="product__slide-icon" width="18.7" height="31.55">' +
+  //     '<use xlink:href="img/svg/stack/sprite.svg#icon-arrow-right"></use>' +
+  //     "</svg>" +
+  //     "</button>",
+  //   responsive: [
+  //     {
+  //       breakpoint: 787,
+  //       settings: {
+  //         arrows: false,
+  //       },
+  //     },
+  //   ],
+  // });
+  // $(".product__slide-item").click(function () {
+  //   $(".product__slide").fadeIn();
+  //   $(".product__slide").slick({
+  //     slidesToShow: 1,
+  //     dots: true,
+  //     arrows: true,
+  //   });
+  // });
   //слайдер дисконт
   $(".discount__list").slick({
     dots: true,
@@ -364,6 +374,28 @@ $(function () {
       },
     ],
   });
+
+  //modal slide
+  $(".product__item-img").click(function () {});
+  $(".product__item-img").on("click", function () {
+    $(".product__modal").addClass("product__modal--active");
+    $(".product__modal").fadeIn();
+    $(".product__modal-list").slick({
+      dots: true,
+      arrows: true,
+      prevArrow:
+        '<button type="button" class="product__modal-arrow product__modal-arrow-prev"><svg class="product__modal-arrow-icon"><use xlink:href="img/svg/stack/sprite.svg#icon-arrow-left"></use></svg></button >',
+      nextArrow:
+        '<button type="button" class="product__modal-arrow product__modal-arrow-next"><svg class="product__modal-arrow-icon"><use xlink:href="img/svg/stack/sprite.svg#icon-arrow-right"></use></svg></button>',
+    });
+    $("body").addClass("modal__lock");
+  });
+
+  $(".product__modal-btn").on("click", function () {
+    $(".product__modal").removeClass("product__modal--active");
+    $("body").removeClass("modal__lock");
+  });
+
   //фильтр продуктов
   var containerEl = document.querySelector(".popular-food");
   var mixer = mixitup(containerEl);
