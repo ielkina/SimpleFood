@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('path/0-head.html',{"title":"SimpleFood | Чизбургер с листьями салата"})
+
+<body>
+  @include('path/1-header-catalog.html')
+  <main class="main">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Чизбургер с листьями салата</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    @include('path/12-product-page.html')
+    @include('path/14-interes.html')
+  </main>
+  @include('path/8-footer.html')
+  @include('path/15-modal.html')
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

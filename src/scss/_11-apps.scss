@@ -1,0 +1,75 @@
+.apps {
+  &__inner {
+    min-height: 381px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center right;
+
+    @include r($xl) {
+      background-size: cover;
+      box-shadow: inset 0 0 0 200vw #f9faffc4;
+      justify-content: center;
+    }
+
+    @include r($sm) {
+      min-height: 195px;
+      box-shadow: inset 0 0 0 200vw $silver-100;
+    }
+  }
+
+  &__content {
+    max-width: 540px;
+
+    @include r($sm) {
+      max-width: 345px;
+    }
+  }
+
+  &__title {
+    padding-top: 3px;
+    text-align: left;
+    margin-bottom: 45px;
+
+    @include r($sm) {
+      padding-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include font-media(20, 14);
+    @include r($sm){
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    height: 40px;
+
+    &:nth-child(1) {
+      .apps__link {
+        width: 120px;
+        margin-right: 30px;
+      }
+    }
+
+    &:nth-child(2) {
+      .apps__link {
+        width: 135px;
+      }
+    }
+  }
+
+  &__link {
+    height: 40px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

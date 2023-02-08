@@ -1,0 +1,145 @@
+<section class="product">
+  <div class="container">
+    <div class="product__inner">
+      <a class="product__item">
+        <img class="product__item-img" width="400" height="400" src="img/content/product/product-img.jpg"
+          alt="Чизбургер с листьями салата">
+      </a>
+      <div class="product__info">
+        <h1 class="product__title title">Чизбургер с листьями салата</h1>
+        <span class="product__star" data-rateyo-rating="4"></span>
+        <span class="product__prise">160 <span>грн.</span></span>
+        <div class="product__order-box">
+          <!-- <label for="order-num"></label> -->
+          <input class="product__order-num" id="order-num" type="number" value="1" min="1">
+          <button class="product__order-btn btn-bg">
+            <svg class="product__order-icon" width="16" height="16" style="margin-right: 16px;">
+              <use xlink:href="img/svg/stack/sprite.svg#icon-cart"></use>
+            </svg>
+            Добавить в корзину
+          </button>
+        </div>
+        <div class="product__shipping">
+          <h2 class="product__shipping-title">Доставка и оплата</h2>
+          <p>Минимальная сумма заказа — 160 грн.</p>
+          <p>Время доставки заказа — 80-140 мин.</p>
+          <p>Оплата осуществляется только банковской картой.</p>
+          <p>Окончательная сумма заказа формируется после сбора товаров.</p>
+        </div>
+        <a class="product__ref" href="#">Подробнее</a>
+      </div>
+    </div>
+  </div>
+  <div class="product__tabs tabs">
+    <div class="tabs__inner">
+      <ul class="tabs__top">
+        <li class="tabs__top-item">
+          <a class="tabs__top-link tabs__top-link--active" href="#tab-1">
+            Описание
+          </a>
+        </li>
+        <li class="tabs__top-item">
+          <a class="tabs__top-link" href="#tab-2">
+            Характеристики
+          </a>
+        </li>
+        <li class="tabs__top-item">
+          <a class="tabs__top-link" href="#tab-3">Отзывы (2)</a>
+        </li>
+      </ul>
+      <div class="tabs__content">
+        <div class="tabs__content-item description tabs__content-item--active" id="tab-1">
+          <p class="description__text">Рубленый бифштекс из натуральной говядины на карамелизированный булочке,
+            с ломтиком сыра «Чеддер», кетчупом, горчицей, луком и маринованными огурчиками.</p>
+          <p class="description__text">Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
+          </p>
+          <p class="description__text"> Внешний вид товара может отличаться от изображений, представленных на сайте.
+          </p>
+        </div>
+        <ul class="tabs__content-item specific" id="tab-2">
+          <li class="specific__item">
+            <span class="specific__span">Диаметр:&ensp;</span><span>20 см</span>
+          </li>
+          <li class="specific__item">
+            <span class="specific__span">Вес:&ensp;</span><span>300 гз</span>
+          </li>
+          <li class="specific__item">
+            <span class="specific__span">Калорийность (на 100г):&ensp;</span><span> 295 ккал</span>
+          </li>
+          <li class="specific__item">
+            <span class="specific__span">Срок хранения:&ensp;</span><span>до 3 дней</span>
+          </li>
+        </ul>
+        <div class="tabs__content-item comments" id="tab-3">
+          <h3 class="comments__title">Мнения наших клиентов</h3>
+          <ul class="comments__list">
+            <li class="comments__item">
+              <div class="comments__item-top">
+                <div class="comments__author-box">
+                  <img class="comments__photo" src="img/content/avatar/dasha.jpg" alt="Фото Даши, автора отзыва"
+                    width="69" height="70">
+                  <div class="comments__author">
+                    <span class="comments__name">Андрей</span>
+                    <span class="comments__data">10.06.2021</span>
+                  </div>
+                </div>
+                <span class="comments__star" data-rateyo-rating="5"></span>
+              </div>
+              <p>
+                Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))
+              </p>
+            </li>
+            <li class="comments__item">
+              <div class="comments__item-top">
+                <div class="comments__author-box">
+                  <img class="comments__photo" src="img/content/avatar/ira.jpg" alt="Фото Кати, автора отзыва"
+                    width="69" height="70">
+                  <div class="comments__author">
+                    <span class="comments__name">Екатерина Белая</span>
+                    <span class="comments__data">7.06.2021</span>
+                  </div>
+                </div>
+                <span class="comments__star" data-rateyo-rating="4"></span>
+              </div>
+              <p>
+                этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                отличный вариант,
+                чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+              </p>
+            </li>
+          </ul>
+          <form class="comments-form" action="#">
+            <h3 class="comments__title">Оставить отзыв</h3>
+            <div class="comments-form__rating">
+              <span class="comments-form__label comments-form__rating-label">Ваша оценка *</span>
+              <label class="comments-form__rating-star" id="star">
+                <input type="radio" name="star" required>
+              </label>
+            </div>
+            <div class="comments-form__box">
+              <label class="comments-form__textarea-label" for="message">Ваш отзыв *
+                <textarea class="comments-form__textarea" placeholder="Введите текст отзыва" id="message"
+                  required></textarea>
+              </label>
+              <div class="comments-form__aside">
+                <label class="comments-form__label comments-form__label-name" for="name">Имя
+                  <input class="comments-form__input" type="text" id="name" placeholder="Введите ваше имя" required>
+                </label>
+                <label class="comments-form__label" for="form-email">Email *
+                  <input class="comments-form__input" type="email" id="form-email" placeholder="youremail@mail.com"
+                    required>
+                </label>
+              </div>
+            </div>
+            <label class="comments-form__checkbox-label" for="checkbox">
+              <input class="comments-form__checkbox-input" type="checkbox" id="checkbox" checked>
+              <span class="comments-form__checkbox"></span>
+              Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+            </label>
+            <button class="comments-form__btn btn-bg" type="submit">Оставить отзыв</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
