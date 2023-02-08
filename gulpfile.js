@@ -29,7 +29,7 @@ const fileInclude = require("gulp-file-include");
 const svgSprite = require("gulp-svg-sprite");
 // -----------------------------------------------------------
 const srcPath = "src/"; //папка с исходниками
-const distPath = "SimpleFood-dist/"; //название репозитория готового проекта изменить на нужное название
+const distPath = "SimpleFood/"; //название репозитория готового проекта изменить на нужное название
 
 function browsersync() {
   browserSync.init({
