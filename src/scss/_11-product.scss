@@ -167,9 +167,9 @@
   .jq-number__field input {
     text-align: center;
     padding: 9px 6px;
-    background-color: #faeded;
+    background-color: $pink-light;
     font: inherit;
-    border: 1px solid #faeded;
+    border: 1px solid $pink-light;
     transition: all 0.3s ease-in-out;
 
     &:focus {

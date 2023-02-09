@@ -25,7 +25,7 @@
         </div>
         <div class="catalog__filter filter-number">
           <select class="filter-number" name="select-number" id="select-number">
-            <option value="" disabled>По 12</option>
+            <option value="" disabled>по 12</option>
             <option value="twelve">по 12</option>
             <option value="ten">по 10</option>
             <option value="eight">по 8</option>
@@ -46,36 +46,31 @@
           </svg>
         </button>
         <div class="filter__item filter-category">
-          <h3 class="filter-category__title filter__title">Категории</h3>
+          <h3 class="filter-category__title filter__title" data-filter="all">Категории</h3>
           <ul class="filter-category__list filter__list">
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".burger">
               <a class="filter-category__link link" href="#">Бургеры</a>
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".pizza">
               <a class="filter-category__link link" href="#">Пицца</a>
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".sandwich">
               <a class="filter-category__link link" href="#">Сендвичи</a>
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".asia">
               <a class="filter-category__link link" href="#">Азиатская кухня</a>
-
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".dish">
               <a class="filter-category__link link" href="#">Сеты</a>
-
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".europe">
               <a class="filter-category__link link" href="#">Европейская кухня</a>
-
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".drink">
               <a class="filter-category__link link" href="#">Напитки</a>
-
             </li>
-            <li class="filter-category__item">
+            <li class="filter-category__item" data-filter=".alcohol">
               <a class="filter-category__link link" href="#">Алкоголь</a>
-
             </li>
           </ul>
         </div>
@@ -123,7 +118,7 @@
       </div>
       <div class="catalog__content">
         <ul class="catalog__food-list catalog-food">
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix burger">
             <article class="catalog-food__card card">
               <a class="card__link" href="product-page.html">
                 <img class="card__img" src="img/content/product/cheeseburger.jpg" alt="Чизбургер с листьями салата"
@@ -136,7 +131,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix pizza">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt-page.html">
                 <img class="card__img" src="img/content/product/beefburger.jpg" alt="Бифбургер" width="140"
@@ -149,7 +144,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix sandwich">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
                 <img class="card__img" src="img/content/product/king-cheeseburger.jpg" alt="Королевский чизбургер"
@@ -162,7 +157,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix asia">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
                 <img class="card__img" src="img/content/product/black-hamburger.jpg" alt="Черный гамбургер" width="140"
@@ -175,7 +170,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix dish">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
                 <img class="card__img" src="img/content/product/cheeseburger.jpg" alt="Чизбургер с листьями салата"
@@ -188,7 +183,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix europe">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
                 <img class="card__img" src="img/content/product/beefburger.jpg" alt="Бифбургер" width="140"
@@ -201,11 +196,11 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix drink">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
-                <img class="card__img" src="img/content/product/king-cheeseburger.jpg"
-                  alt="Королевский чизбургер" width="140" height="140">
+                <img class="card__img" src="img/content/product/king-cheeseburger.jpg" alt="Королевский чизбургер"
+                  width="140" height="140">
                 <h3 class="card__alt">Королевский чизбургер</h3>
               </a>
               <span class="card__price">260<span>грн.</span></span>
@@ -214,11 +209,11 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix alcohol">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
-                <img class="card__img" src="img/content/product/black-hamburger.jpg" alt="Черный гамбургер"
-                  width="140" height="140">
+                <img class="card__img" src="img/content/product/black-hamburger.jpg" alt="Черный гамбургер" width="140"
+                  height="140">
                 <h3 class="card__alt">Черный гамбургер</h3>
               </a>
               <span class="card__price">199 <span>грн.</span></span>
@@ -227,11 +222,11 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix burger">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
-                <img class="card__img" src="img/content/product/cheeseburger.jpg"
-                  alt="Чизбургер с листьями салата" width="140" height="140">
+                <img class="card__img" src="img/content/product/cheeseburger.jpg" alt="Чизбургер с листьями салата"
+                  width="140" height="140">
                 <h3 class="card__alt">Чизбургер с листьями салата</h3>
               </a>
               <span class="card__price">160 <span>грн.</span></span>
@@ -240,7 +235,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix pizza">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
                 <img class="card__img" src="img/content/product/beefburger.jpg" alt="Бифбургер" width="140"
@@ -253,11 +248,11 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix sandwich">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
-                <img class="card__img" src="img/content/product/king-cheeseburger.jpg"
-                  alt="Королевский чизбургер" width="140" height="140">
+                <img class="card__img" src="img/content/product/king-cheeseburger.jpg" alt="Королевский чизбургер"
+                  width="140" height="140">
                 <h3 class="card__alt">Королевский чизбургер</h3>
               </a>
               <span class="card__price">260 <span>грн.</span></span>
@@ -266,11 +261,11 @@
               </button>
             </article>
           </li>
-          <li class="catalog-food__item">
+          <li class="catalog-food__item mix asia">
             <article class="catalog-food__card card">
               <a class="card__link" href="produckt.html">
-                <img class="card__img" src="img/content/product/black-hamburger.jpg" alt="Черный гамбургер"
-                  width="140" height="140">
+                <img class="card__img" src="img/content/product/black-hamburger.jpg" alt="Черный гамбургер" width="140"
+                  height="140">
                 <h3 class="card__alt">Черный гамбургер</h3>
               </a>
               <span class="card__price">199 <span>грн.</span></span>
@@ -293,7 +288,7 @@
             <a class="pagination__link" href="#no__scrol">1</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#no__scrol">2</a>
+            <a class="pagination__link" href="catalog-2.html">2</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#no__scrol">...</a>

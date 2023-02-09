@@ -5,7 +5,7 @@
     padding-top: 140px;
   }
 
-  @include r(560) {
+  @include r($sm) {
     padding-top: 72px;
   }
 

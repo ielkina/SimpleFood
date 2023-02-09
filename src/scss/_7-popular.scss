@@ -4,7 +4,7 @@
     padding-left: 5px;
     margin-bottom: 60px;
 
-    @include r(420) {
+    @include r($xsm) {
       margin-bottom: 28px;
       padding-left: 0;
       padding-right: 15px;
@@ -17,7 +17,7 @@
     padding: 2px;
     margin-bottom: 42px;
 
-    @include r(420) {
+    @include r($xsm) {
       margin-bottom: 25px;
     }
   }
@@ -26,7 +26,7 @@
     &:not(:last-child) {
       margin-right: 20px;
 
-      @include r(420) {
+      @include r($xsm) {
         margin-right: 10px;
       }
     }
@@ -46,7 +46,7 @@
     background-color: #fff;
     transition: color 0.3s, box-shadow 0.3s, fill 0.3s, background-color 0.3s ease-in-out;
 
-    @include r(420) {
+    @include r($xsm) {
       font-size: 14px;
       padding: 11px 13px;
     }
@@ -98,7 +98,7 @@
   &__icon {
     margin-right: 10px;
 
-    @include r(420) {
+    @include r($xsm) {
       width: 20px;
       height: 20px;
     }

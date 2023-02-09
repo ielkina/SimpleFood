@@ -21,7 +21,7 @@
   &__card {
     max-width: 210px;
 
-    @include r(1130) {
+    @include r($xl) {
       margin: 0 auto;
     }
 

@@ -132,13 +132,12 @@
     right: 0;
   }
 
-
   &__modal-img {
     max-width: 750px;
     min-height: 750px;
     object-fit: cover;
     object-position: center;
-    margin: auto auto;
+    margin: auto;
 
     @include r($xl) {
       max-width: 600px;

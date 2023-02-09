@@ -14,7 +14,7 @@
     background-color: $silver-100;
     transition: 0.3s all ease-in-out;
 
-    @include r(560) {
+    @include r($sm) {
       padding-top: 14px;
     }
   }
@@ -48,7 +48,7 @@
       width: 301px;
       display: flex;
       justify-content: space-between;
-      margin-right: 50px + 37px;
+      margin-right: 50px + 44px;
 
       @include r($md) {
         display: none;
@@ -147,7 +147,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      transform: translateX(-100%);
+      transform: translateX(-300%);
       transition: transform 0.3s ease-in-out;
     }
   }

@@ -419,6 +419,8 @@ $(function () {
   });
 
   //фильтр продуктов
-  var containerEl = document.querySelector(".popular-food");
+  var containerEl = document.querySelector(
+    ".popular-food, .catalog-food"
+  );
   var mixer = mixitup(containerEl);
 });

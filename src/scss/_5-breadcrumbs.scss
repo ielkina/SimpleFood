@@ -2,7 +2,7 @@
   margin-top: 157px;
   background-color: $pink-light;
 
-  @include r(560) {
+  @include r($sm) {
     margin-top: 73px;
   }
 
@@ -10,7 +10,7 @@
     padding: 26px 0;
     display: flex;
 
-    @include r(560) {
+    @include r($sm) {
       padding: 24px 0;
     }
   }
@@ -22,7 +22,7 @@
     align-items: center;
 
     &:not(:first-child):not(:last-child) {
-      @include r(962) {
+      @include r($lg) {
         display: none;
       }
     }
