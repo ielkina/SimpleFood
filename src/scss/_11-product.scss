@@ -10,16 +10,13 @@
     max-width: 610px;
     width: 100%;
     min-height: 550px;
-    max-width: 610px;
-    min-height: 550px;
     background-color: #fff;
-    box-shadow: 0px 0px 0px 1px #ececec;
+    box-shadow: 0 0 0 1px $silver-100;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: -1px;
 
     &:before,
     &::after {
@@ -71,7 +68,6 @@
 
   &__item-img {
     object-fit: contain;
-    // margin: 0 auto;
     cursor: pointer;
 
     @include r($md) {
@@ -92,7 +88,7 @@
 
 .product {
   &__tabs {
-    box-shadow: 0px -1px 0px 0px #c2c2c2;
+    box-shadow: 0 -1px 0 0 $gray;
   }
 
   &__inner {
@@ -128,7 +124,6 @@
 
   &__star {
     padding-left: 0;
-
     z-index: -1;
     margin-bottom: 23px;
 
@@ -142,7 +137,7 @@
     font-weight: 500;
     font-size: 25px;
     line-height: 1.4;
-    color: #363853;
+    color: $darkBlue-900;
     margin-bottom: 20px;
   }
 
@@ -186,11 +181,9 @@
   .jq-number__field input {
     box-sizing: border-box;
     width: 100%;
-    font-weight: 400;
-    font-size: 20px;
     line-height: 1;
     letter-spacing: 0.03em;
-    color: #363853;
+    color: $darkBlue-900;
   }
 
   .jq-number__field {
@@ -217,7 +210,7 @@
     left: 0;
     width: 44px;
     height: 44px;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0 0 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +228,7 @@
     right: 0;
     width: 44px;
     height: 44px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0 3px 3px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,7 +254,6 @@
     justify-content: space-between;
 
     @include r($sm) {
-      // display: block;
       margin-right: auto;
     }
 
@@ -280,10 +272,9 @@
 
   &__shipping {
     width: 100%;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
-    color: #505050;
+    line-height: 1.5;
+    color: $gray-dark;
     letter-spacing: 0.02em;
     margin-bottom: 19px;
 
@@ -297,14 +288,13 @@
     font-size: 24px;
     line-height: 1.2;
     letter-spacing: 0.03em;
-    color: #363853;
+    color: $darkBlue-900;
     padding-bottom: 15px;
-    box-shadow: 0px 1px 0px 0px #ececec;
+    box-shadow: 0 1px 0 0 $silver-200;
     margin-bottom: 20px;
     @include font-media(24, 18);
 
     @include r($xsm) {
-      // font-size: 18px;
       padding-bottom: 13px;
       margin-bottom: 15px;
     }
