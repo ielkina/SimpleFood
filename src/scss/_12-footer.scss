@@ -118,8 +118,6 @@
     margin-right: 15px;
   }
 
-  &__list {}
-
   &__item {
     margin-bottom: 11px;
 
@@ -240,7 +238,7 @@
 
     &:active {
       background-color: $orange-extraLight;
-      box-shadow: 0px 0px 0px 2px transparent;
+      box-shadow: 0 0 0 2px transparent;
 
       & .social__icon {
         background-color: $orange-900;
