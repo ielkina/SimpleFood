@@ -12,8 +12,7 @@
 
     @include r($lg) {
       min-height: 462px;
-      box-shadow: inset 0 0 0 200vw #f9faffd9;
-      // justify-content: start;
+      box-shadow: inset 0 0 0 200vw $blue-extraLight-opacity;
     }
   }
 

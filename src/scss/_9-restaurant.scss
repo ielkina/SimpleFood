@@ -16,7 +16,6 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // justify-items: center;
     grid-gap: 30px;
 
     @include r($xl) {
@@ -35,7 +34,7 @@
     max-width: 370px;
     min-height: 419px;
     border-radius: 10px;
-    box-shadow: 0 3px 3px $shadow;
+    box-shadow: 0px 3px 3px #0000001a;
     background-color: #fff;
     position: relative;
     transition: box-shadow 0.3s ease-in-out;
@@ -106,7 +105,7 @@
   &__time {
     font-weight: 300;
     font-size: 18px;
-    line-height: 30px;
+    @include line-height(18, 30);
     opacity: 0.9;
   }
 
