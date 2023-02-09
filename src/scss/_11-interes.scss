@@ -1,16 +1,5 @@
 .interes-food {
-  // .slick-arrow__prev {
-  //   right: 59px;
-  // }
-
-  // .slick-arrow__next {
-  //   transform: rotate(-180deg);
-  // }
-}
-
-.interes-food {
-  padding-top: 100px;
-  padding-bottom: 90px;
+  padding: 100px 0 90px;
 
   @include r($lg) {
     padding: 90px 0;
@@ -49,9 +38,8 @@
   &__title {
     text-align: left;
     font-weight: 500;
-    // font-size: 36px;
     line-height: 1.3;
-    color: #363853;
+    color: $darkBlue-900;
     margin-bottom: 60px;
     @include font-media(36, 20);
 
@@ -139,7 +127,7 @@
       width: 15px;
       height: 15px;
       border-radius: 50%;
-      background-color: #c2c2c2;
+      background-color: $gray;
     }
   }
 

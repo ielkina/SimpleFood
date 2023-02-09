@@ -12,7 +12,7 @@
     overflow-x: hidden;
     backdrop-filter: blur(40px);
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.329);
+    background-color: $shadow;
     transition: all 0.3s ease-in-out;
     display: none;
   }
@@ -22,7 +22,7 @@
     width: 100%;
     padding: 60px 60px 87px;
     background-color: #fff;
-    box-shadow: 0px 0px 0px 1px #ececec;
+    box-shadow: 0 0 0 1px $silver-200;
     border-radius: 5px;
     position: relative;
 
@@ -83,16 +83,10 @@
     padding-bottom: 75px;
     z-index: 0;
 
-    // align-items: center;
-    // justify-content: center;
     @include r($xl) {
       padding-bottom: 30px;
     }
 
-    .slick-list {
-      // display: flex;
-      // z-index: 0;
-    }
 
     .slick-slide {
       padding: 2px;
@@ -138,7 +132,6 @@
     right: 0;
   }
 
-  &__modal-item {}
 
   &__modal-img {
     max-width: 750px;
@@ -159,7 +152,7 @@
 
     @include r($md) {
       max-width: 400px;
-      min-height: 300px;
+      min-height: 400px;
     }
 
     @include r($xsm) {

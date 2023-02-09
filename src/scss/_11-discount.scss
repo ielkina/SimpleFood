@@ -20,58 +20,38 @@
     @include r(1130) {
       text-align: center;
     }
+
     @include r($xsm) {
-     margin-bottom: 36px;
+      margin-bottom: 36px;
     }
   }
 
   &__list {
     z-index: 0;
-    // min-height: 400px;
     display: flex;
-    // flex-direction: column;
     justify-content: space-between;
+
     @include r(1130) {
       display: block;
-      // margin-bottom: 45px;
-      // text-align: center;
-      // flex-direction: column;
     }
   }
 
   .slick-list {
-    // display: flex;
-    // padding-top: 2px;
-    // padding-bottom: 2px;
     max-width: 1170px;
     width: 100%;
-    // padding: 2px;
-      @include r($xl) {
-        text-align: center;
-        margin-bottom: 45px;
-      }
-      @include r($xsm) {
-        margin-bottom: 35px;
-      }
-  }
 
-  .slick-slide {
-    // max-width: 370px;
-    // padding-top: 2px;
-    padding: 4px;
-    // padding-bottom: 2px;
+    @include r($xl) {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-    &:nth-child(1),
-    &:nth-child(2) {
-      // margin-right: auto;
-      // margin-right: 45px;
-      // padding-right: 26px;
+    @include r($xsm) {
+      margin-bottom: 35px;
     }
   }
 
-  .slick-track {
-    // min-width: 1170px;
-    // margin: 0;
+  .slick-slide {
+    padding: 4px;
   }
 
   .slick-dots {
@@ -124,22 +104,13 @@
 
   &__item {
     max-width: 370px;
-    // width: 100%;
     min-height: 392px;
     background-color: #fff;
-    box-shadow: 0px 3px 3px #0000001a;
+    box-shadow: 0 3px 3px #0000001a;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     transition: box-shadow 0.3s ease-in-out;
-
-    &:not(:last-child) {
-      // margin-right: 30px;
-    }
-
-    @include r(1130) {
-      // margin: 0 auto;
-    }
 
     &:hover {
       box-shadow: 0 3px 15px $orange-opacity-7;
