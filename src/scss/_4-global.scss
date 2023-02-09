@@ -1,5 +1,3 @@
-
-
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -97,9 +95,19 @@ body {
   .filter-number {
     z-index: -1;
   }
+
+  .product {
+    z-index: -1px;
+  }
+
+  .product_item {
+    z-index: -1;
+  }
+
   .product__slide {
     z-index: -1;
   }
+
   .product__order-box {
     position: relative;
     z-index: -1;

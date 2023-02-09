@@ -6,26 +6,6 @@
 
 //слайдер
 .product {
-
-  // &__slide-arrow {
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   width: 60px;
-  //   height: 60px;
-  // }
-
-  // &__slide-arrow-next {
-  //   right: 25px;
-  // }
-
-  // &__slide-arrow-prev {
-  //   left: 25px;
-  //   z-index: 1;
-  // }
   &__item {
     max-width: 610px;
     width: 100%;
@@ -39,6 +19,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: -1px;
 
     &:before,
     &::after {
@@ -92,8 +73,6 @@
     object-fit: contain;
     // margin: 0 auto;
     cursor: pointer;
-
-
 
     @include r($md) {
       width: 300px;
@@ -149,7 +128,7 @@
 
   &__star {
     padding-left: 0;
-    background-color: #fff;
+
     z-index: -1;
     margin-bottom: 23px;
 
